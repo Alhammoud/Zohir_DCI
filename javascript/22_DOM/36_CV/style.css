@@ -1,0 +1,78 @@
+body {
+    height: 1000px;
+    width: 1200px;
+    margin: 5px auto;
+    /* border: 1px solid red; */
+    /* background-color: rgba(163, 241, 36, 0.644); */
+}
+
+form {
+    /* border: 1px solid black; */
+    height: 700px;
+    width: 1000px;
+    margin: 10px auto;
+}
+h1{
+    text-align: center;
+    color: black;
+    background-color: lightgoldenrodyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+form fieldset {
+    height: 740px;
+    display: flex;
+    padding: 5px;
+    border: 1px solid greenyellow;
+}
+form fieldset div {
+    background-color: aquamarine;
+    /* display: flex; */
+    height: 50px;
+    border: 1px solid green;
+    /* text-align: center; */
+    /* margin: auto; */
+    margin: 10px;
+    padding: 5px;
+    align-content: center;
+    line-height: 40px;
+
+    
+}
+
+form fieldset div input[type="text"]{
+    line-height: 20px;
+    width: 600px;
+    text-align: center; 
+}
+
+.textarea{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* text-align: center; */
+
+
+}
+form fieldset p{
+    text-align: center;
+    color: blue;
+} 
+
+#lastDiv{
+    border: none;
+    background-color: white;
+    margin: 0px auto;
+} 
+
+.cv{
+    width: 700px;
+    height: 800px;
+    margin: 0px auto;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+
+.cv >h2{
+    text-align: center;
+}

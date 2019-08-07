@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create a CV form-generated Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#" id="form">
+        <h1> **** Create Your CV **** </h1>
+        <fieldset>
+            <legend>Put your details here..!</legend>
+
+            <div>
+                <label for="name">Put your name here :</label>
+                <input type="text" name="fullName" id="name" placeholder="Write your name ..!">
+            </div>
+
+            <div>
+                <label for="birthday">Put your birthday here :</label>
+                <input type="date" name="birthday" id="birthday">
+            </div>
+
+            <div>
+                <label for="pic">Upload a photo fo your :
+                    <input type="file" name="pic" id="pic" accept="image/*">
+                </label>
+
+            </div>
+
+            <div>
+                <label for="firstColor">Pick your favorite color :</label>
+                <input type="color" id="firstColor" name="" value="#e66465">
+            </div>
+            <div>
+                <label for="secondColor">Pick your secondary color :</label>
+                <input type="color" id="secondColor" name="" value="#e69465">
+            </div>
+            <div class="textarea">
+                <label>Write you something about yourself: </label>
+                <textarea id="aboutYou" rows="60" cols="85" maxlength="140" placeholder="Describe yourself here..."></textarea>
+                <p>Type all you need in 140 characters ..!</p>
+            </div>
+
+            <div>
+                Pick your Skills :
+                <input type="checkbox" class="skils" id="Javascript" value="Javascript">Javascript <span>|</span>
+                <input type="checkbox" class="skils" id="Ruby" value="Ruby">Ruby <span>|</span>
+                <input type="checkbox" class="skils" id="Python" value="Python">Python <span>|</span>
+                <input type="checkbox" class="skils" id="Java" value="Java">Java <span>|</span>
+                <input type="checkbox" class="skils" id="Java" value="Java">Java
+            </div>
+            <div id="lastDiv">
+                <input type="submit" value="  Creat CV  ">
+                <input type="button" value="  Rest Form  ">
+            </div>
+        </fieldset>
+
+
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* CSSTerm.com Simple Horizontal DropDown CSS menu */
+body{
+    /* border: 2px solid rgb(50, 47, 255); */
+    /* margin:20px; */
+    padding: 30px;
+
+}
+#title {
+    background-color: #005555;
+    /* top: 0px; */
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    font-size: 30px;
+    /* border: 1px solid fuchsia; */
+    box-sizing: border-box;
+    line-height: 60px;
+    /* padding: 5px 0px; */
+}
+.container {
+    /* width: 1200px; */
+    height: 600px;
+    margin: 0px auto;
+    border: 2px solid greenyellow;
+}
+
+.drop_menu {
+    background: #4144e0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 50px;
+    border: 3px solid yellow;
+    /* justify-items: center; */
+    /* justify-content: center;     */
+    /* text-align: center; */
+    display: flex;
+    /* justify-items: center; */
+    flex-direction: row;
+    /* align-items: center; */
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.drop_menu li {
+    float: left;
+    /* width: 220px; */
+    text-align: center;
+    border: 2px solid pink;
+}
+
+.drop_menu li a {
+    padding: 9px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font: 12px arial, verdana, sans-serif;
+    font-size: 30px;
+    /* text-align: center; */
+}
+
+/* Submenu */
+
+.drop_menu ul {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    list-style-type: none;
+    /* align-items: center; */
+    border: 5px solid red;
+}
+
+.drop_menu li:hover {
+    position: relative;
+    background: rgba(17, 191, 235, 0.739);
+}
+
+.drop_menu li:hover ul {
+    left: 0px;
+    top: 30px;
+    background: rgba(17, 191, 235, 0.739);
+    padding: 0px;
+}
+
+.drop_menu li:hover ul li a {
+    padding: 5px;
+    display: block;
+    width: 168px;
+    text-indent: 15px;
+    background-color: rgba(17, 191, 235, 0.739);
+}
+
+.drop_menu li:hover ul li a:hover {
+    background: #005555;
+}

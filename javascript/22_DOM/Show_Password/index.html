@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Password</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <input type="password" value="fdsffwef" id="psw"></input><br>
+
+    <input type="checkbox" id="chb">Show Password</input> <!-- onclick="toggle()" -->
+
+    <br>
+    <br>
+    <br>
+    <input type="password" id="password">
+    <button onclick="toggler(this)" type="button">Show</button>
+
+
+
+    <br>
+    <br>
+
+    // Example 1
+    <div class="wrapper">
+        <input type="password" id="password">
+        <button id="toggleBtn" class="glyphicon glyphicon-eye-open toggler-ico" type="button">&nbsp;</button>
+    </div>
+
+    // Example 2
+    <div class="wrapper">
+        <input type="password" id="password2">
+        <button class="toggler-txt" type="button" id="toggleBtn2">Show</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

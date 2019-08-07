@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    font-size: xx-large;
+    height: 50px;   
+}
+
+li {
+    background: green;
+    color: white;
+    display: none;
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#newsletterOverlay {
+    background: yellow;
+    display: none;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+label {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+input[type='email'] {
+    background: white;
+    height: 100px;
+    width: 450px;
+    margin: 20px;
+    font-size: 25px;
+}
+span{
+    position: absolute;
+    top: 0;
+}

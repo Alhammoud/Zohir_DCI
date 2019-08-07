@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Active Button</h1>
+    <p>Highlight the active/current (pressed) button.</p>
+
+    <div id="myDIV">
+        <button class="btn">1</button>
+        <button class="btn active">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+    </div>
+
+
+
+    <p>Click the "Try it" button to toggle between adding and removing the "mystyle" class name of the DIV element:</p>
+
+    <p><strong>Note:</strong> The classList property is not supported in IE9 and earlier. In this example, we check if
+        the browser supports the classList.toggle() method. If not, use the className property together with other JS
+        properties and methods to achieve the same result (for IE9).</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV2">
+        This is a DIV element.
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
