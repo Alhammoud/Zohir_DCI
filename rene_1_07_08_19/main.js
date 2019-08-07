@@ -89,3 +89,18 @@ console.log(colors);
 
 //.slice()
 //array.slice(start, end)
+
+
+// .sort()
+// array.sort(compareGunction)
+const zahlen=[10,1,5];
+
+let sortNumbers = (a, b) => {
+    console.log(a);
+    console.log(b);
+    console.log(a-b);
+    return a-b;
+}
+
+zahlen.sort(sortNumbers)
+console.log(zahlen)
