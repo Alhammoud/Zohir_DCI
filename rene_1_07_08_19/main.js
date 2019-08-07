@@ -93,14 +93,83 @@ console.log(colors);
 
 // .sort()
 // array.sort(compareGunction)
-const zahlen=[10,1,5];
+
+
+Array.prototype.sortNumbers = function () {
+    let sortNumbers = (zahl1, zahle2) => {
+
+    };
+    return this.sort(sortNumber)
+}
+const zahlen = [10, 1, 5];
 
 let sortNumbers = (a, b) => {
     console.log(a);
     console.log(b);
-    console.log(a-b);
-    return a-b;
+    console.log(a - b);
+    return a - b;
 }
 
 zahlen.sort(sortNumbers)
 console.log(zahlen)
+
+
+
+const cars = [{
+        name: "Mercedes",
+        color: "Grey",
+        age: 2,
+        price: 90000
+    },
+    {
+        name: "Opel",
+        color: "Green",
+        age: 1,
+        price: 40000
+    },
+    {
+        name: "VW",
+        color: "Yellow",
+        age: 15,
+        price: 30000
+    },
+    {
+        name: "Audi",
+        color: "Blue",
+        age: 3,
+        price: 60000
+    },
+    {
+        name: "Citroen",
+        color: "Pink",
+        age: 11,
+        price: 40000
+    },
+    {
+        name: "Jaguar",
+        color: "Orange",
+        age: 5,
+        price: 80000
+    },
+    {
+        name: "Ferrari",
+        color: "Red",
+        age: 6,
+        price: 500000,
+    }
+];
+//1. 20% Rabatt auf Fahrzeuge älter als 10 Jahre
+//2. Sortieren nach Preis
+//3. Pinke Fahrzeuge in Rot umlackieren
+//4. Gesamtwert des Fuhrparks ermitteln
+
+let newCars = cars.map((data, index) => {
+    return {
+        ...data,
+        discountPrice: data.price * 5
+    }
+});
+
+console.log(newCars);
+
+
