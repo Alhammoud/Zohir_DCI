@@ -1,0 +1,78 @@
+body {
+    box-sizing: border-box;
+    margin:20px ;
+}
+.c0 div{
+    height: 150px;
+}
+
+.c0{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px){
+    /* .c0 div{
+        height: 150px;
+        width: 100%;
+
+    } */
+    .c1, .c2, .c6, .c3, .c4, .c5{
+        width: 50%;
+    }
+    .c7{
+        width: 100%;
+    }
+
+ }/* Die Größe für Mobile*/
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+
+    .c1, .c2, .c6, .c7{
+        width: 100%;
+    }
+    .c3, .c4, .c5{
+        width: calc(100%/3);
+    }
+}/* Die Größe für Tablet*/
+ 
+@media only screen and (min-width: 801px) {
+   
+    .c1, .c2, .c6, .c7{
+        width: 50%;
+    }
+    .c3, .c4, .c5{
+        width: calc(100%/3);
+    }
+}/* Die Größe für Tablet + Desktop*/
+
+.c0 {
+    border: 2px solid red;
+}
+
+.c1 {
+    background-color: purple;
+}
+
+.c2 {
+    background-color: blueviolet;
+}
+
+.c3 {
+    background-color: blue;
+}
+
+.c4 {
+    background-color: green;
+}
+
+.c5 {
+    background-color: yellow;
+}
+
+.c6 {
+    background-color: darkorange;
+}
+
+.c7 {
+    background-color: pink;
+}

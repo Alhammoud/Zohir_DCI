@@ -1,0 +1,11 @@
+:root {
+  --main-bg-color1:rgba(90, 90, 199, 0.582);
+  --main-bg-color2:rgba(167, 54, 73, 0.336);
+}
+
+body {
+  background-image: linear-gradient(var(--main-bg-color1), var(green));
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

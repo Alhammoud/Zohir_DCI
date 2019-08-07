@@ -1,0 +1,26 @@
+@media screen and (min-width:801px) {
+    header{
+        width: 100%;
+        /* order: 0; */
+        }
+        
+        .aside__1{
+            width: 25%;
+            /* order:0; */
+        }
+        
+        article{
+            width: 50%;
+            order:1;
+        }
+        
+        .aside__2{
+            width: 25%;
+            order: 1;
+        }
+        
+        footer{
+            width: 100%;
+            order: 1;
+        }
+}/* Die Größe für Desktop*/

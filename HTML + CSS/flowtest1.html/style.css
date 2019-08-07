@@ -1,0 +1,27 @@
+body{
+    background: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+.block{
+    width: 25vw;
+    height:25vw;
+}
+
+.green{
+    background: green;
+}
+.red{
+    background: red;
+}
+.purple{
+    background: purple;
+}
+.pink{
+    background: pink;
+}
+
+.pink{
+    background: blue;
+}

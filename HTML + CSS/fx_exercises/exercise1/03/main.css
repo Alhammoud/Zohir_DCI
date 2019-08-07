@@ -1,0 +1,16 @@
+/* Use flexbox to display all the flex items in columns. 
+Wrap the items. 
+Set the alignment of the thrid item to center*/
+
+body {
+    height: 800px;
+}
+
+div {
+    height: 100px;
+    width: 150px; 
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+}

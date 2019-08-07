@@ -1,0 +1,14 @@
+/* Use flexbox to align the divs in one row. 
+Reverse the order of the divs 
+(so that div 001 is the last one in the row, and 016 the first). */
+
+
+div {
+    height: 100px;
+    width: 150px;
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+
+}

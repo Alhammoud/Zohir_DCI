@@ -1,0 +1,514 @@
+<pre><font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~</b></font>$ cd Desktop/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop</b></font>$ cd HTML\ +\ CSS/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS</b></font>$ mkdir about-myself
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS</b></font>$ cd about-myself/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 8
+drwxr-xr-x  2 dci-l113 dci-l113 4096 Mai  7 11:07 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 74 dci-l113 dci-l113 4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (about-myself) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/dci-l113/Desktop/HTML + CSS/about-myself/package.json:
+
+{
+  &quot;name&quot;: &quot;about-myself&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+added 174 packages from 138 contributors and audited 529 packages in 10.627s
+found 1 <font color="#EF2929">high</font> severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 64
+drwxr-xr-x   3 dci-l113 dci-l113  4096 Mai  7 11:08 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:08 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   260 Mai  7 11:08 package.json
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm audit fix
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
+up to date in 0.617s
+fixed 0 of 1 vulnerability in 529 scanned packages
+  1 vulnerability required manual review and could not be updated
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+Benutzen Sie „fg“, um zu Nano zurückzukehren.
+
+[1]+  Angehalten              nano package.json
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+updated 1 package and audited 529 packages in 2.234s
+found 1 <font color="#EF2929">high</font> severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+updated 1 package and audited 529 packages in 1.778s
+found 1 <font color="#EF2929">high</font> severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (about-myself) 
+version: (1.0.0) 
+description: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/dci-l113/Desktop/HTML + CSS/about-myself/package.json:
+
+{
+  &quot;name&quot;: &quot;about-myself&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;node-sass&quot;: &quot;^4.12.0&quot;
+  },
+  &quot;devDependencies&quot;: {},
+  &quot;description&quot;: &quot;&quot;
+}
+
+
+Is this OK? (yes) 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+updated 1 package and audited 529 packages in 1.756s
+found 1 <font color="#EF2929">high</font> severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+updated 1 package and audited 529 packages in 5.385s
+found 1 <font color="#EF2929">high</font> severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ mkdir sass css
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 76
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:13 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   285 Mai  7 11:26 package.json
+-rw-r--r--   1 dci-l113 dci-l113  1024 Mai  7 11:11 .package.json.swp
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ cdoe .
+
+Der Befehl &apos;cdoe&apos; wurde nicht gefunden, meinten Sie:
+
+  Befehl &apos;code&apos; aus dem Snap code (51b0b281)
+  Befehl &apos;cde&apos; aus dem deb cde
+  Befehl &apos;cdo&apos; aus dem deb cdo
+  Befehl &apos;cdde&apos; aus dem deb cdde
+
+Informationen zu neuen Versionen sind mit &apos;snap info &lt;snapname&gt;&apos; zu finden.
+
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ code .
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 80
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:35 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+-rw-rw-r--   1 dci-l113 dci-l113   318 Mai  7 11:39 index.html
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:13 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   285 Mai  7 11:26 package.json
+-rw-r--r--   1 dci-l113 dci-l113  1024 Mai  7 11:11 .package.json.swp
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:37 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass/main.scss css/style,css -w
+
+sh: 1: node-sass/main.scss: not found
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">file</font> sh
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> ENOENT
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">syscall</font> spawn
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> about-myself@1.0.0 compile:sass: `node-sass/main.scss css/style,css -w`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> spawn ENOENT
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the about-myself@1.0.0 compile:sass script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/dci-l113/.npm/_logs/2019-05-07T09_39_52_505Z-debug.log
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass scss/main.scss css/style.css -w
+
+An output directory must be specified when compiling a directory
+An output directory must be specified when compiling a directory
+fs.js:121
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, lstat &apos;scss/main.scss&apos;
+    at Object.lstatSync (fs.js:863:3)
+    at Object.module.exports.parseDir (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/sass-graph/sass-graph.js:153:10)
+    at Object.watcher.reset (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/lib/watcher.js:17:21)
+    at watch (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:260:20)
+    at run (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:319:5)
+    at Object.&lt;anonymous&gt; (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:405:3)
+    at Module._compile (internal/modules/cjs/loader.js:723:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:734:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> about-myself@1.0.0 compile:sass: `node-sass scss/main.scss css/style.css -w`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the about-myself@1.0.0 compile:sass script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/dci-l113/.npm/_logs/2019-05-07T09_42_27_703Z-debug.log
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 76
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:43 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+-rw-rw-r--   1 dci-l113 dci-l113   318 Mai  7 11:39 index.html
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:13 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   290 Mai  7 11:43 package.json
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:37 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ cd sass/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself/sass</b></font>$ ll
+insgesamt 12
+drwxr-xr-x 2 dci-l113 dci-l113 4096 Mai  7 11:37 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 5 dci-l113 dci-l113 4096 Mai  7 11:43 <font color="#729FCF"><b>..</b></font>/
+-rw-rw-r-- 1 dci-l113 dci-l113   35 Mai  7 11:38 main.scss
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself/sass</b></font>$ b
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass scss/main.scss css/style.css -w
+
+An output directory must be specified when compiling a directory
+An output directory must be specified when compiling a directory
+fs.js:121
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, lstat &apos;scss/main.scss&apos;
+    at Object.lstatSync (fs.js:863:3)
+    at Object.module.exports.parseDir (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/sass-graph/sass-graph.js:153:10)
+    at Object.watcher.reset (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/lib/watcher.js:17:21)
+    at watch (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:260:20)
+    at run (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:319:5)
+    at Object.&lt;anonymous&gt; (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:405:3)
+    at Module._compile (internal/modules/cjs/loader.js:723:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:734:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> about-myself@1.0.0 compile:sass: `node-sass scss/main.scss css/style.css -w`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the about-myself@1.0.0 compile:sass script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/dci-l113/.npm/_logs/2019-05-07T09_44_30_678Z-debug.log
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (about-myself) 
+version: (1.0.0) 
+description: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/dci-l113/Desktop/HTML + CSS/about-myself/package.json:
+
+{
+  &quot;name&quot;: &quot;about-myself&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;compile:sass&quot;: &quot;node-sass scss/main.scss css/style.css -w&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;node-sass&quot;: &quot;^4.12.0&quot;
+  },
+  &quot;devDependencies&quot;: {},
+  &quot;description&quot;: &quot;&quot;
+}
+
+
+Is this OK? (yes) 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm install node-sass
+
+&gt; node-sass@4.12.0 install /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/install.js
+
+Cached binary found at /home/dci-l113/.npm/node-sass/4.12.0/linux-x64-67_binding.node
+
+&gt; node-sass@4.12.0 postinstall /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass
+&gt; node scripts/build.js
+
+Binary found at /home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/vendor/linux-x64-67/binding.node
+Testing binary
+Binary is fine
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> about-myself@1.0.0 No repository field.
+
++ node-sass@4.12.0
+updated 1 package in 16.129s
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 76
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:43 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+-rw-rw-r--   1 dci-l113 dci-l113   318 Mai  7 11:39 index.html
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:46 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   291 Mai  7 11:45 package.json
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:37 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass scss/main.scss css/style.css -w
+
+An output directory must be specified when compiling a directory
+An output directory must be specified when compiling a directory
+fs.js:121
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, lstat &apos;scss/main.scss&apos;
+    at Object.lstatSync (fs.js:863:3)
+    at Object.module.exports.parseDir (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/sass-graph/sass-graph.js:153:10)
+    at Object.watcher.reset (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/lib/watcher.js:17:21)
+    at watch (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:260:20)
+    at run (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:319:5)
+    at Object.&lt;anonymous&gt; (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:405:3)
+    at Module._compile (internal/modules/cjs/loader.js:723:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:734:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> about-myself@1.0.0 compile:sass: `node-sass scss/main.scss css/style.css -w`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the about-myself@1.0.0 compile:sass script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/dci-l113/.npm/_logs/2019-05-07T09_46_35_722Z-debug.log
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 76
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:43 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+-rw-rw-r--   1 dci-l113 dci-l113   318 Mai  7 11:39 index.html
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:46 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   291 Mai  7 11:45 package.json
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:37 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ cd sass
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself/sass</b></font>$ ll
+insgesamt 12
+drwxr-xr-x 2 dci-l113 dci-l113 4096 Mai  7 11:37 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 5 dci-l113 dci-l113 4096 Mai  7 11:43 <font color="#729FCF"><b>..</b></font>/
+-rw-rw-r-- 1 dci-l113 dci-l113   35 Mai  7 11:38 main.scss
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself/sass</b></font>$ b
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass scss/main.scss css/style.css -w
+
+An output directory must be specified when compiling a directory
+An output directory must be specified when compiling a directory
+fs.js:121
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, lstat &apos;scss/main.scss&apos;
+    at Object.lstatSync (fs.js:863:3)
+    at Object.module.exports.parseDir (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/sass-graph/sass-graph.js:153:10)
+    at Object.watcher.reset (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/lib/watcher.js:17:21)
+    at watch (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:260:20)
+    at run (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:319:5)
+    at Object.&lt;anonymous&gt; (/home/dci-l113/Desktop/HTML + CSS/about-myself/node_modules/node-sass/bin/node-sass:405:3)
+    at Module._compile (internal/modules/cjs/loader.js:723:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:734:10)
+    at Module.load (internal/modules/cjs/loader.js:620:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> about-myself@1.0.0 compile:sass: `node-sass scss/main.scss css/style.css -w`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the about-myself@1.0.0 compile:sass script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/dci-l113/.npm/_logs/2019-05-07T09_49_20_893Z-debug.log
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ ll
+insgesamt 76
+drwxr-xr-x   5 dci-l113 dci-l113  4096 Mai  7 11:48 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x  74 dci-l113 dci-l113  4096 Mai  7 11:07 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:34 <font color="#729FCF"><b>css</b></font>/
+-rw-rw-r--   1 dci-l113 dci-l113   318 Mai  7 11:39 index.html
+drwxr-xr-x 172 dci-l113 dci-l113  4096 Mai  7 11:46 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--   1 dci-l113 dci-l113   291 Mai  7 11:45 package.json
+-rw-r--r--   1 dci-l113 dci-l113 47165 Mai  7 11:08 package-lock.json
+drwxr-xr-x   2 dci-l113 dci-l113  4096 Mai  7 11:37 <font color="#729FCF"><b>sass</b></font>/
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ nano package.json 
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass sass/main.scss css/style.css -w
+
+^C   
+<font color="#8AE234"><b>dci-l113@DCI-L113</b></font>:<font color="#729FCF"><b>~/Desktop/HTML + CSS/about-myself</b></font>$ npm run compile:sass
+
+&gt; about-myself@1.0.0 compile:sass /home/dci-l113/Desktop/HTML + CSS/about-myself
+&gt; node-sass sass/main.scss css/style.css -w
+
+
+</pre>

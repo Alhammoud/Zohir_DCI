@@ -1,0 +1,25 @@
+/* Use flexbox to display all divs in rows + wrapping. 
+
+When resizing the page: 
+The divs on the LAST row should take up all available space 
+(do NOT use media queries for that, use flexbox tools to grow items dynamically)
+*/
+body{
+    height: 700px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    border: 1px solid black;
+
+}
+
+div {
+    height: 100px;
+    width: 150px; 
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+    flex-grow: 1;
+}

@@ -1,0 +1,74 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #1a1a1a;
+}
+
+.container {
+    color: white;
+    min-width: 600px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 5px;
+    font-size: 2em;
+    background: #000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+}
+
+.menu-item {
+    margin: 5px 10px 5px 0;
+    font-size: 1.3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar {
+    width: 120px;
+    background: #eeeeee;
+    padding: 5px;
+}
+
+.sidebar a {
+    color: black;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    margin: 5px 10px;
+    cursor: pointer;
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(31, 31, 31, 0.2), 0 6px 20px 0 rgba(31, 31, 31, 0.19);
+}
+
+.thumbnail:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);    
+}
+
+.movie-description {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
+}

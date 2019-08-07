@@ -1,0 +1,37 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+div{
+    display: none;
+}
+
+@media only screen and (max-width: 480px){
+    .a{
+        display: block;
+    }
+}
+
+/* @media screen and (max-width: 480px){
+    .a{
+        display: block;
+    }
+} */ /* es ist für neues Browser*/
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .b {
+        display: block;
+    }
+ }
+ 
+ @media only screen and (max-width: 1024px) and (min-width: 769px) {
+    .c {
+        display: block;
+    }
+ }
+ 
+ @media only screen and (min-width: 1025px) {
+    .d {
+        display: block;
+    }
+}

@@ -1,0 +1,19 @@
+/* Use flexbox to display all divs in one row at the bottom of the container. */
+
+body {
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    align-items: flex-end; /*to display all divs in one row at the bottom of the container*/
+    align-content: center;
+}
+
+div {
+    height: 100px;
+    width: 150px; 
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+}

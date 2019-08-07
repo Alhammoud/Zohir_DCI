@@ -1,0 +1,38 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    height: 70px;
+    background-color: aquamarine;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.article{
+    padding: 4px;
+    margin: 10px;
+    background: rgb(255, 43, 43);
+
+}
+
+.footer{
+    position:sticky;
+    bottom: 0px;
+    height: 60px;
+    background: blueviolet;
+}
+
+
+@media only screen and (max-width: 769px) {
+    .content{
+        flex-direction: column;
+    }
+    .footer{
+        position:relative;
+    }
+ }

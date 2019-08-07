@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+}
+
+.header {
+    height: 120px;
+}
+
+.main {
+    height: 100%;
+}
+
+.header,
+.navbar, 
+.karussell,
+.karten {
+    background: rgb(55,0,255);
+}
+span {
+    border: 1px solid black;
+    color: white;
+    font-size: 25px;    
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .active>.nav-link {
+    background: white;
+    border: 2px solid darkblue;
+    color: blue;
+}
+
+.karussell,
+.karten {
+    padding: 5px 0;
+}
+
+.karten {
+    height: 200px;
+}
+.card-body {
+    margin-top: calc(80px - 0.5em);
+    padding-bottom: 20px;
+}
+input.form-control {
+    width: 50%;
+}

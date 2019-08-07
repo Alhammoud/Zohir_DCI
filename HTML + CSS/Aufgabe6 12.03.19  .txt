@@ -1,0 +1,56 @@
+Aufgabe6 12.03.19
+~~~~~~~~~
+
+1) Gehe zu deinem mywebsite3 Ordner bzw. Repository
+
+2)Erstelle einen neuen Branch "loopy-loop" and wechsele gleich zu diesem.
+
+3)Erstelle eine neue Datei "index.js" und füge folgenden Code hinzu:
+ for(let i=0; i<10; i++)
+{
+console.log('I am a loop: ' + i) 
+}
+
+4) committe 3).
+
+5) Jetzt fällt Dir ein , dass Du die Anzahl der Iterationen auf erhöhen willst, also änderst Du "i<10" zu "i<5".
+
+6) committe 5).
+
+7) Merge den loopy-loop branch in den Master branch.
+
+8) Erstelle einen neuen branch "crypto" und wechsele zu diesem.
+
+9) Gehe zu Google-Bilder suche und lade ein neues Bild mit dem Thema "ripple" und Bildgröße medium.
+  speichere es als "ripple.jpg" in einem Verzeichnis namens "images" , welches Du zuerst erstellen musst.
+
+10) Füge folgenden HTML-Code in deine index.html hinzu nach dem <body> Tag:
+         <img src="./images/ripple.jpg">
+
+11) Commit deine letzten Änderungen
+
+12) Merge den crypto-Branch ein den Master-branch ohne fast-forward dabbei benutzen.
+
+13) Erstelle einen neuen Branch "bitcoin" und zu diesem.
+
+14) Gehe zu Google-Bilder suche und lade eine neues Bild mit dem Thema "bitcoin" und Bildgröße medium.
+     speichere es alles "bitcoin,jpg" in deinem "images"-Verzeichnis.
+
+15)Ändere deine index.html so dass, bitcoin.jpg angezeigt wird und nicht mehr ripple.jpg
+
+16) committe.
+
+17)wechsel zum master Branch.
+
+18) Gehe zu Google-bilder suche und lade ein neues Bild mit dem Thema "ethereum" und bildgröße medium.
+     speichere es als "ethereum.jpg" in deinem "images"-Verteichnis.
+
+19) Ändere index.html so ,dass ethereum.jpg angezeigt wird unf nicht ripple.jpg .
+
+21) Merge den bitcoin Branch in den Master branch, was für ein Problem besteht jetzt?
+    versuche es zu lösen bzw. den konflikt zu resolven und zu committen.
+
+22)Erstelle ein Remote-Repository von deinem mywebsite3 Repository.
+
+
+

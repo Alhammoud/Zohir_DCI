@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background: #333;
+    color:#222;
+    font-family: Helvetica, Arial,sans-serif
+}
+
+#container{
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.box{
+ background: #db4e4e;
+ width: 150px;
+ height: 150px;
+ margin: 20px 0;
+ color: white;
+}
+
+#relative-box{
+position: relative;
+top: 30px;
+left: -70px;
+/* overflow: hidden; */
+
+}
+
+#absolute-box{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}

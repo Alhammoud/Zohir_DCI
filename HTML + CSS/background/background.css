@@ -1,0 +1,53 @@
+code{
+    background: white;
+    color: #e96c28;
+    display: block;
+    padding: 5px;
+}
+    #eule{
+    background-image:url('img/eule.png');
+    height:310px;
+    /* background-repeat: no-repeat; */
+}
+#pink{
+    background-color: pink;
+}
+
+#eule2{
+    background-image:url('img/eule.png');
+    height:310px;
+    background-repeat: no-repeat;
+}
+
+
+#eule3{
+    background-image:url('img/eule.png');
+    height:700px;
+    background-repeat: repeat-y;
+}
+
+#position-eule{
+    background-image:url('img/eule.png');
+    height:310px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#center-eule{
+    background-image:url('img/eule.png');
+    height:310px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#abkuerzungs-eule{
+    background:pink url('img/eule.png') top left no-repeat;
+    height:310px;
+}
+
+
+#abkuerzungs2-eule{
+    background:pink url('img/eule.png') center 50% no-repeat;
+    height:450px;
+}

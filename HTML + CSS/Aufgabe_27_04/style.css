@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    background: cornflowerblue;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+}
+
+.E{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: red;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+
+}
+.F{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 1PX solid black;
+}
+/* 
+.klon_E{
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    background-color: red;
+    border: 1px solid black;
+} */
+.clearfix{
+    clear:both;
+    visibility: hidden;
+}

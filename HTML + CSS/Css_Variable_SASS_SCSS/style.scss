@@ -1,0 +1,10 @@
+
+
+  $main-bg-color1:rgba(167, 54, 73, 0.336);
+  $my-green:green;
+
+  body{
+    background-image: linear-gradient($main-bg-color1,$my-green);
+    height: 100vh;
+  }
+

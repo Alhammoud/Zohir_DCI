@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: 75% 25%; /* 2 colums */
+   /* grid-template-rows: 50% 50%; /* 2 rows */ 
+    grid-gap: 10px; /* für Abstand zwischen innerhalb die Elemente */
+}
+header{
+background: gainsboro;
+/* grid-column: 1/2 ; */
+}
+aside{
+    background: gainsboro;
+}
+main{
+    background: gainsboro;
+}
+footer{
+    background: gainsboro;
+}
+
+/* .padding-margin{
+    padding: 5px;
+    margin: 5px;
+} */

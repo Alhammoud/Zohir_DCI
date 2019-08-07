@@ -1,0 +1,29 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    /* grid-template-columns: 4 fr;
+    grid-template-rows: 7 fr; */
+    grid-auto-rows: minmax(100px,auto);
+}
+
+.box1{
+    grid-row: 1/1;
+    grid-column:1/1;
+    background: yellow;
+}
+.box2{
+    grid-row:2/4;
+    grid-column:1/1 ;
+    background:red;
+}
+.box3{
+    grid-row:4/6 ;
+    grid-column:1/1;
+    background: plum;
+}
+.box4{
+    grid-row:1/4 ;
+    grid-column:2/3 ;
+    background: greenyellow;
+}

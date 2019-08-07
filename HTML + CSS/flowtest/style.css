@@ -1,0 +1,39 @@
+body{
+    background: #aaa;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.block{
+    width: 25vh;
+    height:25vh;
+}
+
+.red{
+    background: red;
+    float: left;
+}
+.green{
+    background: green;
+    float:left;
+}
+
+
+.blue{
+    background: blue;
+    clear: both;
+  }
+
+
+
+.purple{
+    background: purple;
+    float: right;
+}
+
+.pink{
+    background: pink;
+    float: right;
+
+  }

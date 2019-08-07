@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+}
+    
+body{
+    background: url(images/green_background.jpg);
+    font-family: Helvetica,Arial, sans-serif;
+
+}
+
+
+#main_container{
+    border: 1px solid black;
+    width: 850px;
+    margin: 20px auto;
+}
+
+.header{
+    /* border: 1px solid black; */
+    /* position: relative; */
+    padding:11px 0 20px 330px;
+} 
+
+.inner_container{
+    border: 1px solid black;
+    background: url(images/yellow_background.jpg);
+    padding:17px 0px 0px 28px;
+}
+h1{
+    border: 1px solid black;
+    color: rgb(158, 10, 10);
+    width: 500px;
+    text-align: center;
+    padding: 3px 0 4px 0;
+    margin: 3px 0 -20px 0;
+}
+#welcome{
+    border: 1px solid black;
+    font-size: 71%;
+    color: rgb(117, 72, 10);
+    width: 52%;
+    text-align: justify;
+    /* padding: 0 0 0 0; */
+}

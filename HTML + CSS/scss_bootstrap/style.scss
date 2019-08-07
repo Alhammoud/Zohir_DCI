@@ -1,0 +1,8 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+$theme-colors: (
+  "primary":pink,
+  "danger": #ff4136
+  );
+  @import "bootstrap-4.0.0/scss/bootstrap";

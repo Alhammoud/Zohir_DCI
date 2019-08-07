@@ -1,0 +1,17 @@
+Aufgabe 27_04:
+~~~~~~~~~~~~~~
+
+1) Erstelle eine HTML5 webseite mit einer stylesheet-Datei.
+2) Erstelle 4 Divs mit dem Inhalt A, B, C, und D.
+3) Jesdes Div hat die Maße 200x200 px.
+4) Die beiden Divs A und B sind nebeneinander .
+   C und D ebenfalls.
+   C und D sind allerdings unterhalb von A und B.
+5) Alle Divs haben die Farbe cornflowerblue und eine margin von 5px zu all Seiten.
+6) Erstelle ein Weiteres Div E, welches 100px vertikal und 100px horizontal vom ursprung des Dokuments positioniert ist.
+   Die farbe ist red und die Maße sind 200x200 px.
+7) Erstelle ein weiteres Div F nach dem Div E mit der Position relative.
+   die Maße sind 200x200px und die Farbe ist green.
+8) Erstelle einen Klon von Div E namens Klon_E und positioniere rs innerhalb von F.
+    Wass beobachtest Du?
+   

@@ -1,0 +1,5 @@
+Aufgabe:
+
+Erstelle eine kleine website mit Parallax-Effekt und 3 parallax Bildern unereinander.
+Das Thema sei dir frei gestellt.
+Z.B. Dein lieblingsort in Berlin oder sonstwo.

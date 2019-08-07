@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #bbbbbb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    width: 1300px;
+    margin: 0 auto;
+
+}
+
+header {
+    padding: 20px 50px 40px;
+}
+
+.header_main {
+    background: #ffffff;
+    margin: 0 auto;
+    width: 750px;
+}
+
+.header_content {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+
+input {
+    flex-grow: 1;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.main {
+    background: #ffffff;
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+    flex: 2;
+
+}
+
+.sidebar_1, .sidebar_2 {
+    flex: 1;
+}
+
+.main_column {
+    flex: 2;
+}
+
+h2,
+h3,
+p {
+    padding: 10px;
+}
+
+.feature {
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+}
+
+.feature_1 {
+    background: #c0dbe2;
+    width: 420px;
+    height: 225px;
+
+}
+
+.feature_2 {
+    background: #cdf1c3;
+    width: 420px;
+    height: 225px;
+
+}
+
+.feature_3 {
+    background: #ccb9da;
+    width: 420px;
+    height: 225px;
+    margin-bottom: 30px;
+}
+
+.main_box {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 50px 40px 40px;
+}
+
+.box {
+    border: 1px solid red;
+    background: red;
+    font-size: 4em;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    /* font-weight: bold; */
+    color: #fff;
+}
+
+.number {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    margin: 30px 0 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.plz {
+    width: 700px;
+    height: 400px;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.plz_content {
+    color: #fff;
+    font-size: 3em;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.footer_content {
+    width: 900px;
+    height: 400px;;
+    display: flex;
+}
+
+.footer_text {
+    background: #fff;
+    width: 450px;
+}
+
+.text_AB {
+    display: flex;
+}
+
+.text_A {
+    background: rgb(117, 207, 243);
+    width: 450px;
+    height: 200px;
+
+}
+
+.text_B {
+    background: rgb(145, 236, 145);
+    width: 450px;
+    height: 200px;
+
+}

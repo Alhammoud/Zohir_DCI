@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url("images/green_background.jpg");    
+}
+
+img {
+    margin: 30px 0 0 650px;
+}
+    
+#container {
+    border: 1px solid black;
+    background: url("./images/yellow_background.jpg");
+    width: 768px;
+    margin: 40px 315px;
+    padding: 55px ;
+    position: absolute;
+    left: auto;
+    /* font-size: small; */
+}
+
+#content {
+    border: 1px solid black;
+    width: 500px;
+}
+
+h1 {
+    border: 1px solid black;
+    color: rgb(117, 72, 10);
+    font-size: 40px;
+}
+
+#welcome {
+    color: rgb(117, 72, 10);
+    /* padding: 0 0 15px 0; */
+    font-size: 15px;
+    width: 520px;
+}
+
+#offer {
+    color: white;
+    background: url("./images/red_background.jpg");
+    padding: 25px;
+    position: relative;
+    top: 55px;
+    width: 485px;
+}
+
+#spezial {
+    width: 155px;
+    position: relative;
+    top: -45px;
+    right: 20px;
+    /* padding: none */
+}
+
+#steak {
+    position: relative;
+    float: right;
+    top: -35px;
+    right: -20px;
+}
+
+#nav {
+    float: right;
+    position: absolute;
+    top: 75px;
+    right: 25px;
+    width: 250px;
+    font-size: small;
+}
+
+h2 {
+    background: url("./images/green_background.jpg");
+    color: white;
+    /* padding: 10px 40px 10px 30px; */
+    width: 140px;
+}
+
+.media {
+    font-size: medium;
+    padding: 10px 40px 10px 30px;
+}
+
+.info {
+    color: rgb(117, 72, 10);
+    padding: 10px 0 20px 30px;
+}
+
+#farmer {
+    width: 200px;
+    overflow: visible;
+}
+ 
+#mail {
+    color: white;
+    background: green;
+    width: 155px;
+    position: relative;
+    top: -20px;
+    right: -30px;
+}

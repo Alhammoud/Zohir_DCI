@@ -1,0 +1,46 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+} 
+.menu{
+    animation-name: wald;
+    animation-duration: 2s;
+}
+
+.background{
+    background: url(wald.jpg);
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    /* background-position: left;  */
+}
+h1{
+    padding: 10px;
+    margin: 20px auto;
+    font-weight: bold;
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+
+}
+@keyframes wald{
+    0%{
+       opacity: 0;
+    }
+    50%{
+        /* opacity: 0.5; */
+    }
+    100%{
+        opacity: 1;
+    }
+}

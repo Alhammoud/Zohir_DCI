@@ -1,0 +1,51 @@
+
+Augabe 3:}
+~~~~~~~~~
+
+1) Erstelle Ein Romate-Repository aus Deinem hallo_git3 lokalrepository
+2)Verändere darei1.txt indem "Hallo Sonne" in zeile 1 schreibst, anstatt "Hallo Mars"
+3) Commite die Änderungen ind pushe sie Noch Nicht.
+
+
+Aufgabe 4
+~~~~~~~~
+1) Erstelle ein lokales Repository aus mywebsite2.
+
+2) Erstelle ein remote  Repository aus mywebsite2. push
+
+3) Ändere den Titel nach "meine 2. Website mit git versioniert".
+
+4) Committe seine Änderungen.
+
+5) Füge eine neue Datei hinzu : style.css und schreibe folgendes hinein:
+
+body ,htlm{
+
+ 	width: 100%;
+	heigt: 100%;
+}
+h1{
+color:blue;
+}
+
+6) Commit die Änderungen
+
+7)Ändere Die Farbe des h1-elements von blau nach red.
+
+8)stage die Änderungen und vegleiche den letzten Commit mit dem staging-Bereich. was hat sich geändert?
+
+9a)Füge die folgende zeile in die index.html ein, nach Zeile 7 vor dem </head> Tag:
+ <link rel="stylesheet" href="style.css">
+
+9b)Füge die folgende Zeile in die index.html ein , nach dem <body> Tag:
+<h1> Hallo Jupiter</h>
+
+10)Commit die Änderungen.
+
+11)Vergleiche den aktuellen Commit mit deinem ersten Commit. wieviele Zeilen wurden hinzugefügt pro Datei?
+.
+
+12)Vergleiche den letzten lockalen Commit mit dem letzten Remote-Commit.
+
+13) pushe den letzeten lokalen Commit in Dein Remote Repository.
+

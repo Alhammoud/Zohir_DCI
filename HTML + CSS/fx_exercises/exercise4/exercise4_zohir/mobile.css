@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px){
+    body{
+        flex-direction: column;
+    }
+    .article, .aside__1,.aside__2{
+        width: 100%;
+    }
+ 
+}/* Die Größe für Mobile*/

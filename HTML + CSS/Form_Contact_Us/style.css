@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background: white;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#contanier,input{
+    background: #ff0e42e7;
+    margin:12px 5px 22px 6px;
+    display: block;
+}
+
+#form_blue{
+    width: 50%;
+    background-size: 100% 100%;
+    font-family: sans-serif;
+    color: black;
+}
+fieldset{
+
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0;
+
+    margin:14px 14px 71px 42px;
+
+}
+fieldset, legend{
+    background: #9ae1f7e7;
+     background-size: 100% 100%;
+}
+legend{
+    margin: 0px 0px 14px 33px;
+    padding: 0 0 0 0;
+    border: 2px solid black;
+    color: black;
+    height:35px;
+    width: 150px;
+   
+}
+
+h1{
+
+}

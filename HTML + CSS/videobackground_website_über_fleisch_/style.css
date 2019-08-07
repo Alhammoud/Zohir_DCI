@@ -1,0 +1,104 @@
+html, body{
+    /* padding: 0; */
+    /* margin: 0; */
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  
+.video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform:scale(1.5); */
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}/* video als hintergroung machen*/
+
+.header{
+    width: 97%;
+    /* border: 1px solid yellow; */
+}
+#nav{
+    padding-top: 6px;
+    padding-bottom: 5px;
+}
+
+
+
+ul {
+    background: rgba(233, 229, 27, 0.1);
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content:center;
+}
+
+li{
+    text-align: center;
+    padding:1em;
+    
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(110, 223, 82);
+    }   
+
+li:hover{
+    background: rgba(81, 255, 13, 0.377);
+}
+
+
+.content{
+    position: fixed;
+    top: 20;
+    color: #e20c0c;
+    /* background: rgba(233, 229, 27, 0.3); */
+    width: 100%;
+    padding: 20px;
+}
+
+/* CSS for losung.html */
+.parallax{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.pic1{
+    background-image: url(pic-1.jpg);
+}
+.pic2{
+    background-image: url(pic-2.jpg);
+}
+.pic3{
+    background-image: url(pic-3.jpg);
+}
+.pic4{
+    background-image: url(pic-3.jpg);
+}
+.pic5{
+    background-image: url(pic-3.jpg);
+}
+.description{
+    height: 25%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}

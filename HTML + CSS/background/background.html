@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hintergründe</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+
+<body>
+    <h1>CSS hintergründe</h1>
+    <h2>Eigenschaften</h2>
+    <p>Es gibt einige verschiedene Hintergrund Eigenschaften</p>
+    <dl>
+        <dt id="eule">background-image</dt>
+        <dd>Diese Eigenschaft ist die location von Bild, zum Beispiel
+            <code>
+                h1{
+                    background-image:url('http://website.com/img/background.jpg;')
+                }
+            </code>
+            oder relativer Pfad ohne https:
+            <code>
+                h1{
+                    background-image:url('img/eule.png');
+                }
+            </code>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt id="pink">background-color</dt>
+        <dd>Diese Eigenschaft ist die Farbe von Bild, zum Beispiel
+            <code>
+                h1{
+                    background-color:pink;
+                }
+            </code>
+            oder alternativ als
+            <code>
+                h1{
+                    background-color:#FFC0CB;
+                }
+            </code>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt id="eule2">background-image</dt>
+        <dd>Diese Eigenschaft ist die location von Bild, zum Beispiel
+            <code>
+                h1{
+                    background-image:url('http://website.com/img/background.jpg;')
+                }
+            </code>
+            oder relativer Pfad ohne https:
+            <code>
+                h1{
+                    background-image:url('img/eule.png');
+                }
+            </code>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt id="eule3">background-repeat</dt>
+        <dd>Diese Eigenschaft beschreibt,wie oft der Hintergrund wiederholt werden soll, zum Beispiel einmalig
+            <code>
+                h1{
+                    background-repeat:no-repeat;
+                }
+            </code>
+            oder auf der Y-Achse:
+            <code>
+                h1{
+                    background-repeat:repeat-y;
+                }
+            </code>
+        </dd>
+    </dl>
+    <dl>
+        <dt id="position-eule">background-position:right</dt>
+        <dd>Diese Eigenschaft beschreibt,wie der Hintergrund positioniert werden soll, zum Beispiel einmalig
+            <code>
+                h1{
+                    background-position:right;
+                }
+            </code>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt id="center-eule">background-position:center</dt>
+        <dd>Diese Eigenschaft beschreibt,wie der Hintergrund positioniert werden soll, zum Beispiel einmalig
+            <code>
+                h1{
+                    background-position:center;
+                }
+            </code>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt id="abkuerzungs-eule">background: pink url('img/eule.png) top left no-repeat;</dt>
+        <dd>Diese Eigenschaft beschreibt,wie man alle vorher genannten Eignschaften in einer Zeile gleichzeitig definiert, zum Beispiel:
+            <code>
+                h1{
+                    background:pink url('img/eule.png') top left no-repeat;
+                    height:310px;
+            </code>
+        </dd>
+    </dl>
+
+
+    <dl>
+        <dt id="abkuerzungs2-eule">
+            background:pink url('img/eule.png') center 50% no-repeat;
+            height:450px;</dt>
+        <dd>Diese Eigenschaft beschreibt,wie man alle vorher genannten Eignschaften in einer Zeile gleichzeitig definiert, zum Beispiel:
+            <code>
+                h1{
+                    background:pink url('img/eule.png') center 50% no-repeat;
+                    height:450px;
+            </code>
+        </dd>
+    </dl>
+
+
+</body>
+
+</html>

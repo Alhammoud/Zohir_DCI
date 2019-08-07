@@ -1,0 +1,49 @@
+body{
+    background: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer{
+    background: #333;
+    padding: 20px;
+
+}
+h1{
+    margin-bottom: 0;
+}
+h2{
+    margin-top: 0;
+}
+p{
+    margin-top: 0;
+}
+
+div{
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: justify;
+
+}
+
+span{
+    color: gray;
+    font-style: italic;
+}
+
+footer{
+    margin-top: 12px;
+    text-align: center;
+}
+
+.fett{
+    font-weight: 800;
+}
+
+.orange{
+    color: #ed7000;
+}
+
+.white{
+    color: white;
+}

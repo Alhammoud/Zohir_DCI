@@ -1,0 +1,3 @@
+Aufgabe:
+
+wenn der Nutzer drüber-hovered, dann soll sich das listitemnach oben bewegen und ein Schatten

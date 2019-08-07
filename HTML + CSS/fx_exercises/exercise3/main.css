@@ -1,0 +1,53 @@
+html,
+body,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px){
+   
+      ul{
+          flex-direction: column;
+      }
+      li{
+          justify-content: space-between;
+          border: 1px solid white;
+      }
+ }/* Die Größe für Mobile*/
+
+/* style */
+
+ul {
+    background-color: deepskyblue;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content:flex-end;
+    /* flex-flow: row; */
+}
+li{
+    text-align: center;
+    padding:1em;
+    
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    /* height: 60px; */
+    /* display: block; */
+
+}   
+
+li:hover{
+    background: rgb(180, 65, 225);
+}
+
+/* */
+
+

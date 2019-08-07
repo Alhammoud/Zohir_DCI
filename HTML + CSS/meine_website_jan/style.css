@@ -1,0 +1,24 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: url(images/forest.jpg);
+    background-size: cover;
+}
+#header{
+    font-size: 32px;
+    background:linear-gradient(0.25turn) rgb(207,0, 155);
+    padding:10px;
+
+}
+#contianer{
+    padding: 10px;
+    color: rgba(225, 225, 225, 5)
+
+}
+img{
+    width: 630px;
+}
