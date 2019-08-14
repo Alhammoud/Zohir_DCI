@@ -13,24 +13,24 @@
 //     [[0,1,0],[1,0,1],[0,1,0]],
 // ]
 
-const cube = (l) => {
-    let arr = [];
-    if (l === 3) {
-        for (let i = 0; i <l; i++) {
-            for (let j = 0; j <i; j++) {
-                for (let k = 0; k <j; k++) {
-                    if (k % 2 === 1) {
-                        arr[i][j][k] = 0;
-                    } else {
-                        arr[i][j][k] = 1;
-                    }
-                }
-            }
-        }
-    }
-};
+// const cube = (l) => {
+//     let arr = [];
+//     if (l === 3) {
+//         for (let i = 0; i <l; i++) {
+//             for (let j = 0; j <i; j++) {
+//                 for (let k = 0; k <j; k++) {
+//                     if (k % 2 === 1) {
+//                         arr[i][j][k] = 0;
+//                     } else {
+//                         arr[i][j][k] = 1;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// };
 
-console.log(cube(3));
+// console.log(cube(3));
 
 
 // Aufgabe :
@@ -53,8 +53,42 @@ const increasingNumbers = (n) => {
     let arr = [];
     for (let i = 0; i < n; i++) {
         arr = [...arr, i]
+        //arr.push(i);
     }
     return arr;
 };
 
 console.log(increasingNumbers(4));
+
+
+// spread Operator mit Objekten
+
+let obj1 = {
+    x: 1,
+    y: 5
+}
+console.log(obj1);
+
+// obj1 wird direkt verändert
+console.log('// obj1 wird direkt verändert');
+obj1.x = 10;
+console.log(obj1);
+
+let obj2 = obj1;
+
+// obj1 indirekt über die referenz von obj2 verändert
+obj2.x = 12;
+console.log(obj1);
+
+// obj3 ist ein klon von obj1
+let obj3 = { ...obj1 };
+obj3.x = 50000;
+console.log(obj1);
+
+// obj3 ist ein klon von obj1, mit überschreibung des key-value paares y: 5
+let obj4 = { ...obj1, y: 15 };
+console.log( obj4 );
+
+
+
+

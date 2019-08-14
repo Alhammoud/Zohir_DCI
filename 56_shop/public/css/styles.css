@@ -1,0 +1,62 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 10px;
+}
+
+.headCountiener {
+    margin: auto;
+    font-size: 18px;
+    width: 1200px;
+    height: 100px;
+    background-color: rgba(179, 163, 163, 0.87);
+    
+}
+
+.headCountiener h1 {
+    padding-top: 20px;
+    padding-left: 10px;
+    color: brown;
+}
+
+
+button{
+    border: none; 
+    background-color: rgba(179, 163, 163, 0.87);
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+#cart_btn{
+    float: right;
+    margin-right: 10px;
+}
+
+.mainCountiener{
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 20px;
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(179, 163, 163, 0.87);
+}
+.imgs{
+    margin: 10px;
+    width: 200px;
+    height: 350px; 
+    border: 1px solid black;
+}
+
+img{
+    width: 100%;
+    height: 90%;
+}
