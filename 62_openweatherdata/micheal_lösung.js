@@ -5,6 +5,33 @@ let inpBtnObj = document.getElementById('inputCityBtn');
 
 let weatherByCity = [];
 
+
+/* inpBtnObj.addEventListener('keyup', function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        let reqCity = document.getElementById('inputCityField').value;
+        if (reqCity === '') return;
+    
+        let urlServiceAddress = `https://api.openweathermap.org/data/2.5/weather?q=${reqCity}&APPID=${authToken}`;
+    
+        fetch(urlServiceAddress)
+            .then(weatherResponse => {
+                console.table(weatherResponse);
+                return weatherResponse.json();
+            }).then(weatherData => {
+                console.table(weatherData);
+                for (element of weatherByCity) {
+                    if (weatherData.name === element.name) {
+                        element = weatherData;
+                        updateWeather(weatherData);
+                        return;
+                    }
+                };
+                createNewWeatherCard(weatherData);
+            })
+    }
+ });
+ */
 inpBtnObj.addEventListener('click', () => {
 
     let reqCity = document.getElementById('inputCityField').value;
