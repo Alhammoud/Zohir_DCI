@@ -1,11 +1,19 @@
 import React from 'react';
+/* import ReactDOM from 'react-dom';
+ */
+
+import PropTypes from 'prop-types';
+
+
 
 class MyHeading extends React.Component {
     render() {
+        // Außerhalb des Fragments Zugriff auf die Properties
+        //const myProps= (props)=>(<p>(props.propName)</p>);
         const title=`A header will be rendered by varibal title`;
         const titles=[`A header will be rendered by varibal title`,'halloooo','hallocheeen'];
 
-        const showParagraph=false;
+        const showParagraph=true;
         return (
             //    <div>
             //     <h1>A header will be rendered</h1>
@@ -26,10 +34,18 @@ class MyHeading extends React.Component {
 
             {/* Conditonl im React */}
             <p>Conditonl im React </p> 
-            {showParagraph && <p> A paragraph will be added !!!</p>} 
+            {/* {showParagraph && <p> A paragraph will be added !!!</p>}  */}
+            {showParagraph && <p> {this.props.paragraphText}</p>} 
+            {/* children im property */}
+            {this.props.children}
             </React.Fragment>
         );
     }
 }
 
-export default MyHeading;
+MyHeading.propTypes ={
+    paragraphText: PropTypes.string.isRequired
+};
+
+//ReactDOM.render(<MyHeading paragraphText="A paragraph will be added"/>,document.getElementById('heading'));
+ export default MyHeading;
