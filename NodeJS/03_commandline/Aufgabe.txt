@@ -1,0 +1,5 @@
+Aufgabe:
+*******
+
+Schreibe ein NodeJs-programm filereader.js welches  alle Dateinamen, 
+die als Argument übergeben worden öffent und den Inhalt ausgibt.

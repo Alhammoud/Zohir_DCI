@@ -18,6 +18,13 @@
   <body>
     <div id="heading"></div>
     <div id="root"></div>
+    <div id="root2">
+      <!-- This element's contents will be replaced with your component. -->
+  </div>
+
+  <div id="app2"></app>
+
+  
     <div id="hello-world"></div>
     <!--
       This HTML file is a template.
@@ -29,5 +36,29 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+
+
+            <script id="rendered-js">
+              class Clock extends React.Component {
+                  render() {
+                        return (
+                        React.createElement("div", null,
+                        React.createElement("h1", null, "Hello, world!"),
+                        React.createElement("h2", null, "It is ", this.props.date.toLocaleTimeString(), ".")));
+
+
+          }}
+
+
+        function tick() {
+          ReactDOM.render(
+          React.createElement(Clock, { date: new Date() }),
+          document.getElementById('root2'));
+
+        }
+
+        setInterval(tick, 1000);
+      //# sourceURL=pen.js
+    </script>
   </body>
 </html>

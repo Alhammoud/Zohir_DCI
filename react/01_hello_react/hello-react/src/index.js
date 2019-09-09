@@ -14,6 +14,8 @@ import * as serviceWorker from './serviceWorker';
 
 import MyComponent from './MyComponent';
 
+//import Clock from './Clock';
+
 // ReactDOM.render(<Myheading />, document.getElementById('heading'));
 ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<HelloWorld />, document.getElementById('hello-world'));
@@ -36,6 +38,9 @@ ReactDOM.render(<Myheading>
     <MyComponent/>           
 </Myheading>
 ,document.getElementById('heading'));
+
+
+//ReactDOM.render(<Clock />, document.getElementById('root2'));
 
 
 // If you want your app to work offline and load faster, you can change
