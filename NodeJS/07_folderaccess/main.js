@@ -12,3 +12,20 @@ let path2 = '/home/temp/Desktop/Zohir_DCI/NodeJS/07_folderaccess/test/hallo'; //
 
 const infoPath1 = fs.lstatSync(path1);
 const infoPath2 = fs.lstatSync(path2);
+
+const sum = (x) => {
+    let sum0fX = 0;
+    for (let i = 0; i < x; i++) {
+        sum0fX = x + sum(x - 1);
+    }
+    return sum0fX;
+
+}
+console.log(sum(5))
+
+// Aufgabe 2:
+
+const fs = require('fs');
+const listFiles= path=>{};
+
+
