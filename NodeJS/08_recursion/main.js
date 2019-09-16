@@ -1,3 +1,13 @@
+const sum = (x) => {
+    let sum0fX = 0;
+    for (let i = 0; i < x; i++) {
+        sum0fX = x + sum(x - 1);
+    }
+    return sum0fX;
+}
+console.log(sum(5));
+
+
 const f = x => {
     // rekursionsende
     // bei diesem parameter-wert rufen wir f NICHT nochmal auf
