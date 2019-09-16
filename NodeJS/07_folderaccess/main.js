@@ -11,5 +11,11 @@ let path1 = '/home/temp/Desktop/Zohir_DCI/NodeJS/07_folderaccess/test'; // Datei
 let path2 = '/home/temp/Desktop/Zohir_DCI/NodeJS/07_folderaccess/test/hallo'; // Verzeichnis
 
 const infoPath1 = fs.lstatSync(path1);
+console.log('infoPath1');
+console.log(infoPath1);
+
 const infoPath2 = fs.lstatSync(path2);
+console.log('infoPath2');
+console.log(infoPath2);
+
 
