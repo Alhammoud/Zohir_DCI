@@ -84,8 +84,8 @@ class App extends React.Component {
                 
               };
 
-            let germnayUser=user.filter(ele=>ele.country==='germany');
-            console.log(germnayUser);
+            const germnayUser = user.filter((user) => user.country === 'germany');
+            //console.log(germnayUser);
 
     return (
       <div>
@@ -169,17 +169,23 @@ class App extends React.Component {
 
 
         <h2> Löusunf für 2 Aufgabe mit map() und filter() Funktionen  </h2>
+        
+
         <table>
-            <tr>
-              <th>Money</th>
-              <th>Name</th> 
-              <th>Country</th>
-              <th>Born</th>
-            </tr>
-            <tr>
-              {nutzerDeutsche.map }
-            </tr>
+          <tr>
+            <th>Money</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Born</th>
+          </tr>
+            {germnayUser.map( element => <tr>
+              <td>{element.money}</td>
+              <td>{element.name}</td>
+              <td>{element.country}</td>
+              <td>{element.born}</td>
+          </tr>)}
         </table>
+
 
         Hallo Welt von 02_JSX
       </div>
