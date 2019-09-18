@@ -1,0 +1,98 @@
+<pre><font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ npm init -y
+Wrote to /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/package.json:
+
+{
+  &quot;name&quot;: &quot;11_server_mit_querystrings&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ ll
+total 12
+drwxrwxr-x  2 temp temp 4096 Sep 17 14:27 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 14 temp temp 4096 Sep 17 14:26 <font color="#729FCF"><b>..</b></font>/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ npm install express
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 11_server_mit_querystrings@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 11_server_mit_querystrings@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 126 packages in 5.333s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ ll
+total 32
+drwxrwxr-x  3 temp temp  4096 Sep 17 14:27 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 14 temp temp  4096 Sep 17 14:26 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 52 temp temp  4096 Sep 17 14:27 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp   290 Sep 17 14:27 package.json
+-rw-r--r--  1 temp temp 14302 Sep 17 14:27 package-lock.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ ls
+<font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ node server.js 
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+internal/modules/cjs/loader.js:775
+    throw err;
+    ^
+
+Error: Cannot find module &apos;/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/index.js&apos;
+<font color="#555753">    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:677:27)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font> {
+  code: <font color="#4E9A06">&apos;MODULE_NOT_FOUND&apos;</font>,
+  requireStack: []
+}
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ node server.js 
+ReferenceError: response is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/server.js:9:5
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: response is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/server.js:9:5
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: response is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/server.js:9:5
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings/node_modules/express/lib/router/layer.js:95:5)
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ node server.js 
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/11_server_mit_querystrings</b></font>$ 
+</pre>

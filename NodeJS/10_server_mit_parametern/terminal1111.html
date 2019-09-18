@@ -1,0 +1,2424 @@
+<pre><font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ npm init -y
+Wrote to /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/package.json:
+
+{
+  &quot;name&quot;: &quot;10_server_mit_parametern&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;server.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
+    &quot;start&quot;: &quot;node server.js&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ npm install express --save
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 10_server_mit_parametern@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 10_server_mit_parametern@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 126 packages in 6.109s
+found <font color="#8AE234">0</font> vulnerabilities
+
+
+
+<font color="#C4A000">   ╭────────────────────────────────────────────────────────────────╮</font>
+   <font color="#C4A000">│</font>                                                                <font color="#C4A000">│</font>
+   <font color="#C4A000">│</font>      New <font color="#C4A000">minor</font> version of npm available! <font color="#CC0000">6.10.3</font> → <font color="#4E9A06">6.11.3</font>       <font color="#C4A000">│</font>
+   <font color="#C4A000">│</font>   <font color="#C4A000">Changelog:</font> <font color="#06989A">https://github.com/npm/cli/releases/tag/v6.11.3</font>   <font color="#C4A000">│</font>
+   <font color="#C4A000">│</font>               Run <font color="#4E9A06">npm install -g npm</font> to update!                <font color="#C4A000">│</font>
+   <font color="#C4A000">│</font>                                                                <font color="#C4A000">│</font>
+<font color="#C4A000">   ╰────────────────────────────────────────────────────────────────╯</font>
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ lltotal 36
+drwxrwxr-x  3 temp temp  4096 Sep 17 11:51 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 13 temp temp  4096 Sep 17 11:49 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 52 temp temp  4096 Sep 17 11:51 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp   320 Sep 17 11:51 package.json
+-rw-r--r--  1 temp temp 14300 Sep 17 11:51 package-lock.json
+-rw-rw-r--  1 temp temp   199 Sep 17 11:50 server.js
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ node <font color="#729FCF"><b>e_modules</b></font>  package.json  package-lock.json  server.js
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ node server.js 
+events.js:186
+      throw er; // Unhandled &apos;error&apos; event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+<font color="#555753">    at Server.setupListenHandle [as _listen2] (net.js:1298:14)</font>
+<font color="#555753">    at listenInCluster (net.js:1346:12)</font>
+<font color="#555753">    at Server.listen (net.js:1434:7)</font>
+    at Function.listen (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/<u style="text-decoration-style:single">express</u>/lib/application.js:618:24)
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:13:5)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+Emitted &apos;error&apos; event on Server instance at:
+<font color="#555753">    at emitErrorNT (net.js:1325:8)</font>
+<font color="#555753">    at processTicksAndRejections (internal/process/task_queues.js:80:21)</font> {
+  code: <font color="#4E9A06">&apos;EADDRINUSE&apos;</font>,
+  errno: <font color="#4E9A06">&apos;EADDRINUSE&apos;</font>,
+  syscall: <font color="#4E9A06">&apos;listen&apos;</font>,
+  address: <font color="#4E9A06">&apos;::&apos;</font>,
+  port: <font color="#C4A000">3000</font>
+}
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ node server.js 
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ node server.js 
+hallo welt server auf port 3000
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ node server.js 
+hallo welt server auf port 3000
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+nodemon: command not found
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ sudo npm install -g nodemon
+[sudo] password for temp: 
+/usr/local/bin/nodemon -&gt; /usr/local/lib/node_modules/nodemon/bin/nodemon.js
+
+&gt; nodemon@1.19.2 postinstall /usr/local/lib/node_modules/nodemon
+&gt; node bin/postinstall || exit 0
+
+<font color="#4E9A06">Love nodemon? You can now support the project via the open collective:</font>
+ &gt; <font color="#34E2E2"><b>https://opencollective.com/nodemon/donate</b></font>
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> <font color="#75507B">optional</font> SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/nodemon/node_modules/fsevents):
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> <font color="#75507B">notsup</font> SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;linux&quot;,&quot;arch&quot;:&quot;x64&quot;})
+
++ nodemon@1.19.2
+added 221 packages from 128 contributors in 33.369s
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:28
+app.listen(3000);
+^
+
+SyntaxError: Identifier &apos;app&apos; has already been declared
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:25
+const products
+      ^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:}
+        ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:&apos;1000&apos;,name}
+               ^
+
+ReferenceError: name is not defined
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27:16)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:&apos;1000&apos;,name:}
+                    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:&apos;1000&apos;,name:}
+                    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:&apos;1000&apos;,name:&apos;&apos;,price}
+                       ^
+
+ReferenceError: price is not defined
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27:24)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:27
+    {id:&apos;1000&apos;,name:&apos;&apos;,price:}
+                             ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:41
+}); 
+^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        All Products : ${}
+                         ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+            for(product of products){
+            ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+            for(product of products){
+            ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+            for(product of products){
+            ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+            for(product of products){
+            ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+            for(product of products){
+            ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        for(product of products){
+        ^^^
+
+SyntaxError: Unexpected token for
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:39
+${
+ ^
+
+SyntaxError: Unexpected token {
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+    return response.send(`
+    ^^^^^^
+
+SyntaxError: Unexpected token return
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:41
+    for ()
+         ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:41
+    for (product )
+                 ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if()
+           ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if(product.id===)
+                        ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:43
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:44
+            product of ${} ${request.params.name}
+                         ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:44
+            product of ${id} is  ${request.params.name} and his price is ${}
+                                                                           ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+ReferenceError: id is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42:25
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if(product.id===${request.params.name}){
+                         ^
+
+SyntaxError: Unexpected token {
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if(product.id===${request.params.i}){
+                         ^
+
+SyntaxError: Unexpected token {
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if(product.id===${request.params.id}){
+                         ^
+
+SyntaxError: Unexpected token {
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:42
+        if(product.id===request.params.id}){
+                                         ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+TypeError: Cannot read property &apos;name&apos; of undefined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:44:67
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:60
+    }
+    ^
+
+SyntaxError: missing ) after argument list
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ nodemon
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        stringProducts product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                       ^^^^^^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        stringProducts=+ product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                                 ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:55
+        stringProducts += product of ${product.id} is  ${product.name} and his price is ${product.price} &lt;/br&gt;
+                                  ^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+(node:15953) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. Use emitter.setMaxListeners() to increase limit
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:60
+}); 
+ ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:66
+
+
+
+SyntaxError: Unexpected end of input
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:65
+
+
+
+SyntaxError: Unexpected end of input
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:65
+
+
+
+SyntaxError: Unexpected end of input
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:65
+
+
+
+SyntaxError: Unexpected end of input
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:61
+}
+^
+
+SyntaxError: missing ) after argument list
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:61
+}
+^
+
+SyntaxError: missing ) after argument list
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:59
+    let stringProducts=&apos;&apos;;
+        ^
+
+SyntaxError: Identifier &apos;stringProducts&apos; has already been declared
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for ()
+         ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0)
+                ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0)
+                ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0;i&gt;)
+                   ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0;i&lt;)
+                   ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0;i&lt;products)
+                           ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0;i&lt;products.l)
+                             ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:73
+    for (let i=0;i&lt;products.length)
+                                  ^
+
+SyntaxError: Unexpected token )
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:67
+                ${}
+                  ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:63
+                &lt;tr&gt;
+                ^
+
+SyntaxError: Unexpected token &lt;
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:49
+    return response.send(``
+                         ^^
+
+SyntaxError: missing ) after argument list
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:78
+    }
+    ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:49
+    return response.send(`product ID ${}`);
+                                       ^
+
+SyntaxError: Unexpected token }
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Cannot access &apos;stringProducts2&apos; before initialization
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:68:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:66
+    /return response.send(stringProducts1); 
+    ^
+
+SyntaxError: Invalid regular expression: missing /
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:78
+            &lt;td&gt;${product.id}&lt;/td&gt;
+            ^
+
+SyntaxError: Unexpected token &lt;
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:64
+   /*  let stringProducts1=&apos;&apos;;
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+ReferenceError: product is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: product is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: product is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76:19
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/node_modules/express/lib/router/layer.js:95:5)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76
+            &lt;td&gt;${product[].id}&lt;/td&gt;
+                          ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76
+            &lt;td&gt;${products[].id}&lt;/td&gt;
+                           ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76
+            &lt;td&gt;${products[].id}&lt;/td&gt;
+                           ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76
+            &lt;td&gt;${products[].id}&lt;/td&gt;
+                           ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:76
+            &lt;td&gt;${products[].id}&lt;/td&gt;
+                           ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern/server.js:77
+            &lt;td&gt;${products[].name} &lt;/td&gt;
+                           ^
+
+SyntaxError: Unexpected token ]
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node server.js`</font>
+hallo welt server auf port 3000
+^C<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/10_server_mit_parametern</b></font>$ 
+</pre>
