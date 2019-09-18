@@ -177,7 +177,7 @@ class App extends React.Component {
               <th>Born</th>
             </tr>
             <tr>
-              {nutzerDeutsche.map}
+              {nutzerDeutsche.map }
             </tr>
         </table>
 
