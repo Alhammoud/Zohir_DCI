@@ -1,0 +1,35 @@
+.contiener{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.header{
+  height: 120px;
+  padding: 10px;
+  margin: 10px;
+  line-height: 120px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.mainContierer{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box{
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  font-size: 50px;
+  color: white;
+  background-color: darkcyan;
+  line-height: 200px;
+  text-align: center;
+  border: 1px solid black;
+
+}
