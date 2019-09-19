@@ -12,7 +12,10 @@ const names = ["Rene", "Tom", "Claire", "Ralph", "Ben"];
 let num = numbers.map((data, index) => {
   return data * 2;
 });
+console.log('num');
 console.log(num);
+// outPut : [ 204, <1 empty item>, 3, 2, 4, 6, 44, 154, 8, 10, 12, 14 ]
+
 
 //.forEach()
 //array.forEach(function(currentValue, index, arr), thisValue)
@@ -21,28 +24,36 @@ let newArray = [];
 numbers.forEach((data, index) => {
   return (newArray[index] = data * 2);
 });
+console.log('newArray');
 console.log(newArray);
 
 //.reduce()
 //array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
 let reduceArray = numbers.reduce((data, current) => data + current);
+console.log('reduceArray');
 console.log(reduceArray);
+
+
+
+const string = "Blau";
+console.log(`string.indexOf("Blau")`);
+console.log(string.indexOf("Blau"));
+
 
 //.filter()
 //array.filter(function(currentValue, index, arr), thisValue)
 
 const colors = ["Red", "Green", "Blue", "Yellow", "Red", "Green Red"];
 
-const string = "Blau";
-console.log(string.indexOf("Blau"));
-
 let newcolor = colors.filter(value => {
   if (value !== "Red") {
     return value;
   }
 });
+console.log('newcolor');
 console.log(newcolor);
+//Output : [ 'Green', 'Blue', 'Yellow', 'Green Red' ]
 
 let newcolor2 = colors.filter(value => {
   console.log(value);
