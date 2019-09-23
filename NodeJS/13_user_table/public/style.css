@@ -1,0 +1,47 @@
+*{
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 120p;
+    width: 1200px;
+    background-image: linear-gradient(gray, white); 
+    border: 1px solid black;
+
+
+}
+.header h1{
+    text-align: center;
+}
+
+.container{
+    margin-top: 10px;
+    width: 1200px;
+    height: 100%;
+    border: 1px solid black;
+    background-image: linear-gradient(gray, white); 
+
+ 
+
+}
+.container h1{
+    text-align: center;
+}
+
+th, td {
+    height: 20px;
+    width: 60px;
+
+    border: 1px solid black;
+}
+
+.content ,table{
+    display: flex;
+    
+    width: 800px;
+    border: 1px solid black;
+
+
+
+}

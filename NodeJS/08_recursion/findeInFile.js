@@ -1,3 +1,4 @@
+const fs = require('fs');
 
 
 // Aufgabe:
@@ -8,6 +9,30 @@
 //    und schaut sich jede Datei genau an. Dabei wird untersucht
 //    ob in der Datei strSearch zu finden ist. Falls ja, 
 //    wird der Pfad der Datei ausgegeben.
+
+// Löusung von Jan ..
+const findInFiles = (path, strSearch) => {
+    let files = fs.readdirSync(path);
+    for (file of files) {
+        // file kann sein datei, verzeichnis oder link
+        // wir schauen uns die datein an .
+        const info = fs.lstatSync(`${path}/${file}`);
+        if (info.isFile()) {
+            // rekursionsende 1
+            // hier gucken wir nach ,ob in der datei ein string zu finden  ist nach muster strSearch
+            // wir öffnen die datei und schauen nach. 
+            const fileContent = fs.readFileSync(`${path}/${file}`);
+            if (new String(fileContent).includes(strSearch)) {
+
+                console.log(` Match : ${path}/${file} `);
+            }
+
+        } else if (info.isDirectory()) {
+            findInFiles(`${path}/${file}`, strSearch);
+        }
+    }
+}
+
 
 // 2) Erstelle eine Funktion (basierend auf findInFiles) namens
 //    replaceInFiles mit drei Parametern path, strSearch und strReplace.
@@ -23,16 +48,15 @@
 
 
 // 1);
-
-const fs = require('fs');
+// Löusung Zohir
 const findInFiles = (path, strSearch) => {
 
-   /*  const info = fs.lstatSync(path);
-    if(!info.isDirectory) return null; */
+    /*  const info = fs.lstatSync(path);
+     if(!info.isDirectory) return null; */
 
     let files = fs.readdirSync(path);
-    for(file of files) {
-        if(fs.lstatSync(`${path}/${file}`).isFile()) {
+    for (file of files) {
+        if (fs.lstatSync(`${path}/${file}`).isFile()) {
 
             /* fs.readFile(`${path}/${file}`, function (err, data) {
                 if (err) throw err;
@@ -41,19 +65,18 @@ const findInFiles = (path, strSearch) => {
                 }
               }); */
             fs.readFile(`${path}/${file}`, function (err, data) {
-                let stringObj=JSON.parse(fs.lstatSync(`${path}/${file}`));
+                let stringObj = JSON.parse(fs.lstatSync(`${path}/${file}`));
                 console.log(stringObj);
 
                 if (err) throw err;
-                if(stringObj.includes(strSearch)){
-                 console.log(data);
+                if (stringObj.includes(strSearch)) {
+                    console.log(data);
                 }
-              });
-        }
-        else if(fs.lstatSync(`${path}/${file}`).isDirectory()) {
+            });
+        } else if (fs.lstatSync(`${path}/${file}`).isDirectory()) {
             findInFiles(`${path}/${file}`, strSearch);
         }
     }
 }
 
-findInFiles("/home/temp/Desktop/Zohir_DCI/NodeJS/07_folderaccess/test",'Rechnung');
+findInFiles("/home/temp/Desktop/Zohir_DCI/NodeJS/07_folderaccess/test", 'Rechnung')
