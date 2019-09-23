@@ -12,11 +12,11 @@ app.use('/',express.static('public'));
 
 
 const users = [
-    { id: 1 ,name: 'Stefan', email:'stefan@abc.net',},
-    { id: 2 ,name: 'Lara', email:'lara@gmx.net',},
-    { id: 3 ,name: 'Julia', email:'julia@gmail.com',},
-    { id: 4 ,name: 'Karsten', email:'karsten@foo.net',},
-    { id: 5 ,name: 'Peter', email:'peter@xing.net',}
+    { id: 1 ,name: 'Stefan', email:'stefan@abc.net'},
+    { id: 2 ,name: 'Lara', email:'lara@gmx.net'},
+    { id: 3 ,name: 'Julia', email:'julia@gmail.com'},
+    { id: 4 ,name: 'Karsten', email:'karsten@foo.net'},
+    { id: 5 ,name: 'Peter', email:'peter@xing.net'}
 ]
 
 
