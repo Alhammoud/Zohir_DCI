@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Stefan",
+        "email": "stefan@abc.net",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "stefen.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Lara",
+        "email": "lara@gmx.net",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "lara.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Julia",
+        "email": "julia@gmail.com",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "julia.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Karsten",
+        "email": "karsten@foo.net",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "karsten.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Peter",
+        "email": "peter@xing.net",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "peter.jpg"
+    },
+    {
+        "id": 6,
+        "name": "klaus",
+        "email": "klaus @xing.net",
+        "description" :" Bla Bla Bla Bla .....",
+        "profilePic" : "klaus.jpeg"
+    }
+]

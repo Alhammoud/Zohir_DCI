@@ -5,7 +5,7 @@
 
 .header{
     height: 120p;
-    width: 1200px;
+    width: 800px;
     background-image: linear-gradient(gray, white); 
     border: 1px solid black;
 
@@ -17,7 +17,7 @@
 
 .container{
     margin-top: 10px;
-    width: 1200px;
+    width: 800px;
     height: 100%;
     border: 1px solid black;
     background-image: linear-gradient(gray, white); 
@@ -44,4 +44,7 @@ th, td {
 
 
 
+}
+.imgUser{
+    border-radius: 50%;
 }
