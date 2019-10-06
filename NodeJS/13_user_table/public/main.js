@@ -16,16 +16,29 @@ console.log('Hallo world from Frontend...! (main.js)');
 // SChaue mal auf https://loading.io
 
 const loadUsers = async () => {
-    showSpinner();
-    //const result = await fetch ('http://localhost:3000/users');
-    const result = await fetch('http://localhost:3000/users_delay');
+   // showSpinner();
+   
+   
+   const result = await fetch ('http://localhost:3000/users');
+   console.log("const result = await fetch ('http://localhost:3000/users'); ");
+   console.log(result);
 
+
+//    const result = await fetch('http://localhost:3000/users_delay');
+//    console.log("const result = await fetch('http://localhost:3000/users_delay');");
+//    console.log(result);
+   
+    console.log( 'typeof result');
+    console.log( typeof result);
+
+    
     const data = await result.json();
 
     // const responseStr = JSON.stringify(data);
 
-    console.log('data from server http://localhost:3000/users');
-    console.log(data);
+    // console.log('data from server http://localhost:3000/users');
+    // console.log('const data = await result.json();');
+    // console.log(data);
 
     // Aufgabe :
     //
@@ -68,12 +81,19 @@ showSpinner = () => {
     showSpinnerObj.innerHTML='<img src="willkommen.gif" alt="willkommen.gif">';
 
 }
-
+loadUsers();
 console.log('loadUsers(); in main.js');
 console.log(loadUsers());
 
+/* 
+var el = document.getElementById("outside");
+el.addEventListener("click", modifyText, false);
 
 
+
+
+
+ */
 
 
 

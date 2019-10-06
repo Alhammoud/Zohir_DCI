@@ -30,9 +30,20 @@ app.get('/users', (req, res) => {
             if (error) return res.send({
                 error: error
             });
+            console.log(' typeof data');
+            console.log( typeof data); // Output : string
 
+            console.log('data');
+            console.log(data);
             // nur die zusammengefassten Daten herausgeben
-            const usersAll = JSON.parse(data);
+             const usersAll = JSON.parse(data); 
+             // wir kontieveren data als string von server zu javascript Objekt damit können wir mit ihm bearbeiten.
+
+            console.log("usersAll from  const usersAll = JSON.parse(data);");
+            console.log( 'typeof usersAll');
+            console.log( typeof usersAll); // Output :javascript Objekt
+            console.log('usersAll');
+            console.log(usersAll);
             const usersSummary = [];
 
 
@@ -52,6 +63,43 @@ app.get('/users', (req, res) => {
 
 });
 
+
+// Output from  : app.get('/users', (req, res)
+
+/* 
+[
+{
+id: 1,
+name: "Stefan",
+email: "stefan@abc.net"
+},
+{
+id: 2,
+name: "Lara",
+email: "lara@gmx.net"
+},
+{
+id: 3,
+name: "Julia",
+email: "julia@gmail.com"
+},
+{
+id: 4,
+name: "Karsten",
+email: "karsten@foo.net"
+},
+{
+id: 5,
+name: "Peter",
+email: "peter@xing.net"
+},
+{
+id: 6,
+name: "klaus",
+email: "klaus @xing.net"
+}
+]
+*/
 
 // demonstration: langes laden synchron 
 // effekt: blockiert den server, nutzer 2 
@@ -79,7 +127,7 @@ app.get('/longload_asynchron', (req, res) => {
     )
 });
 
-
+/* 
 app.get('/users_delay', (req, res) => {
     setTimeout(
         () => {
@@ -95,8 +143,8 @@ app.get('/users_delay', (req, res) => {
         10000
     ); // end setTimeout() 
 });
-
-
+ 
+ */
 
 
 
