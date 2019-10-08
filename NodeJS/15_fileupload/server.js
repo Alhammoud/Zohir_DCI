@@ -18,7 +18,7 @@ const app = express();
 //console.log(app);
 
 
-app.use('/')
+// app.use('/')
 
 
 
