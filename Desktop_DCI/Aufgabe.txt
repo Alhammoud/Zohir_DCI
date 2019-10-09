@@ -1,0 +1,18 @@
+Mongo DB:
+
+1.Non-relational or distributed database system.
+2.They have have dynamic schema.
+3.These databases are best suited for hierarchical data storage.
+4.These databases are not so good for complex queries.
+5.Horizontally scalable.
+
+
+
+ 
+My SQL :
+
+1.RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS).
+2.These databases have fixed or static or predefined schema.
+3.These databases are not suited for hierarchical data storage.
+4.These databases are best suited for complex queries.
+5.Verticlly Scalable.
