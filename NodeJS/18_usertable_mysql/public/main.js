@@ -26,6 +26,7 @@ const loadUsers = async(search) => {
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Description</th>
             </tr>
     `;
 
@@ -35,6 +36,7 @@ const loadUsers = async(search) => {
                 <td>${user.id}</td>
                 <td>${user.name}</td>
                 <td>${user.email}</td>
+                <td>${user.description}</td>
             </tr>
         `;
     }
@@ -146,6 +148,7 @@ const showAddUser = () => {
         formData.append('email', emailInputObj.value);
         formData.append('description', descriptionInputObj.value);
         formData.append('imageUpload', fileInputObj.files[0]);
+        let responseJsonParse;
 
         try {
             const response = await fetch('http://localhost:3000/users',
@@ -161,6 +164,25 @@ const showAddUser = () => {
                 const responseStr = JSON.stringify(responseJson);
                 loadUsers();
             }
+
+            // wenn die Tabelle angezeigt werden soll:
+                    //loadUsers();
+
+                    // wenn der neu angelegte User angezeigt werden soll:
+
+                    
+            /* if(response.ok) {
+                // 2. das objekt als json interpretieren -> wir bekommen ein objekt
+                const  responseJson = await response.json();
+                responseJsonParse=JSON.parse(responseJson);
+                // 3. als string darstellen
+                //const responseStr = JSON.stringify(responseJson);
+                console.log('responseJson.id');
+                console.log(responseJson.id);
+                // console.log('responseStr.newUserId');
+                // console.log(responseStr.newUserId); 
+                showUser(responseJsonParse.id);
+            } */
         }
         catch (e) {
             console.log('Error: ' + e); 
