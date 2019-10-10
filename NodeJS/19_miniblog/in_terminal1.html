@@ -1,0 +1,354 @@
+<pre><font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm init -y
+Wrote to /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/package.json:
+
+{
+  &quot;name&quot;: &quot;19_miniblog&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ ll
+total 284
+drwxr-xr-x  2 temp temp   4096 Okt 10 14:27 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 24 temp temp   4096 Okt 10 14:01 <font color="#729FCF"><b>..</b></font>/
+-rw-r--r--  1 temp temp    225 Okt 10 14:27 package.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm install -save mysql
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No repository field.
+
++ mysql@2.17.1
+added 11 packages from 15 contributors in 11.408s
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ ll
+total 292
+drwxr-xr-x  3 temp temp   4096 Okt 10 14:28 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 24 temp temp   4096 Okt 10 14:01 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 13 temp temp   4096 Okt 10 14:28 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp    273 Okt 10 14:28 package.json
+-rw-r--r--  1 temp temp   3183 Okt 10 14:28 package-lock.json
+-rw-r--r--  1 temp temp 276884 Okt 10 11:58 task.pdf
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ mkdir public
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ ll
+total 304
+drwxr-xr-x  4 temp temp   4096 Okt 10 14:33 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 24 temp temp   4096 Okt 10 14:01 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 13 temp temp   4096 Okt 10 14:28 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp    273 Okt 10 14:28 package.json
+-rw-r--r--  1 temp temp   3183 Okt 10 14:28 package-lock.json
+drwxr-xr-x  2 temp temp   4096 Okt 10 14:32 <font color="#729FCF"><b>public</b></font>/
+-rw-r--r--  1 temp temp   4209 Okt 10 13:17 server.js
+-rw-r--r--  1 temp temp 276884 Okt 10 11:58 task.pdf
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ code .
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+internal/modules/cjs/loader.js:775
+    throw err;
+    ^
+
+Error: Cannot find module &apos;express&apos;
+Require stack:
+- /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js
+<font color="#555753">    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:677:27)</font>
+<font color="#555753">    at Module.require (internal/modules/cjs/loader.js:830:19)</font>
+<font color="#555753">    at require (internal/modules/cjs/helpers.js:68:18)</font>
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:1:17)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font> {
+  code: <font color="#4E9A06">&apos;MODULE_NOT_FOUND&apos;</font>,
+  requireStack: [ <font color="#4E9A06">&apos;/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js&apos;</font> ]
+}
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 19_miniblog@1.0.0 start: `node server.js`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the 19_miniblog@1.0.0 start script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/temp/.npm/_logs/2019-10-10T12_39_28_506Z-debug.log
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm install express --save
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No repository field.
+
++ express@4.17.1
+added 49 packages from 36 contributors and audited 139 packages in 8.209s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ ll
+total 320
+drwxr-xr-x  4 temp temp   4096 Okt 10 14:41 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 24 temp temp   4096 Okt 10 14:01 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 61 temp temp   4096 Okt 10 14:41 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp    299 Okt 10 14:41 package.json
+-rw-r--r--  1 temp temp  17149 Okt 10 14:41 package-lock.json
+drwxr-xr-x  2 temp temp   4096 Okt 10 14:32 <font color="#729FCF"><b>public</b></font>/
+-rw-r--r--  1 temp temp   4319 Okt 10 14:39 server.js
+-rw-r--r--  1 temp temp 276884 Okt 10 11:58 task.pdf
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ code .
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+internal/modules/cjs/loader.js:775
+    throw err;
+    ^
+
+Error: Cannot find module &apos;express-fileupload&apos;
+Require stack:
+- /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js
+<font color="#555753">    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:677:27)</font>
+<font color="#555753">    at Module.require (internal/modules/cjs/loader.js:830:19)</font>
+<font color="#555753">    at require (internal/modules/cjs/helpers.js:68:18)</font>
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:4:20)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font> {
+  code: <font color="#4E9A06">&apos;MODULE_NOT_FOUND&apos;</font>,
+  requireStack: [ <font color="#4E9A06">&apos;/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js&apos;</font> ]
+}
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 19_miniblog@1.0.0 start: `node server.js`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the 19_miniblog@1.0.0 start script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/temp/.npm/_logs/2019-10-10T12_41_47_353Z-debug.log
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+internal/modules/cjs/loader.js:775
+    throw err;
+    ^
+
+Error: Cannot find module &apos;randomstring&apos;
+Require stack:
+- /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js
+<font color="#555753">    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:677:27)</font>
+<font color="#555753">    at Module.require (internal/modules/cjs/loader.js:830:19)</font>
+<font color="#555753">    at require (internal/modules/cjs/helpers.js:68:18)</font>
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:5:22)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font> {
+  code: <font color="#4E9A06">&apos;MODULE_NOT_FOUND&apos;</font>,
+  requireStack: [ <font color="#4E9A06">&apos;/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js&apos;</font> ]
+}
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 19_miniblog@1.0.0 start: `node server.js`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the 19_miniblog@1.0.0 start script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/temp/.npm/_logs/2019-10-10T12_42_22_435Z-debug.log
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:18
+app.use(fileUpload());
+    ^
+
+ReferenceError: fileUpload is not defined
+    at Object.&lt;anonymous&gt; (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:18:5)
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:936:30)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> ELIFECYCLE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">errno</font> 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 19_miniblog@1.0.0 start: `node server.js`
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Exit status 1
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Failed at the 19_miniblog@1.0.0 start script.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> This is probably not a problem with npm. There is likely additional logging output above.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/temp/.npm/_logs/2019-10-10T12_42_48_466Z-debug.log
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+Hallo World from Backend.
+ReferenceError: connection is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/server.js:73:9
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:209:13)
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+Hallo World from Backend.
+Error: Error: ER_NO_SUCH_TABLE: Table &apos;miniblog.users&apos; doesn&apos;t exist
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+Hallo World from Backend.
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+Hallo World from Backend.
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm install express mysql --save
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> 19_miniblog@1.0.0 No repository field.
+
++ express@4.17.1
++ mysql@2.17.1
+removed 1 package, updated 3 packages and audited 139 packages in 4.615s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ ll
+total 320
+drwxr-xr-x  4 temp temp   4096 Okt 10 19:42 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 24 temp temp   4096 Okt 10 14:01 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 61 temp temp   4096 Okt 10 19:42 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp    299 Okt 10 14:41 package.json
+-rw-r--r--  1 temp temp  16851 Okt 10 19:42 package-lock.json
+drwxr-xr-x  2 temp temp   4096 Okt 10 14:32 <font color="#729FCF"><b>public</b></font>/
+-rw-r--r--  1 temp temp   4316 Okt 10 14:49 server.js
+-rw-r--r--  1 temp temp 276884 Okt 10 11:58 task.pdf
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ 
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ cat package.json 
+{
+  &quot;name&quot;: &quot;19_miniblog&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;express&quot;: &quot;^4.17.1&quot;,
+    &quot;mysql&quot;: &quot;^2.17.1&quot;
+  }
+}
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ mysql -u zohir -p password
+Enter password: 
+ERROR 1049 (42000): Unknown database &apos;password&apos;
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ mysql -u zohir -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 40
+Server version: 5.7.27-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt; ^DBye
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ mysql -u zohir -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 41
+Server version: 5.7.27-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt; connect miniblog
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Connection id:    42
+Current database: miniblog
+
+mysql&gt; CREATE TABLE `users` (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50), password VARCHAR(500) NOT NULL, full_name VARCHAR(50), is_author BOOLEAN DEFAULT , UNIQUE INDEX (username));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &apos; UNIQUE INDEX (username))&apos; at line 1
+mysql&gt; 
+mysql&gt; INSERT INTO `users` (username, password, full_name, is_author) VALUES (&quot;admin&quot;, &quot;$2a$08$Z3FpAQwRgj7W0i71TtizFO7QDjpsIRNJfHh6mLgRJRJBtheKJh1Tu&quot;, &quot;admin&quot;, 1);
+ERROR 1146 (42S02): Table &apos;miniblog.users&apos; doesn&apos;t exist
+mysql&gt; 
+mysql&gt; CREATE TABLE `posts` (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, title VARCHAR(100), body LONGTEXT, date TIMESTAMP, author_id INT, slug VARCHAR(50), UNIQUE INDEX (slug), FOREIGN KEY (author_id) REFERENCES `users` (id));
+ERROR 1215 (HY000): Cannot add foreign key constraint
+mysql&gt; 
+mysql&gt; INSERT INTO `posts` (title, body, date, author_id, slug) VALUES (&quot;مرحبًا بالعالم!&quot;, &quot;مرحبًا بكم في مدوّنتي المتواضعة!&quot;, &quot;2014-12-29&quot;, 1, &quot;hello-world&quot;);
+ERROR 1146 (42S02): Table &apos;miniblog.posts&apos; doesn&apos;t exist
+mysql&gt; INSERT INTO `posts` (title, body, date, author_id, slug) VALUES (&quot;اقتباسات (1)&quot;, &quot;الغني لو سئل عن تحسين العمل والحياة فسوف يقول: نحن نعرف أن البؤس غيرمفرح والواقع أن البؤس مادام بعيداً عنا فإننا نتسلح بفكرة أنه غير مفرح. ولكن لا تتوقع منا أن نفعل أي شيء بصدده. نحن آسفون لطبقاتكم الدنيا مثل مانحن آسفون لقطة جرباء...غير أننا سنقتل كالمردة ضد أي تحسين لظرفكم. نحن نشعر انكم مأمونون أكثر وأنتم في حالكم هذا. إن الواقع الراهن يناسبنا ولسنا مستعدين لمخاطرة تحريركم حتى بساعة إضافية في اليوم هكذا يا إخوتي الأعزاء إن كان عليكم ان تعرقوا لدفع رحلاتنا إلى إيطاليا فلتعرقوا ولتحل عليكم اللعنة ― جورج أورويل، متشردًا في باريس ولندن&quot;, &quot;2014-12-30&quot;, 1, &quot;quotes-1&quot;);
+ERROR 1146 (42S02): Table &apos;miniblog.posts&apos; doesn&apos;t exist
+mysql&gt; INSERT INTO `posts` (title, body, date, author_id, slug) VALUES (&quot;اقتباسات (2)&quot;, &quot;التليفزيون يُغرقك في بحر من الأصوات والألوان بحيث لا تجد الوقت الكافي لتفكر أوتنتقد... إنه يقدم لك الأفكار الجاهزة ولا يسمح لك بالانتقاد الذي يسمح به الكتاب. ― راي برادبري، فهرنهايت 451&quot;, &quot;2014-12-31&quot;, 1, &quot;quotes-2&quot;);
+ERROR 1146 (42S02): Table &apos;miniblog.posts&apos; doesn&apos;t exist
+mysql&gt; INSERT INTO `posts` (title, body, date, author_id, slug) VALUES (&quot;اقتباسات (3)&quot;, &quot;أستطيع أن أقول لك يا بنيّ إنّ السّعادة ينبوع يتفجّر من القلب، لا غيث يهطل من السّماء، وأنّ النّفس الكريمة الرّاضية البريئة من أدران الرّذائل وأقذارها، ومطامع الحياة وشهواتها، سعيدة حيثما حلّت. [...] فمن أراد السّعادة فلا يسأل عنها المال والنّسب، وبين الفضّة والذّهب، والقصور والبساتين، والأرواح والرّياحين، بل يسأل عنها نفسه الّتي بين جنبيه فهي ينبوع سعادته وهنائه إن شاء، ومصدر شقائه وبلائه إن أراد. ― مصطفى لطفي المنفلوطي، الفضيلة&quot;, &quot;2015-01-01&quot;, 1, &quot;quotes-3&quot;);
+ERROR 1146 (42S02): Table &apos;miniblog.posts&apos; doesn&apos;t exist
+mysql&gt; ^DBye
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/19_miniblog</b></font>$ npm run start
+
+&gt; 19_miniblog@1.0.0 start /home/temp/Desktop/Zohir_DCI/NodeJS/19_miniblog
+&gt; node server.js
+
+Hallo World from Backend.
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
