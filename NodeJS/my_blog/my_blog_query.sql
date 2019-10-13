@@ -1,24 +1,41 @@
-CREATE TABLE `users` (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50), password VARCHAR(500) NOT NULL, full_name VARCHAR(50), is_author BOOLEAN DEFAULT , UNIQUE INDEX username);
+CREATE TABLE `users` (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50) NOT NULL, password VARCHAR(500) NOT NULL, full_name VARCHAR(50), is_author BOOLEAN DEFAULT , UNIQUE INDEX username);
+
+
+CREATE TABLE `myblog2`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(50) NULL,
+  `password` VARCHAR(500) NOT NULL,
+  `full_name` VARCHAR(50) NULL,
+  `is_author` VARCHAR(45) NULL DEFAULT 'BOOLEAN DEFAULT',
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `idusers_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC));
+
+
+
+
 
 INSERT INTO `users` (username, password, full_name, is_author) VALUES ("admin", "$2a$08$Z3FpAQwRgj7W0i71TtizFO7QDjpsIRNJfHh6mLgRJRJBtheKJh1Tu", "admin", 1);
 
-INSERT INTO `users` (username, password, full_name, is_author) VALUES ("tom", "$2a$08$Z3FpAQwRgj7W0i71TtizFO7QDjpsIRNJfHh6mLgRJRJBtheKJh1Tu", "zohir Alhammoud", true);
+INSERT INTO `users` (username, password, full_name, is_author) VALUES ("tom", "$2a$08$Z3FpAQwRgj7W0i71TtizFO7QDjpsIRNJfHh6mLgRJRJBtheKJh1Tu", "Tomm Tomme", true);
 
 CREATE TABLE `posts` (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, title VARCHAR(100), body LONGTEXT, date TIMESTAMP, author_id INT, slug VARCHAR(50), UNIQUE INDEX (slug), FOREIGN KEY (author_id) REFERENCES `users` (id));
 
 ALTER DATABASE myblog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
+ 
 INSERT INTO `posts` (title, body, date, author_id, slug) VALUES ("مرحبًا بالعالم!", "مرحبًا بكم في مدوّنتي المتواضعة!", "2014-12-29", 1, "hello-world");
 
 
 INSERT INTO `posts` (title, body, date, author_id, slug) 
-VALUES ("Hallo ..!", "Hallo Welt in myBlog ..!", "2014-12-29", 1, "hello-world");
+VALUES ("Hallo ..!", "Hallo Welt in myBlog ..!", "2014-12-29", 1, "hello-world2");
 
 INSERT INTO `posts` (title, body, date, author_id, slug) 
-VALUES ("Hallo 222 ..!", "Hallo Welt in myBlog ..!222", "2015-12-29", 1, "hello-world2");
+VALUES ("Hallo 222 ..!", "Hallo Welt in myBlog ..!222", "2015-12-29", 1, "hello-world3");
 
-INSERT INTO `posts` (title, body, date, author_id, slug) VALUES ("اقتباسات (1)", "الغني لو سئل عن تحسين العمل والحياة فسوف يقول: نحن نعرف أن البؤس غيرمفرح والواقع أن البؤس مادام بعيداً عنا فإننا نتسلح بفكرة أنه غير مفرح. ولكن لا تتوقع منا أن نفعل أي شيء بصدده. نحن آسفون لطبقاتكم الدنيا مثل مانحن آسفون لقطة جرباء...غير أننا سنقاتل كالمردة ضد أي تحسين لظرفكم. نحن نشعر انكم مأمونون أكثر وأنتم في حالكم هذا. إن الواقع الراهن يناسبنا ولسنا مستعدين لمخاطرة تحريركم حتى بساعة إضافية في اليوم هكذا يا إخوتي الأعزاء إن كان عليكم ان تعرقوا لدفع رحلاتنا إلى إيطاليا فلتعرقوا ولتحل عليكم اللعنة ― جورج أورويل، متشردًا في باريس ولندن", "2014-12-30", 1, "quotes-1");
+INSERT INTO `posts` (title, body, date, author_id, slug) 
+VALUES ("اقتباسات (1)", "الغني لو سئل عن تحسين العمل والحياة فسوف يقول: نحن نعرف أن البؤس غيرمفرح والواقع أن البؤس مادام بعيداً عنا فإننا نتسلح بفكرة أنه غير مفرح. ولكن لا تتوقع منا أن نفعل أي شيء بصدده. نحن آسفون لطبقاتكم الدنيا مثل مانحن آسفون لقطة جرباء...غير أننا سنقاتل كالمردة ضد أي تحسين لظرفكم. نحن نشعر انكم مأمونون أكثر وأنتم في حالكم هذا. إن الواقع الراهن يناسبنا ولسنا مستعدين لمخاطرة تحريركم حتى بساعة إضافية في اليوم هكذا يا إخوتي الأعزاء إن كان عليكم ان تعرقوا لدفع رحلاتنا إلى إيطاليا فلتعرقوا ولتحل عليكم اللعنة ― جورج أورويل، متشردًا في باريس ولندن", "2014-12-30", 1, "quotes-1");
 
-INSERT INTO `posts` (title, body, date, author_id, slug) VALUES ("اقتباسات (2)", "التليفزيون يُغرقك في بحر من الأصوات والألوان بحيث لا تجد الوقت الكافي لتفكر أو تنتقد... إنه يقدم لك الأفكار الجاهزة ولا يسمح لك بالانتقاد الذي يسمح به الكتاب. ― راي برادبري، فهرنهايت 451", "2014-12-31", 1, "quotes-2");
+INSERT INTO `posts` (title, body, date, author_id, slug) 
+VALUES ("اقتباسات (2)", "التليفزيون يُغرقك في بحر من الأصوات والألوان بحيث لا تجد الوقت الكافي لتفكر أو تنتقد... إنه يقدم لك الأفكار الجاهزة ولا يسمح لك بالانتقاد الذي يسمح به الكتاب. ― راي برادبري، فهرنهايت 451", "2014-12-31", 1, "quotes-2");
 
 INSERT INTO `posts` (title, body, date, author_id, slug) VALUES ("اقتباسات (3)", "أستطيع أن أقول لك يا بنيّ إنّ السّعادة ينبوع يتفجّر من القلب، لا غيث يهطل من السّماء، وأنّ النّفس الكريمة الرّاضية البريئة من أدران الرّذائل وأقذارها، ومطامع الحياة وشهواتها، سعيدة حيثما حلّت. [...] فمن أراد السّعادة فلا يسأل عنها المال والنّسب، وبين الفضّة والذّهب، والقصور والبساتين، والأرواح والرّياحين، بل يسأل عنها نفسه الّتي بين جنبيه فهي ينبوع سعادته وهنائه إن شاء، ومصدر شقائه وبلائه إن أراد. ― مصطفى لطفي المنفلوطي، الفضيلة", "2015-01-01", 1, "quotes-3");
