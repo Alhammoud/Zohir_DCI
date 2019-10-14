@@ -1,243 +1,62 @@
-console.log(`Hallo World from Frontend`);
+console.log(`Hallo World from Frontend (main.js)`);
 
 const linkObj = document.getElementsByTagName(`a`);
 const contentObj = document.getElementById(`content`);
 
-const loadUsers = async (search) => {
-
+const loadPosts = async () => {
+    
     linkObj[0].classList.add(`active`);
     linkObj[1].classList.remove(`active`);
-    linkObj[2].classList.remove(`active`);
-
-
-    let result;
-
-    if (search === undefined) {
-        result = await fetch(`http://localhost:3000/users`);
-    } else {
-        result = await fetch(`http://localhost:3000/users?q=${search}`);
-    }
+    
+    
+    const result = await fetch(`http://localhost:3000/blogposts`);
     const data = await result.json();
+    
+    let posts="";
 
-    // console.log(data);
-    const contentObj = document.getElementById(`content`);
-    contentObj.innerHTML = "";
-    const tableObj = document.createElement('table');
-    contentObj.append(tableObj);
-    const tableheadObj = document.createElement(`tr`);
-    tableheadObj.innerHTML = `<th>id</th><th>Name</th><th>E-Mail</th>`;
-    tableObj.append(tableheadObj);
-
-    for (elem of data) {
-        const tablerowObj = document.createElement(`tr`);
-        tablerowObj.innerHTML = `<td>${elem.id}</td><td>${elem.name}</td><td>${elem.email}</td>`;
-        tablerowObj.onclick = showUser.bind(this, elem.id);
-        tablerowObj.classList.add(`hover`);
-        tableObj.append(tablerowObj);
+    for (post of data) {
+        posts += `<div class="post">
+        <h4>${post.id} - ${post.title}</h4>
+        <h6>created at : ${post.created}</h6>
+        <p>${post.content}<p></div>
+        `;
     }
-}
 
+    contentObj.innerHTML =posts;
+}; // end loadPosts
 
-
-const showUser = async (id) => {
-
+const writePost = () => {
     linkObj[0].classList.remove(`active`);
-    linkObj[1].classList.remove(`active`);
-    linkObj[2].classList.remove(`active`);
-
-    const result = await fetch(`http://localhost:3000/userdetail/${id}`);
-    const data = await result.json();
-
-    contentObj.innerHTML = `<div class="profile">
-    <div class="profile-pic">
-        <img src="./uploads/${data.profilePic}" alt="">
-    </div>
-    <div class="profile-description">
-    <h3>${data.name}</h3>
-    <table>
-
-            <tr>
-                <td>Id: </td>
-                <td>${data.id}</td>
-            </tr>
-            <tr>
-                <td>E-Mail: </td>
-                <td><a href="mailto:${data.email}">${data.email}</a></td>
-            </tr>
-            <tr>
-                <td>Beschreibung: </td>
-                <td>${data.description}</td>
-            </tr>
-        </table>
-    </div>
-</div>`
-
-
-}
-
-const searchUser = () => {
-
     linkObj[1].classList.add(`active`);
-    linkObj[0].classList.remove(`active`);
-    linkObj[2].classList.remove(`active`);
+    contentObj.innerHTML = ` 
+    <input type="text" id="titelPost" placeholder="Hier Titel eingeben">
+    <textarea id="textPost" cols="30" rows="10" placeholder ="Hier Text eingeben"></textarea>
+    <button id="addPost">Artikel erstellen</button>`;
 
-    contentObj.innerHTML = `
-    <input type="text" id="searchfield" placeholder="Suchbegriff eingeben..."></input>
-    <button id="suchBtn">Suchen</button>
-    `
-    const suchBtnObj = document.getElementById('suchBtn');
-
-    suchBtnObj.onclick = () => {
-        const searchObj = document.getElementById('searchfield');
-
-        // console.log(searchObj.value);
-        loadUsers(searchObj.value);
-
-    }
-}
-
-const uploadUser = () => {
-
-    linkObj[2].classList.add(`active`);
-    linkObj[0].classList.remove(`active`);
-    linkObj[1].classList.remove(`active`);
-
-    // InnerHTML beim Anlegen eines Users mit manueller Eingabe des Dateinamens für das Foto:
-
-
-    //     contentObj.innerHTML = `            <div class="addUser">
-    //     <div class="addUserLeft">
-    //         <input type="text" id="nameInput" placeholder="Name">     
-    //         <input type="email" id="emailInput" placeholder="Email">     
-    //         <textarea id="descriptionInput" cols="30" rows="5" placeholder= "Description"></textarea> 
-
-    //     </div>
-    //     <div class="addUserRight">
-    //         <input type="text" id="picture" placeholder="Dateiname Foto"/>
-
-    //         <form ref='uploadForm' 
-    //         id='uploadForm' 
-    //         action='/imageupload' 
-    //         method='post' 
-    //         encType="multipart/form-data">
-    //             <input type="file" id="pictureUpload"name="sampleImage" />
-    //     </form>		
-    //         </div>
-    // </div>
-    // <button id ="addUser">Erstellen</button>
-
-
-
-    // </div>
-    //     `
-
-
-    // InnerHTML beim Anlegen eines Users wenn der Dateiname des Fotos aus dem Upload des Fotos bestimmt wird:
-
-    contentObj.innerHTML = `            <div class="addUser">
-    <div class="addUserLeft">
-        <input type="text" id="nameInput" placeholder="Name">     
-        <input type="email" id="emailInput" placeholder="E-Mail">     
-        <textarea id="descriptionInput" cols="30" rows="5" placeholder= "Beschreibung"></textarea> 
+    const addPostObj = document.getElementById('addPost');
     
-    </div>
-    <div class="addUserRight">
-        <div class="profilePicHeadline">Profilfoto hochladen:</div>
-        <form ref='uploadForm' 
-        id='uploadForm' 
-        action='/imageupload' 
-        method='post' 
-        encType="multipart/form-data">
-            <input type="file" id="pictureUpload"name="sampleImage" />
-            <p id="fileType">Es sind nur Dateien des Typs .jpg und .jpeg erlaubt.</p>
-    </form>		
-    <button id ="addUser">Nutzer erstellen</button>
-    </div>
-    
-    </div>
+    addPostObj.onclick = async () => {
 
-
-</div>
-    `
-
-    const addUserBtnObj = document.getElementById('addUser');
-
-    addUserBtnObj.onclick = async () => {
-
-        const nameInputObj = document.getElementById('nameInput');
-        const emailInputObj = document.getElementById('emailInput');
-        const descriptionInputObj = document.getElementById('descriptionInput');
-        
-        // Nötig beim Anlegen eines Users mit manueller Eingabe des Dateinamens des Fotos:
-        // const pictureObj = document.getElementById('picture');
-        
-        const pictureUploadObj = document.getElementById(`pictureUpload`);
-        const uploadFormObj = document.getElementById(`uploadForm`);
-        const filetypeObj = document.getElementById(`fileType`);
-        let responseJson;
-
-        // Bei manueller Einagbe des Dateinamens des Fotos Überorüfund ob das Eingabefed ausgefüllt ist:
-
-        // if (nameInputObj.value === "" || emailInputObj.value === "" || descriptionInputObj.value === "" || pictureObj.value === "") {
-        //     alert(`Eingaben in allen Feldern erforderlich`);
-        //     return
-        // }
-
-
-        if (nameInputObj.value === "" || emailInputObj.value === "" || descriptionInputObj.value === "") {
-            alert(`Eingaben in allen Feldern erforderlich`);
-            return
+        const titelPostObj = document.getElementById('titelPost');
+        const textPostObj = document.getElementById('textPost');
+      
+        if (!(titelPostObj.value.length > 0 && textPostObj.value.length > 0)) {
+            alert('Alle Felder müssen ausgefüllt sein.');
+            return;
         }
-
-        const emailValidation = emailInputObj.value.split("@");
-
-        if (emailValidation.length !== 2) {
-            alert(`Email-Adresse ungültig`)
-            return
-        }
-
-        const emailValidationRight = emailValidation[1].split(".");
-        if (emailValidationRight.length < 2) {
-            alert(`Email-Adresse ungültig`)
-            return
-        }
-        
-
-        // Nötig bei manueller Eingabe des Fotonamens:
-        // const lowerCaseProfilPic = (pictureObj.value).toLowerCase()
-    
-
-        // Nötig beim Auslesen des Fotonamens aus dem Upload:
-
-        const pictureUploadObjArray = pictureUploadObj.value.split("\\");
-        const lowerCaseProfilPic = pictureUploadObjArray[pictureUploadObjArray.length - 1].toLowerCase();
-
-        const profilePicValidation = lowerCaseProfilPic.split(".");
-        if (profilePicValidation.length !== 2) {
-            alert(`Datei ungültig`)
-            return
-        }
-        if (profilePicValidation[1] !== "jpeg" && profilePicValidation[1] !== "jpg") {
-            filetypeObj.style.color="red";
-            return
-        }
-
 
         const body = {
-            name: nameInputObj.value,
-            email: emailInputObj.value.toLowerCase(),
-            description: descriptionInputObj.value,
-            profilePic: lowerCaseProfilPic
-
-
+            title : titelPostObj.value,
+            content: textPostObj.value
         }
 
         try {
-            const response = await fetch('http://localhost:3000/users', {
+            const response = await fetch('http://localhost:3000/blogposts', {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
+               // method: 'writePost',
                 method: 'POST',
                 body: JSON.stringify(body)
             });
@@ -245,41 +64,11 @@ const uploadUser = () => {
             if (response.ok) {
 
                 responseJson = await response.json();
+                loadPosts();
 
-            }
-        } catch (e) {
-            console.log('Error: ' + e);
-        }
-        try {
-            var form = uploadFormObj;
-            var formData = new FormData(form);
-
-            const responseUpload = await fetch('http://localhost:3000/imageupload', {
-                headers: {
-                    encType: "multipart/form-data",
-                },
-                method: 'POST',
-                body: formData
-
-
-            });
-
-            if (responseUpload.ok) {
-                //if (status === 200) {
-
-                    //const responseUploadJson = await responseUpload.json();
-
-                    // wenn die Tabelle angezeigt werden soll:
-                    //loadUsers();
-
-                    // wenn der neu angelegte User angezeigt werden soll:
-                    showUser(responseJson.id)
-                //}
             }
         } catch (e) {
             console.log('Error: ' + e);
         }
     }
-}
-
-loadUsers();
+} // end writePost() 

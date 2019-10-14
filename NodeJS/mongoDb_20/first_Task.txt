@@ -1,0 +1,7 @@
+- [ ] neuer folder: npm init -y and install mongoose
+- [ ] install mongoDB compass and local mongodb in OS
+- [ ] connect to mongoose
+- [ ] Create Mongo schema, and export it as a mongoose model
+- [ ] create example javascript array of data (post1, post2, bla)
+- [ ] insert the data to the model (Model.insertMany(data)
+- [ ] Check data in Mongodb compass and see your created data (bearbeiten)
