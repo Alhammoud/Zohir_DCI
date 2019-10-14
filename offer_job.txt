@@ -1,0 +1,27 @@
+Sehr geehrter Herr ,
+wir sind auf der Suche nach einem Fullstack Javascript Developer für ein Start-Up im Herzen des Berliner Westens.
+Details:
+   Startdatum: asap
+   Laufzeit: bis Ende des Jahres mit Option auf Verlängerung
+   Einsatzort: Berlin / Gedächtniskirche
+   Vorort und 100 Remote möglich
+   Kappas: Vollzeit
+Aufgabe:
+   Globale Plattform mit aufbauen
+Skills:
+Must Have:
+   Node.js, React, Javascript (min. 3 Jahre), Git, Hands-on
+Nice to Have:
+   Postgres, Nest.js, APIs, StartUp Erfahrung
+Sollte das Projekt zu Dir passen, würde wir uns sehr über eine Rückmeldung freuen!
+Beste Grüße,
+Orlando Jose Balzer
+Recruiting Specialist
+HAYS Recruiting experts worldwide
+Hays AG
+Friedrichstraße 88
+10117 Berlin
+T: + 49 30 847 884 393
+F: + 49 30 847 884 299
+M: +49 160 6189131
+E: orlando.jose.balzer@hays.de
