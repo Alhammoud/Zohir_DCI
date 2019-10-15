@@ -1,6 +1,9 @@
 //const express = require("express");
 const mongoose = require('mongoose');
+
 const Post = require("./Post");
+
+// const dotenu = require('dotenv').config();
 require('dotenv').config();
 
 mongoose.connect(process.env.MONGOURL, {
@@ -22,9 +25,19 @@ const postsData = [{
 
 (async () => {
     if (!process.argv.includes("--delete")) {
-        const eP = await Post.find()
-        console.log(eP);
-        const createdPosts = await Post.insertMany(postsData); // injecting example data in db
+        const found = await Post.find()
+        console.log(found);
+        if(found.length===0){
+
+            const createdPosts = await Post.insertMany(postsData); // injecting example data in db
+            console.log(createdPosts," Done ! Successufully inserted data \n")
+            process.exit();
+        }else{
+            console.log("Done Posts already there ..!")
+            process.exit();
+
+        }
+
     } else {
 
         await Post.deleteMany();
@@ -38,18 +51,18 @@ const postsData = [{
             console.log("Collection is deleted!");
 
         }); */
-
-
+           /* */ 
+           
+           process.exit();
     } // end else
 
-    
+
     /* 
             Last thing for today:
-                After your scripts are done, your process is still running and you need to CTRL+C to quit it. That sucks.
+             After your scripts are done, your process is still running and you need to CTRL+C to quit it. That sucks.
                 - Find out how to exit a node process (bearbeitet) 
-
+            
 
     */
-    process.exit();
 
 })()
