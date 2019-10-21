@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://codehandbook.org/understanding-javascript-promise/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://codehandbook.org/xmlrpc.php">
+
+<title>Understanding JavaScript Promise - Code Handbook</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v3.9 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="In this tutorial, you&#39;ll learn what are JavaScript Promises, why are they used and how to use JavaScript promise.">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="https://codehandbook.org/understanding-javascript-promise/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding JavaScript Promise - Code Handbook">
+<meta property="og:description" content="In this tutorial, you&#39;ll learn what are JavaScript Promises, why are they used and how to use JavaScript promise.">
+<meta property="og:url" content="https://codehandbook.org/understanding-javascript-promise/">
+<meta property="og:site_name" content="Code Handbook">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Promise">
+<meta property="article:section" content="JavaScript">
+<meta property="article:published_time" content="2018-06-19T21:04:10+00:00">
+<meta property="article:modified_time" content="2018-10-21T12:07:48+00:00">
+<meta property="og:updated_time" content="2018-10-21T12:07:48+00:00">
+<meta property="og:image" content="https://codehandbook.org/wp-content/uploads/2018/06/javascript_promise.png">
+<meta property="og:image:width" content="510">
+<meta property="og:image:height" content="380">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="In this tutorial, you&#39;ll learn what are JavaScript Promises, why are they used and how to use JavaScript promise.">
+<meta name="twitter:title" content="Understanding JavaScript Promise - Code Handbook">
+<meta name="twitter:image" content="https://codehandbook.org/wp-content/uploads/2018/06/javascript_promise.png">
+<meta name="twitter:creator" content="@jay3dec">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Code Handbook » Feed" href="https://codehandbook.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code Handbook » Comments Feed" href="https://codehandbook.org/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code Handbook » Understanding JavaScript Promise Comments Feed" href="https://codehandbook.org/understanding-javascript-promise/feed/">
+		<script src="./Understanding JavaScript Promise - Code Handbook_files/f(8).txt"></script><script src="./Understanding JavaScript Promise - Code Handbook_files/sdk.js" async="" crossorigin="anonymous"></script><script src="./Understanding JavaScript Promise - Code Handbook_files/cb=gapi.loaded_1" async=""></script><script src="./Understanding JavaScript Promise - Code Handbook_files/cb=gapi(1).loaded_0" async=""></script><script src="./Understanding JavaScript Promise - Code Handbook_files/osd.js"></script><script id="facebook-jssdk" src="./Understanding JavaScript Promise - Code Handbook_files/sdk(1).js"></script><script type="text/javascript" async="" src="./Understanding JavaScript Promise - Code Handbook_files/plusone.js" gapi_processed="true">{"parsetags": "explicit"}</script><script id="twitter-wjs" src="./Understanding JavaScript Promise - Code Handbook_files/widgets.js"></script><script src="./Understanding JavaScript Promise - Code Handbook_files/f(9).txt" id="google_shimpl"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/codehandbook.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.19"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Understanding JavaScript Promise - Code Handbook_files/wp-emoji-release.min.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="awpa-wp-post-author-style-css" href="./Understanding JavaScript Promise - Code Handbook_files/awpa-frontend-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Understanding JavaScript Promise - Code Handbook_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="gazette-lora-css" href="./Understanding JavaScript Promise - Code Handbook_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="gazette-lato-inconsolata-css" href="./Understanding JavaScript Promise - Code Handbook_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="gazette-style-css" href="./Understanding JavaScript Promise - Code Handbook_files/style.css" type="text/css" media="all">
+<style id="gazette-style-inline-css" type="text/css">
+
+			.post-navigation .nav-previous { background-image: url(https://codehandbook.org/wp-content/uploads/2018/06/asd.png); }
+			.post-navigation .nav-previous .post-title, .post-navigation .nav-previous a:hover .post-title, .post-navigation .nav-previous .meta-nav { color: #fff; }
+			.post-navigation .nav-previous a:hover .meta-nav, .post-navigation .nav-previous a:hover .post-title { opacity: 0.6; }
+			.post-navigation .nav-previous a { background-color: rgba(0, 0, 0, 0.3); border: 0; text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.3); }
+			.post-navigation .nav-previous a:hover { background-color: rgba(0, 0, 0, 0.6); }
+		
+			.post-navigation .nav-next { background-image: url(https://codehandbook.org/wp-content/uploads/2018/07/rsz_ang.png); }
+			.post-navigation .nav-next .post-title, .post-navigation .nav-next a:hover .post-title, .post-navigation .nav-next .meta-nav { color: #fff; }
+			.post-navigation .nav-next a:hover .meta-nav, .post-navigation .nav-next a:hover .post-title { opacity: 0.6; }
+			.post-navigation .nav-next a { background-color: rgba(0, 0, 0, 0.3); border: 0; text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.3); }
+			.post-navigation .nav-next a:hover { background-color: rgba(0, 0, 0, 0.6); }
+		
+</style>
+<link rel="stylesheet" id="gazette-block-style-css" href="./Understanding JavaScript Promise - Code Handbook_files/blocks.css" type="text/css" media="all">
+<link rel="stylesheet" id="prism-theme-css" href="./Understanding JavaScript Promise - Code Handbook_files/prism-css.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="./Understanding JavaScript Promise - Code Handbook_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Understanding JavaScript Promise - Code Handbook_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/jquery.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/related-posts.js"></script>
+<link rel="https://api.w.org/" href="https://codehandbook.org/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://codehandbook.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://codehandbook.org/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.5.19">
+<link rel="shortlink" href="https://wp.me/p6oGxs-iy">
+<link rel="alternate" type="application/json+oembed" href="https://codehandbook.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcodehandbook.org%2Funderstanding-javascript-promise%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://codehandbook.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcodehandbook.org%2Funderstanding-javascript-promise%2F&amp;format=xml">
+<script async="" src="./Understanding JavaScript Promise - Code Handbook_files/f(10).txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8100068945711948",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<style type="text/css">img#wpstats{display:none}</style>
+<style type="text/css"></style>
+
+<style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style>
+
+<style id="custom-css-css">.hCode{background-color:#F0E6E6}.entry-summary p{display:none}.twDiv{float:left}.gpDiv{float:left;margin-left:25px}.fbDiv{float:left;margin-top:-7px}img.attachment-gazette-post-thumbnail.size-gazette-post-thumbnail.wp-post-image{min-height:209px}</style>
+<meta data-pso-pv="1.2.1" data-pso-pt="singlePost" data-pso-th="883d4b5dcaf8a6c0cea80bb099ef360a"><script async="" src="./Understanding JavaScript Promise - Code Handbook_files/f(10).txt"></script><script pagespeed_no_defer="" data-pso-version="20170403_083938">window.dynamicgoogletags={config:[]};dynamicgoogletags.config=["ca-pub-8100068945711948",[[[["ASIDE",null,"blog_subscription-3",[]],["10px","10px",0],3,[0],"2656195049",0,null,null,7],[["ARTICLE",0,null,[],0],["10px","10px",0],0,[0],"8541278245",0,null,null,10],[["ARTICLE",0,null,[],2],["10px","30px",0],0,[0],"9143380648",0,null,null,10]]],[[[[null,[[0,19]],null,16,1,1],[null,[[20,20]],null,34,1,1],[null,[[180,199]],null,17,1,1]],[[["BODY",0,null,[]],["10px","30px",1],2,[5],null,0,null,null,2],[["HEADER",0,null,[]],["10px","10px",1],3,[2],null,0,null,null,4],[["DIV",null,null,["site-branding"]],["10px","10px",0],1,[1],null,0,null,null,6],[["DIV",null,null,["site-branding"]],["10px","10px",0],2,[1],null,0,null,null,6],[["DIV",null,null,["post-thumbnail"]],["10px","10px",1],1,[2],null,0,null,null,6],[["DIV",null,null,["post-thumbnail"]],["10px","10px",1],2,[2],null,0,null,null,6],[["DIV",null,null,["entry-header-wrapper"]],["10px","10px",1],0,[2],null,0,null,null,6],[["DIV",null,null,["entry-meta"]],["10px","10px",1],3,[2],null,0,null,null,8],[["DIV",null,"primary",[]],["10px","10px",1],0,[1],null,0,null,null,6],[["DIV",null,"comments",[]],["10px","30px",1],0,[3],null,0,null,null,8],[["ARTICLE",0,null,[],1],["10px","30px",0],0,[0],null,0,null,null,11],[["ARTICLE",0,null,[],2],["10px","30px",0],0,[0],null,0,null,null,10],[["ARTICLE",0,null,[],-1],["10px","30px",0],3,[0],null,0,null,null,10],[["ARTICLE",0,null,[],3],["10px","30px",0],0,[0],null,0,null,null,10]],["7328570247","8805303444","1282036646","2758769846","4235503046"],["ARTICLE",null,null,[]],"20170214_040801"]],"WordPressSinglePost","4197293845",null,0.01,null,[null,1494909404418],0.01,0,null,null,"http://codehandbook.org"];(function(){var h=this,aa=function(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
+else if("function"==b&&"undefined"==typeof a.call)return"object";return b},p=function(a){return"number"==typeof a},ba=function(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var b=c.slice();b.push.apply(b,arguments);return a.apply(this,b)}},r=function(a,b){function c(){}c.prototype=b.prototype;a.Ra=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.Ta=function(a,c,f){for(var d=Array(arguments.length-2),e=2;e<arguments.length;e++)d[e-2]=arguments[e];return b.prototype[c].apply(a,
+d)}};var ca=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")},da=function(a,b){return a<b?-1:a>b?1:0},ea=function(a){return String(a).replace(/\-([a-z])/g,function(a,c){return c.toUpperCase()})};var fa=Array.prototype.forEach?function(a,b,c){Array.prototype.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e="string"==typeof a?a.split(""):a,f=0;f<d;f++)f in e&&b.call(c,e[f],f,a)};var ga=function(a){ga[" "](a);return a};ga[" "]=function(){};var ia=function(a,b){var c=ha;Object.prototype.hasOwnProperty.call(c,a)||(c[a]=b(a))};var t;a:{var ja=h.navigator;if(ja){var ka=ja.userAgent;if(ka){t=ka;break a}}t=""}var v=function(a){return-1!=t.indexOf(a)};var la=v("Opera"),w=v("Trident")||v("MSIE"),ma=v("Edge"),na=v("Gecko")&&!(-1!=t.toLowerCase().indexOf("webkit")&&!v("Edge"))&&!(v("Trident")||v("MSIE"))&&!v("Edge"),oa=-1!=t.toLowerCase().indexOf("webkit")&&!v("Edge"),pa=function(){var a=h.document;return a?a.documentMode:void 0},qa;
+a:{var ra="",sa=function(){var a=t;if(na)return/rv\:([^\);]+)(\)|;)/.exec(a);if(ma)return/Edge\/([\d\.]+)/.exec(a);if(w)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(oa)return/WebKit\/(\S+)/.exec(a);if(la)return/(?:Version)[ \/]?(\S+)/.exec(a)}();sa&&(ra=sa?sa[1]:"");if(w){var ta=pa();if(null!=ta&&ta>parseFloat(ra)){qa=String(ta);break a}}qa=ra}
+var ua=qa,ha={},va=function(a){ia(a,function(){for(var b=0,c=ca(String(ua)).split("."),d=ca(String(a)).split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var g=c[f]||"",k=d[f]||"";do{g=/(\d*)(\D*)(.*)/.exec(g)||["","","",""];k=/(\d*)(\D*)(.*)/.exec(k)||["","","",""];if(0==g[0].length&&0==k[0].length)break;b=da(0==g[1].length?0:parseInt(g[1],10),0==k[1].length?0:parseInt(k[1],10))||da(0==g[2].length,0==k[2].length)||da(g[2],k[2]);g=g[3];k=k[3]}while(0==b)}return 0<=b})},wa;var xa=h.document;
+wa=xa&&w?pa()||("CSS1Compat"==xa.compatMode?parseInt(ua,10):5):void 0;var x=function(){},ya="function"==typeof Uint8Array,z=function(a,b,c){a.a=null;b||(b=[]);a.Va=void 0;a.M=-1;a.l=b;a:{if(a.l.length){b=a.l.length-1;var d=a.l[b];if(d&&"object"==typeof d&&"array"!=aa(d)&&!(ya&&d instanceof Uint8Array)){a.R=b-a.M;a.G=d;break a}}a.R=Number.MAX_VALUE}a.Ua={};if(c)for(b=0;b<c.length;b++)d=c[b],d<a.R?(d+=a.M,a.l[d]=a.l[d]||y):a.G[d]=a.G[d]||y},y=[],A=function(a,b){if(b<a.R){b+=a.M;var c=a.l[b];return c===y?a.l[b]=[]:c}c=a.G[b];return c===y?a.G[b]=[]:c},Aa=function(a){a=
+A(za,a);return null==a?a:+a},B=function(a,b,c){b<a.R?a.l[b+a.M]=c:a.G[b]=c},C=function(a,b,c){a.a||(a.a={});if(!a.a[c]){var d=A(a,c);d&&(a.a[c]=new b(d))}return a.a[c]},D=function(a,b,c){a.a||(a.a={});if(!a.a[c]){for(var d=A(a,c),e=[],f=0;f<d.length;f++)e[f]=new b(d[f]);a.a[c]=e}b=a.a[c];b==y&&(b=a.a[c]=[]);return b},Ba=function(a,b,c){a.a||(a.a={});c=c||[];for(var d=[],e=0;e<c.length;e++)d[e]=E(c[e]);a.a[b]=c;B(a,b,d)},Ca=function(a){if(a.a)for(var b in a.a){var c=a.a[b];if("array"==aa(c))for(var d=
+0;d<c.length;d++)c[d]&&E(c[d]);else c&&E(c)}},E=function(a){Ca(a);return a.l};x.prototype.toString=function(){Ca(this);return this.l.toString()};var Da=function(a){var b;if("array"==aa(a)){for(var c=Array(a.length),d=0;d<a.length;d++)null!=(b=a[d])&&(c[d]="object"==typeof b?Da(b):b);return c}if(ya&&a instanceof Uint8Array)return new Uint8Array(a);c={};for(d in a)null!=(b=a[d])&&(c[d]="object"==typeof b?Da(b):b);return c};var Ea=function(a,b){this.events=[];this.Ga=b||h;var c=null;b&&(b.google_js_reporting_queue=b.google_js_reporting_queue||[],this.events=b.google_js_reporting_queue,c=b.google_measure_js_timing);this.ia=null!=c?c:Math.random()<a};Ea.prototype.disable=function(){fa(this.events,this.ya,this);this.events.length=0;this.ia=!1};Ea.prototype.ya=function(a){var b=this.Ga.performance;a&&b&&b.clearMarks&&(b.clearMarks("goog_"+a.uniqueId+"_start"),b.clearMarks("goog_"+a.uniqueId+"_end"))};var Fa=function(){var a=!1;try{var b=Object.defineProperty({},"passive",{get:function(){a=!0}});h.addEventListener("test",null,b)}catch(c){}return a}();var Ha=function(){var a=Ga;try{var b;if(b=!!a&&null!=a.location.href)a:{try{ga(a.foo);b=!0;break a}catch(c){}b=!1}return b}catch(c){return!1}},Ia=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(void 0,a[c],c,a)};var Ja=function(a,b,c,d,e){this.la=c||4E3;this.H=a||"&";this.wa=b||",$";this.T=void 0!==d?d:"trn";this.Sa=e||null;this.va=!1;this.V={};this.Ja=0;this.L=[]},Ma=function(a,b,c,d){b=b+"//"+c+d;var e=Ka(a)-d.length-0;if(0>e)return"";a.L.sort(function(a,b){return a-b});d=null;c="";for(var f=0;f<a.L.length;f++)for(var g=a.L[f],k=a.V[g],m=0;m<k.length;m++){if(!e){d=null==d?g:d;break}var l=La(k[m],a.H,a.wa);if(l){l=c+l;if(e>=l.length){e-=l.length;b+=l;c=a.H;break}else a.va&&(c=e,l[c-1]==a.H&&--c,b+=l.substr(0,
+c),c=a.H,e=0);d=null==d?g:d}}f="";a.T&&null!=d&&(f=c+a.T+"="+(a.Sa||d));return b+f+""},Ka=function(a){if(!a.T)return a.la;var b=1,c;for(c in a.V)b=c.length>b?c.length:b;return a.la-a.T.length-b-a.H.length-1},La=function(a,b,c,d,e){var f=[];Ia(a,function(a,k){(a=Na(a,b,c,d,e))&&f.push(k+"="+a)});return f.join(b)},Na=function(a,b,c,d,e){if(null==a)return"";b=b||"&";c=c||",$";"string"==typeof c&&(c=c.split(""));if(a instanceof Array){if(d=d||0,d<c.length){for(var f=[],g=0;g<a.length;g++)f.push(Na(a[g],
+b,c,d+1,e));return f.join(c[d])}}else if("object"==typeof a)return e=e||0,2>e?encodeURIComponent(La(a,b,c,d,e+1)):"...";return encodeURIComponent(String(a))};var Ra=function(a,b,c,d){var e=Pa;if((c?e.Pa:Math.random())<(d||e.za))try{var f;b instanceof Ja?f=b:(f=new Ja,Ia(b,function(a,b){var c=f,d=c.Ja++,e={};e[b]=a;a=[e];c.L.push(d);c.V[d]=a}));var g=Ma(f,e.Ma,e.Ba,e.La+a+"&");g&&Qa(g)}catch(k){}},Qa=function(a){h.google_image_requests||(h.google_image_requests=[]);var b=h.document.createElement("img");b.src=a;h.google_image_requests.push(b)};var Sa;if(!(Sa=!na&&!w)){var Ta;if(Ta=w)Ta=9<=Number(wa);Sa=Ta}Sa||na&&va("1.9.1");w&&va("9");var F=function(a,b,c,d){this.top=a;this.right=b;this.bottom=c;this.left=d};F.prototype.floor=function(){this.top=Math.floor(this.top);this.right=Math.floor(this.right);this.bottom=Math.floor(this.bottom);this.left=Math.floor(this.left);return this};var Ua=document,Va=window;var Wa=!!window.google_async_iframe_id,Ga=Wa&&window.parent||window;var Pa,G;if(Wa&&!Ha()){var Xa="."+Ua.domain;try{for(;2<Xa.split(".").length&&!Ha();)Ua.domain=Xa=Xa.substr(Xa.indexOf(".")+1),Ga=window.parent}catch(a){}Ha()||(Ga=window)}G=Ga;var Ya=new Ea(1,G);Pa=new function(){this.Ma="http:"===Va.location.protocol?"http:":"https:";this.Ba="pagead2.googlesyndication.com";this.La="/pagead/gen_204?id=";this.za=.01;this.Pa=Math.random()};
+if("complete"==G.document.readyState)G.google_measure_js_timing||Ya.disable();else if(Ya.ia){var Za=function(){G.google_measure_js_timing||Ya.disable()};G.addEventListener?G.addEventListener("load",Za,Fa?void 0:!1):G.attachEvent&&G.attachEvent("onload",Za)};var H=function(a){this.na={};this.na.c=a;this.o=[];this.u=null;this.v=[];this.ea=0};H.prototype.g=function(a){for(var b=0;b<this.o.length;b++)if(this.o[b]==a)return this;this.o.push(a);return this};var $a=function(a,b){a.u=a.u?a.u:b;return a};H.prototype.C=function(a){for(var b=0;b<this.v.length;b++)if(this.v[b]==a)return this;this.v.push(a);return this};
+H.prototype.getData=function(a){var b=this.na,c={},d;for(d in b)c[d]=b[d];0<this.ea&&(c.t=this.ea);c.err=this.o.join();c.warn=this.v.join();if(this.u){c.excp_n=this.u.name;c.excp_m=this.u.message&&this.u.message.substring(0,512);if(b=this.u.stack){d=this.u.stack;try{-1==d.indexOf("")&&(d="\n"+d);for(var e;d!=e;)e=d,d=d.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,"$1");b=d.replace(/\n */g,"\n")}catch(f){b=""}}c.excp_s=b}c.w=0<a.innerWidth?a.innerWidth:null;c.h=0<a.innerHeight?a.innerHeight:
+null;return c};var bb=function(a,b){ab(a,a.Ea,a.X,b)},ab=function(a,b,c,d){var e=d.u;d=d.getData(a.K);a.Ha?(d.type=b,a.K.console.log(d),e&&a.K.console.error(e)):0<c&&(d.r=c,Ra(b,d,"jserror"!=b,c))};var I=function(a){return a.dynamicgoogletags=a.dynamicgoogletags||{}};var J=function(a){z(this,a,cb)};r(J,x);var cb=[4];J.prototype.getId=function(){return A(this,3)};var K=function(a){z(this,a,null)};r(K,x);var db=function(a){z(this,a,null)};r(db,x);var L=function(a){return C(a,J,1)},fb=function(a){z(this,a,eb)};r(fb,x);var eb=[1];fb.prototype.i=function(){return D(this,db,1)};fb.prototype.pa=function(a){Ba(this,1,a)};var M=function(a){z(this,a,gb)};r(M,x);var gb=[2];M.prototype.ka=function(){return A(this,3)};M.prototype.qa=function(a){B(this,3,a)};var hb=function(a){z(this,a,null)};r(hb,x);var N=function(a){z(this,a,ib)};r(N,x);var ib=[1,2,3];N.prototype.i=function(){return D(this,db,2)};
+N.prototype.pa=function(a){Ba(this,2,a)};var O=function(a){z(this,a,jb)};r(O,x);var jb=[3];O.prototype.A=function(){return A(this,1)};O.prototype.D=function(){return C(this,fb,2)};O.prototype.O=function(){return A(this,4)};O.prototype.ka=function(){return A(this,5)};O.prototype.qa=function(a){B(this,5,a)};O.prototype.N=function(){return C(this,kb,9)};var kb=function(a){z(this,a,null)};r(kb,x);var lb=function(a){this.m=a;this.sa=[]};lb.prototype.f=function(){return 0<D(this.m,N,3).length?D(this.m,N,3)[0]:null};var mb=function(a){var b=["adsbygoogle-placeholder"];a=a.className?a.className.split(/\s+/):[];for(var c={},d=0;d<a.length;++d)c[a[d]]=!0;for(d=0;d<b.length;++d)if(!c[b[d]])return!1;return!0};var nb=function(a,b){for(var c=0;c<b.length;c++){var d=b[c],e=ea(d.Wa);a[e]=d.value}},qb=function(a,b){var c=ob;b.setAttribute("data-adsbygoogle-status","reserved");b={element:b};(c=c&&c.Na)&&(b.params=c);pb(a).push(b)},pb=function(a){return a.adsbygoogle=a.adsbygoogle||[]};var rb=function(a,b){if(!a)return!1;a=b.getComputedStyle?b.getComputedStyle(a,null):a.currentStyle;if(!a)return!1;a=a.cssFloat||a.styleFloat;return"left"==a||"right"==a},sb=function(a){for(a=a.previousSibling;a&&1!=a.nodeType;)a=a.previousSibling;return a?a:null},tb=function(a){return!!a.nextSibling||!!a.parentNode&&tb(a.parentNode)};var ub=function(a,b){var c=a.length;if(null!=c)for(var d=0;d<c;d++)b.call(void 0,a[d],d)};var vb=function(a,b,c,d){this.ma=a;this.$=b;this.aa=c;this.P=d};vb.prototype.query=function(a){var b=[];try{b=a.querySelectorAll(this.ma)}catch(f){}if(!b.length)return[];a=b;b=a.length;if(0<b){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];a=c}else a=[];a=wb(this,a);p(this.$)&&(b=this.$,0>b&&(b+=a.length),a=0<=b&&b<a.length?[a[b]]:[]);if(p(this.aa)){b=[];for(c=0;c<a.length;c++){var d=xb(a[c]),e=this.aa;0>e&&(e+=d.length);0<=e&&e<d.length&&b.push(d[e])}a=b}return a};
+vb.prototype.toString=function(){return JSON.stringify({nativeQuery:this.ma,occurrenceIndex:this.$,paragraphIndex:this.aa,ignoreMode:this.P})};
+var wb=function(a,b){if(null==a.P)return b;switch(a.P){case 1:return b.slice(1);case 2:return b.slice(0,b.length-1);case 3:return b.slice(1,b.length-1);case 0:return b;default:throw Error("Unknown ignore mode: "+a.P);}},xb=function(a){var b=[];ub(a.getElementsByTagName("p"),function(a){100<=yb(a)&&b.push(a)});return b},yb=function(a){if(3==a.nodeType)return a.length;if(1!=a.nodeType||"SCRIPT"==a.tagName)return 0;var b=0;ub(a.childNodes,function(a){b+=yb(a)});return b},zb=function(a){return 0==a.length||
+isNaN(a[0])?a:"\\"+(30+parseInt(a[0],10))+" "+a.substring(1)};var Ab=function(a,b){var c=0,d=A(a,6);if(void 0!==d)switch(d){case 0:c=1;break;case 1:c=2;break;case 2:c=3}var d=null,e=A(a,7);if(A(a,1)||a.getId()||0<A(a,4).length){var f=a.getId(),g=A(a,1),e=A(a,4),d=A(a,2);a=A(a,5);var k="";g&&(k+=g);f&&(k+="#"+zb(f));if(e)for(f=0;f<e.length;f++)k+="."+zb(e[f]);d=(e=k)?new vb(e,d,a,c):null}else e&&(d=new vb(e,A(a,2),A(a,5),c));return d?d.query(b):[]},Bb=function(a,b){if(a==b)return!0;if(!a||!b||A(a,1)!=A(b,1)||A(a,2)!=A(b,2)||a.getId()!=b.getId()||A(a,7)!=A(b,
+7)||A(a,5)!=A(b,5)||A(a,6)!=A(b,6))return!1;a=A(a,4);b=A(b,4);if(a||b)if(a&&b&&a.length==b.length)for(var c=0;c<a.length;c++){if(a[c]!=b[c])return!1}else return!1;return!0};var Cb=function(a){a=a.document;return("CSS1Compat"==a.compatMode?a.documentElement:a.body)||{}},Db=function(a){return void 0===a.pageYOffset?(a.document.documentElement||a.document.body.parentNode||a.document.body).scrollTop:a.pageYOffset};var Eb=function(a,b){b=L(b);if(!b)return null;a=Ab(b,a);return 0<a.length?a[0]:null},Gb=function(a,b){b=Fb(a,b,!0);return p(b)&&!(b<=Cb(a).clientHeight)},Hb=function(a,b){return a.body?b-a.body.getBoundingClientRect().top:b},Fb=function(a,b,c){if(!c||!p(A(b,8))){var d=Eb(a.document,b);if(d){var e=null!=C(b,K,2)?A(C(b,K,2),3):void 0;c=a.document.createElement("div");c.className="googlepublisherpluginad";var f=c.style;f.textAlign="center";f.width="100%";f.height="0px";f.clear=e?"both":"none";Ib(c,d,
+A(b,3));d=c.getBoundingClientRect().top+Db(a);c.parentNode.removeChild(c);B(b,8,d)}}b=A(b,8);return p(b)?b-Db(a):null},Jb={0:0,1:1,2:2,3:3},Kb={0:"auto",1:"horizontal",2:"vertical",3:"rectangle"},Lb=function(a,b){a.sort(function(a,d){a=Fb(b,a,!0);a=p(a)?a:Number.POSITIVE_INFINITY;d=Fb(b,d,!0);d=p(d)?d:Number.POSITIVE_INFINITY;return a-d})},Ib=function(a,b,c){switch(Jb[c]){case 0:b.parentNode&&b.parentNode.insertBefore(a,b);break;case 3:if(c=b.parentNode){var d=b.nextSibling;if(d&&d.parentNode!=c)for(;d&&
+8==d.nodeType;)d=d.nextSibling;c.insertBefore(a,d)}break;case 1:b.insertBefore(a,b.firstChild);break;case 2:b.appendChild(a)}if(1!=b.nodeType?0:"INS"==b.tagName&&mb(b))b.style.display="block"};var ob=new function(){this.ha="googlepublisherpluginad";this.Na={google_tag_origin:"pso"}},P=function(a){this.b=a;this.j=[];this.da=0;this.o=[];this.v=[];this.Y=null;this.oa=!1},Mb=function(a,b){a=C(a.f(),J,4);if(!(a&&b&&A(b,1)==A(a,1)&&b.getId()==a.getId()&&p(A(b,2))&&p(A(b,5))))return!1;a=A(a,4);b=A(b,4);if(a.length!=b.length)return!1;for(var c=0;c<a.length;++c)if(b[c]!=a[c])return!1;return!0},Nb=function(a){var b=p(void 0)?void 0:20,c=a.f(),d=c.i(),e=C(c,J,4);if(!(a.oa||0>=b)&&e&&0!=Ab(e,a.b.document).length){a.oa=
+!0;for(var c=[],f=0;f<d.length;++f){var g=d[f],k=L(g);if(Mb(a,k)){var m=A(k,2),k=A(k,5);null!=m&&null!=k&&0<=m&&0<=k&&(!c[m]||A(L(c[m]),5)<k)&&(c[m]=g)}}k=0;d=Ab(e,a.b.document);for(m=0;m<c.length&&k<b;++m){var e=k,f=a,l=d[m],g=c[m],k=b-k,u=f.f().i(),q=0;if(l&&g){l=xb(l).length;switch(A(L(g),6)){case 0:case 1:--l;break;case 2:l-=2}for(var n=A(L(g),5)+1;n<l&&q<k;++n){var Oa=new g.constructor(Da(E(g))),Hc=L(Oa);B(Hc,5,n);u.push(Oa);q++}}q&&f.f().pa(u);k=e+q}}};
+P.prototype.g=function(a){for(var b=0;b<this.o.length;++b)if(this.o[b]==a)return;this.o.push(a)};P.prototype.C=function(a){for(var b=0;b<this.v.length;++b)if(this.v[b]==a)return;this.v.push(a)};
+var Ob=function(a,b,c){var d=Jb[A(b,3)],e=Eb(a.b.document,b);if(e){var f=L(b)?A(L(b),2):void 0,g;a:{g=a.b;if(null!=f)switch(d){case 0:g=rb(sb(e),g);break a;case 3:g=rb(e,g);break a;case 2:f=e.lastChild;g=rb(f?1==f.nodeType?f:sb(f):null,g);break a}g=!1}if(!g&&(c||2!=d||tb(e))&&(c=1==d||2==d?e:e.parentNode,!c||(1!=c.nodeType?0:"INS"==c.tagName&&mb(c))||!(0>=c.offsetWidth)))a:if(A(b,7))a.C(8);else{b:if(A(b,5))c=A(b,5);else{if(c=Q(a).f())if(c=A(c,3),a.da<c.length){c=c[a.da++];break b}a.g(4);c=null}if(null!=
+c){B(b,7,!0);d=[];(g=a.O())&&d.push(g);g=Q(a).sa;for(f=0;f<g.length;++f)d.push(g[f]);p(A(b,9))&&d.push("pso-lv-"+A(b,9));var k=a.b.document;g=a.A();var f=A(b,6),f=null!=f?Kb[f]:f,m=C(b,K,2),l={};m&&(l.ra=A(m,1),l.ga=A(m,2),l.xa=!!A(m,3));var m=c,u=ob,q=k.createElement("div"),n=q.style;n.textAlign="center";n.width="100%";n.height="auto";n.clear=l.xa?"both":"none";l.Ka&&nb(n,l.Ka);k=k.createElement("ins");n=k.style;n.display="block";n.margin="auto";n.backgroundColor="transparent";l.ra&&(n.marginTop=
+l.ra);l.ga&&(n.marginBottom=l.ga);l.ta&&nb(n,l.ta);q.appendChild(k);k.setAttribute("data-ad-format",f?f:"auto");if(f=u&&u.ha)q.className=f;k.className="adsbygoogle";k.setAttribute("data-ad-client",g);m&&k.setAttribute("data-ad-slot",m);d.length&&k.setAttribute("data-ad-channel",d.join("+"));Ib(q,e,A(b,3));try{qb(a.b,k)}catch(Oa){A(b,5)!=c&&a.da--;B(b,7,!1);a.C(6);q&&q.parentNode&&q.parentNode.removeChild(q);break a}a.j.push(q)}}}},Pb=function(a,b){for(var c=Number.POSITIVE_INFINITY,d=0;d<a.j.length;++d)var e=
+a.j[d].getBoundingClientRect().top,f=a.j[d].getBoundingClientRect().bottom,c=Math.min(c,b<e?e-b:f<b?b-f:0);return c},Q=function(a){a=I(a.b).ps||null;if(!a)throw Error("No placementState");return a},Qb=function(a,b){var c=Q(a).m;if(!c||!c.A())return a.g(5),!1;c=D(c,N,3)[0];return c?A(c,3).length<b?(a.g(4),a.g(5),!1):!0:(a.g(5),!1)};P.prototype.A=function(){return Q(this).m.A()||""};P.prototype.O=function(){return Q(this).m.O()||void 0};P.prototype.D=function(){return Q(this).m.D()||new fb};
+P.prototype.f=function(){var a=Q(this).f();if(!a)throw Error("No mConfig");return a};var Rb=function(a){a=A(a.f(),6);return null!=a&&0<a};var Sb=function(){this.I=this.J=this.ba=null};var R=function(a){P.call(this,a)};r(R,P);R.prototype.apply=function(a){var b;(b=Q(this).m)&&b.A()&&b.D()?b=!0:(this.g(5),b=!1);if(b){b=this.D().i();for(var c=0;c<b.length;c++){var d=b[c];A(d,7)||Ob(this,d,a)}}};R.prototype.B=function(){return(0==this.D().i().length||0<this.j.length)&&0==this.o.length};var Tb=function(a){P.call(this,a);if(Qb(this,0)){a=this.D().i();for(var b=this.f().i(),c=0;c<a.length;c++){var d=a[c],e;a:{e=d;var f=b;if(e&&L(e))for(var g=0;g<f.length;g++){var k=f[g];if(A(e,3)==A(k,3)&&Bb(L(e),L(k))){e=k;break a}}e=null}e&&C(e,K,2)&&(e=C(e,K,2),d.a||(d.a={}),f=e?E(e):e,d.a[2]=e,B(d,2,f))}}};r(Tb,R);var Vb=function(a,b){var c=void 0===b.pageXOffset?(b.document.documentElement||b.document.body.parentNode||b.document.body).scrollLeft:b.pageXOffset,d=Db(b);if(a.getBoundingClientRect)return a=a.getBoundingClientRect(),Ub(a)?new F(a.top+d,a.right+c,a.bottom+d,a.left+c):new F(0,0,0,0);b=b.document.createRange();b.selectNodeContents(a);return b.collapsed?new F(0,0,0,0):b.getBoundingClientRect?(a=b.getBoundingClientRect(),Ub(a)?new F(a.top+d,a.right+c,a.bottom+d,a.left+c):new F(0,0,0,0)):new F(0,0,0,
+0)},Ub=function(a){return!!a&&p(a.top)&&!isNaN(a.top)&&p(a.right)&&!isNaN(a.right)&&p(a.bottom)&&!isNaN(a.bottom)&&p(a.left)&&!isNaN(a.left)};var $b=function(a){this.K=a;this.Fa=Wb(a);this.ua=S("ins.adsbygoogle",a);this.fa=Xb(a);this.Oa=S("[__lsu_res=reserved]",a);this.U=[];a=Yb(this);for(var b=0;b<a.length;b++)this.U.push(new Zb(a[b]))},Wb=function(a){var b=a.googletag;if(!b||"function"!=typeof b.pubads)return S("div[id^=div-gpt-ad]",a);var c=[];try{for(var d=b.pubads().getSlots(),b=0;b<d.length;b++){var e=d[b].getSlotElementId(),f=a.document.getElementById(e);null!=f&&c.push(f)}}catch(g){Ra("ladd_evt",{ok:0,err:g.toString()},!0,.1)}return c},
+Xb=function(a){return S("iframe[id^=aswift_],iframe[id^=google_ads_frame]",a)},S=function(a,b){return Array.prototype.slice.call(b.document.querySelectorAll(a))},Yb=function(a){return[].concat(a.Fa,a.ua,a.fa,a.Oa)},Zb=function(a){this.Ca=a;this.W=null};var T=function(a){P.call(this,a)};r(T,P);T.prototype.apply=function(){};T.prototype.B=function(){var a;if(Rb(this)){a=this.b;var b=Wb(a);a=0<[].concat(b,S("ins.adsbygoogle",a),Xb(a),S("[__lsu_res=reserved]",a)).length}else a=!0;return a};var ac=function(a){P.call(this,a);this.F=null};r(ac,P);
+ac.prototype.apply=function(a){if(a&&Qb(this,2)){Nb(this);a=Cb(this.b).clientHeight||640;null==this.F&&(this.F=new $b(this.b));var b=this.F.fa.length;if(!(5<=b)){var b=Math.min(2,5-b),c=this.f().i();Lb(c,this.b);for(var d=0;d<c.length&&this.j.length<b;++d){var e=c[d];if(Gb(this.b,e)){var f=Fb(this.b,e,!0);if(void 0!==f){var g;a:{g=this.F;for(var k=a,m=f,l=0;l<g.U.length;l++){var u=m,q=k,n;n=g.U[l];n.W||(n.W=Vb(n.Ca,g.K));n=n.W;if(n.top-q<u&&u<n.bottom+q){g=!0;break a}}g=!1}g||Pb(this,f)<a||Ob(this,
+e,!0)}}}0==this.j.length&&this.C(1)}}};ac.prototype.B=function(){return Rb(this)?0<Yb(this.F).length:!0};var bc=function(a){P.call(this,a);this.Z=!1};r(bc,T);
+bc.prototype.apply=function(a){if(a&&!this.Z){var b;a:{var c=this.b.document;b=c.body;if(a&&b){a=this.A();var d=ob,e=c.createElement("div");e.style.display="block";if(d=d&&d.ha)e.className=d;c=c.createElement("ins");c.className="adsbygoogle";c.setAttribute("data-ad-client",a);c.setAttribute("data-reactive-ad-format","1");c.style.display="none";e.appendChild(c);Ib(e,b,2);try{qb(this.b,c)}catch(f){this.C(6);e&&e.parentNode&&e.parentNode.removeChild(e);b=5;break a}this.j.push(e);b=0}else b=4}this.Z=
+0==b}};bc.prototype.B=function(){return this.Z&&T.prototype.B.call(this)};var cc=function(a){P.call(this,a);a=Cb(a).clientHeight;this.Aa=.1*a;this.Ia=.75*a};r(cc,P);
+cc.prototype.apply=function(a){if(Qb(this,3)&&!this.B()){Nb(this);var b=this.f().i();Lb(b,this.b);var c;c=this.Aa;var d;d=document;d=d.querySelectorAll?d.querySelectorAll("header,#header,#masthead,.header,.site-header"):[];for(var e=d.length,f=0<e?d[0]:null,g=1;g<e;g++)d[g].getBoundingClientRect().top<f.getBoundingClientRect().top&&(f=d[g]);(d=f)&&(d=d.getBoundingClientRect())&&d.top!=d.bottom&&d.left!=d.right&&(c=Math.min(c,Hb(document,d.bottom)));for(d=0;d<b.length&&3>this.j.length;d++){e=b[d];
+var f=c,g=this.b.document,k=Fb(this.b,e,!1);!p(k)||Hb(g,k)<f?f=!1:(f=Pb(this,k),f=this.Ia<f);f&&(f=Gb(this.b,e),g=A(e,6)||0,f&&0==g&&B(e,6,3),!f&&a||Ob(this,e,a))}}};cc.prototype.B=function(){return 3==this.j.length};var U={};U[16]=R;U[17]=R;U[19]=T;U[29]=ac;U[33]=T;U[30]=bc;U[28]=cc;U[34]=cc;U[32]=Tb;U[1]=R;U[8]=T;U[11]=R;var dc=[19,29,33,30,16,32,17,34],ec=[16,19,33,30,17,1,6,8,11];var fc=function(a,b){a=a.google_ad_modifications=a.google_ad_modifications||{};(a.ad_channels=a.ad_channels||[]).push(b)};var gc=function(a){return 0>a||99<a?null:10>a?"0"+a:""+a};var hc=function(a,b){a=a.google_ad_modifications=a.google_ad_modifications||{};a=a.loeids=a.loeids||[];for(var c=0;c<b.length;c++)a.push(b[c])};var ic=function(a,b,c){this.ja=a;this.Da=c?c:new kb};ic.prototype.N=function(){return this.Da||new kb};var jc=function(a){if(!p(a))return!1;for(var b=0;b<dc.length;++b)if(a==dc[b])return!1;return!0},oc=function(){var a=V,b=kc,c=lc,d=b.f();if(!d)return mc(16);var e=null,f;a:{var g=D(d,M,1);for(f=0;f<g.length;++f){for(var k=!0,m=0;m<ec.length;++m)A(g[f],4)==ec[m]&&(k=!1);if(k){g=[];0==d.i().length&&g.push("PsoInvalidVariant");0==A(d,3).length&&g.push("PsoNoAdSlotCodes");f=g;break a}}f=[]}g=c.ja;if(0==f.length)a:{e=D(d,M,1);if(p(g))for(f=0;f<e.length;f++)if(k=e[f],U[A(k,4)])for(var m=D(k,hb,2),l=0;l<
+m.length;l++){var u=m[l],q=A(u,1),u=A(u,2);if(p(q)&&p(u)&&g>=q&&g<=u){e=k;break a}}e=null}else for(k=0;k<f.length;++k)b.sa.push(f[k]);if(!e){f=D(d,M,1);e={};for(k=0;k<f.length;k++)e[A(f[k],4)]=!0;f=null;e[19]||e[8]?f=19:e[16]||e[1]?f=16:0<d.i().length&&0<A(d,3).length&&e[34]&&(f=34);null!=f?(e=new M,B(e,6,3),B(e,4,f),16!=f&&19!=f&&e.qa("pso-ama-fallback")):e=null}(f=!e)||(!p(g)||800>g?f=!1:820>g?(hc(a,["26835111"]),f=!0):(840>g&&hc(a,["26835112"]),f=!1));if(f)return mc(16);(g=e.ka())&&fc(a,g);g=!0;
+A(c.N(),2)&&(Date.now?Date.now():+new Date)<A(c.N(),2)||(fc(a,"pso-ama-exd"),g=!1);A(b.m,11)&&(fc(a,"pso-ama-stl-tmp"),g=!1);g&&fc(a,"pso-ama-elig");2==A(e,6)&&(b=A(e,1),null!=b&&hc(a,[""+b]));if(g&&(2==A(e,6)||1==A(e,6))){d=D(d,M,1);if(null===c.ja)c=[];else{b={};c=[];for(g=0;g<d.length;g++)f=nc(d[g]),null==f||b[f]||(b[f]=!0,c.push(f));b=nc(e);if(null!=b){d=[];b=gc(b);g=!1;if(b)for(f=0;f<c.length;f++)k=gc(c[f]),b==k&&(g=!0),k&&d.push("950"+b+k);g||(d=[]);c=d}else c=[]}hc(a,c)}a=new Sb;a.ba=A(e,5);
+a.J=A(e,4);return a},mc=function(a){var b=new Sb;b.J=a;return b},pc=function(a){a=a.google_ad_modifications=a.google_ad_modifications||{};a.remove_ads_by_default=!0;a.ad_whitelist=[{ad_tag_origin:"pso"}];a.ad_blacklist=[];a.space_collapsing="slot"},nc=function(a){var b;switch(A(a,6)){case 1:b=A(a,4);break;case 2:b=A(a,7)}return null!=b?b:null};var qc=function(a){this.document=a};var W=function(a){H.call(this,a)};r(W,H);W.prototype.getData=function(a){var b=W.Ra.getData.call(this,a),c;a:{c=(new qc(a.document)).document.getElementsByTagName("script");for(var d=0;d<c.length;++d)if(c[d].hasAttribute("data-pso-version")){c=c[d].getAttribute("data-pso-version");break a}c=null}b.sv=c;if(d=I(a).ps||null){c=d.m;var d=d.f(),e=b.wpc;b.wpc=null!=e?e:c.A();b.su=A(c,14);b.tn=c.O();b.ev=d&&A(d,5)}if(a=I(a).ss||null)b.s=a.J,b.st=a.ba;return b};var rc=null,sc=!1,vc=function(a){var b=tc,c=uc;b.addEventListener?(a&&b.addEventListener("DOMContentLoaded",a,!1),c&&b.addEventListener("load",c,!1)):b.attachEvent&&c&&b.attachEvent("onload",c)},xc=function(a){p(rc)&&a.clearInterval&&(a.clearInterval(rc),rc=null);sc||wc(a,!1);wc(a,!0)},yc=function(a,b){try{xc(b);var c=I(b).ss||null;if(c&&c.I){var d=c.I,e=d.B(),f=d.o,g=d.v,k=d.Y,m=d.j.length;e||0!=m||f.push(6);for(var l=new W(m),c=0;c<g.length;c++)l.C(g[c]);if(e&&0==f.length&&null===k)ab(a,a.Qa,a.ca,
+l);else{for(e=0;e<f.length;e++)l.g(f[e]);bb(a,$a(l,k))}}else bb(a,(new W(0)).g(2))}catch(u){bb(a,$a((new W(0)).g(1),u))}I(b).loaded=!0},wc=function(a,b){b||(sc=!0);if((a=I(a).ss||null)&&a.I){a=a.I;try{a.apply(b)}catch(c){a.g(1),null===a.Y&&(a.Y=c)}}},zc=function(){wc(window,!1)};var X=new function(a){this.Qa="pso_success";this.Ea="pso_failure";this.X=this.ca=.01;this.Ha=!1;this.K=a}(window);
+try{var V=window,za,Ac=I(V).config;za=Ac?new O(Ac):null;if(!za)throw Error("No config");var Bc=Aa(10),Cc=Aa(7);X.ca=null!=Bc?Bc:X.ca;X.X=null!=Cc?Cc:X.X;var kc=new lb(za),Dc=kc;I(V).ps=Dc;var Y,lc;if(v("iPad")||v("Android")&&!v("Mobile")||v("Silk")||!(v("iPod")||v("iPhone")||v("Android")||v("IEMobile")))Y=mc(16);else{var Ec,Fc=/^#([^=]*)=(\d+)$/.exec(V.location.hash);if((Ec=Fc&&3==Fc.length&&"pso_strategy"==Fc[1]?+Fc[2]:null)&&U[Ec]){Y=mc(Ec);var Gc=V;jc(Ec)&&pc(Gc)}else{var Ic=V,Jc=kc.m.N(),Z;try{var Kc=
+parseInt(Ic.localStorage.getItem("PSO_EXP0"),10);Z=isNaN(Kc)?null:Kc}catch(a){Z=null}if(null==Z){Z=Math.floor(1024*Math.random());var Lc=Z;try{Ic.localStorage.setItem("PSO_EXP0",Lc.toString())}catch(a){}}lc=new ic(Z,0,Jc);Y=oc()}if(1==Y.ba){var Mc=V;jc(Y.J)&&pc(Mc)}}if(!Y)throw Error("No strategyState created!");var Nc=Y;I(V).ss=Nc;var Oc=V,Pc=Y,Qc=Pc.J;if(p(Qc)){var Rc=U[Qc];Qc&&Rc&&(Pc.I=new Rc(Oc))}var tc=V,uc=ba(yc,X,tc),Sc=ba(xc,tc);switch(tc.document.readyState){case "complete":uc();break;case "interactive":Sc();
+vc();break;default:var Tc=tc,Uc=pb(Tc);Uc.loaded||(Uc.onload=zc);rc=Tc.setInterval(zc,10);vc(Sc)}}catch(a){bb(X,$a(new W(0),a))};})();
+</script><link rel="preload" href="./Understanding JavaScript Promise - Code Handbook_files/f(11).txt" as="script"><script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/f(11).txt"></script><link rel="preload" href="./Understanding JavaScript Promise - Code Handbook_files/f(12).txt" as="script"><script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/f(12).txt"></script><link rel="preload" href="./Understanding JavaScript Promise - Code Handbook_files/f(9).txt" as="script"><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Understanding JavaScript Promise - Code Handbook_files/hovercard.min.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Understanding JavaScript Promise - Code Handbook_files/services.min.css"><script charset="utf-8" src="./Understanding JavaScript Promise - Code Handbook_files/button.d941c9a422e2e3faf474b82a1f39e936.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+<body class="single single-post postid-1150 single-format-standard group-blog no-footer-widget fixed" style="padding-top: 61px;">
+<div id="page" class="hfeed site" style="height: auto !important;">
+	<a class="skip-link screen-reader-text" href="https://codehandbook.org/understanding-javascript-promise/#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-inner">
+			<div class="site-branding">
+								<h1 class="site-title"><a href="https://codehandbook.org/" rel="home">Code Handbook</a></h1>
+				<h2 class="site-description">Code Handbook offers articles and tutorials on web development technologies such as JavaScript, Node.js, AngularJS, Python, Asp.Net C#, MySQL, SQL etc.</h2>
+			</div><!-- .site-branding -->
+
+							<nav id="site-navigation" class="main-navigation" role="navigation" style="margin-top: -15px;">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="screen-reader-text">Primary Menu</span></button>
+					<div class="menu-menu-container"><ul id="primary-menu" class="menu nav-menu" aria-expanded="false"><li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-11"><a href="https://codehandbook.org/category/javascript/">JavaScript</a>
+<ul class="sub-menu">
+	<li id="menu-item-1052" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1052"><a href="https://codehandbook.org/category/javascript/javascript-coding-practice/">Coding Practice</a></li>
+</ul>
+</li>
+<li id="menu-item-1051" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1051"><a href="https://codehandbook.org/category/angular/">Angular</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="https://codehandbook.org/category/nodejs/">Node.js</a>
+<ul class="sub-menu">
+	<li id="menu-item-1313" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1313"><a href="https://codehandbook.org/category/nodejs/express/">Express</a></li>
+</ul>
+</li>
+<li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7"><a href="https://codehandbook.org/category/python-programming-language/">Python</a>
+<ul class="sub-menu">
+	<li id="menu-item-1054" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1054"><a href="https://codehandbook.org/category/python-programming-language/flask/">Flask</a></li>
+</ul>
+</li>
+<li id="menu-item-725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-725"><a href="http://codehandbook.org/advertise-code-handbook/">Advertise</a></li>
+<li id="menu-item-1897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1897"><a href="https://codehandbook.org/write-for-codehandbook/">Write For Us !!</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			<!-- #search-header -->
+		<div id="search-header" class="search-header">
+				<button class="search-toggle" aria-controls="search-form" aria-expanded="false"><span class="screen-reader-text">Search</span></button>
+				<form role="search" method="get" class="search-form" action="https://codehandbook.org/" aria-expanded="false">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>			</div></div><!-- .site-header-inner -->
+	</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content" style="height: auto !important;">
+
+	<header class="entry-header entry-hero">
+					<div class="post-thumbnail">
+				<img width="510" height="380" src="./Understanding JavaScript Promise - Code Handbook_files/javascript_promise.png" class="attachment-gazette-single-thumbnail size-gazette-single-thumbnail wp-post-image" alt="Understanding JavaScript Promise" srcset="https://codehandbook.org/wp-content/uploads/2018/06/javascript_promise.png 510w, https://codehandbook.org/wp-content/uploads/2018/06/javascript_promise-300x224.png 300w, https://codehandbook.org/wp-content/uploads/2018/06/javascript_promise-81x60.png 81w" sizes="(max-width: 510px) 100vw, 510px">			</div>
+		
+					<div class="entry-header-wrapper"><div class="entry-header-inner"><div class="entry-meta">
+				<span class="cat-links"><a href="https://codehandbook.org/category/javascript/" rel="category tag">JavaScript</a></span>			</div><h1 class="entry-title">Understanding JavaScript Promise</h1></div></div><!-- .entry-meta -->
+		
+			</header><div class="site-content-inner" style="height: auto !important;">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main" style="height: auto !important;">
+
+				
+					
+<article id="post-1150" class="post-1150 post type-post status-publish format-standard has-post-thumbnail hentry category-javascript tag-javascript tag-promise" style="height: auto !important;">
+	<!-- .entry-header -->
+
+	<div class="entry-content" style="height: auto !important;">
+		<div class="googlepublisherpluginad" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-8100068945711948" data-ad-slot="8541278245" data-ad-channel="WordPressSinglePost+pso-lv-10" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 280px;"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><iframe width="540" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 540px; height: 280px; overflow: visible;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(4).html"></iframe></ins></ins></ins></div><p><a href="https://codehandbook.org/understanding-javascript-promise/#what-is-javascript-promise" target="_blank">JavaScript</a> Promise is one of the must know things for a JavaScript developer. In this tutorial, you’ll learn what are JavaScript Promises, why are they used and how to use JavaScript promise.</p>
+<ul>
+<li><a href="https://codehandbook.org/understanding-javascript-promise/#what-is-javascript-promise">What is JavaScript Promise ?</a></li>
+<li><a href="https://codehandbook.org/understanding-javascript-promise/#why-use-javascript-promise">Why use JavaScript Promise ?</a></li>
+<li><a href="https://codehandbook.org/understanding-javascript-promise/#chaining-javascript-promise">Chaining JavaScript Promise</a></li>
+<li><a href="https://codehandbook.org/understanding-javascript-promise/#error-handling-javascript-promise">Error handling in JavaScript Promise</a></li>
+<li><a href="https://codehandbook.org/understanding-javascript-promise/#javascript-promise-all">JavaScript Promise All</a></li>
+</ul>
+<h2 id="what-is-javascript-promise">What is JavaScript Promise ?</h2>
+<p>From a layman’s point of view, a promise is an assurance that a particular thing will happen. Now a promise can be either kept in future or it may be broken. Similarly, JavaScript promise is an assurance that something may happen in future.</p>
+<div class="googlepublisherpluginad" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-8100068945711948" data-ad-slot="9143380648" data-ad-channel="WordPressSinglePost+pso-lv-10" data-adsbygoogle-status="done" style="display: block; margin: 10px auto 30px; background-color: transparent; height: 280px;"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><iframe width="540" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 540px; height: 280px; overflow: visible;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(5).html"></iframe></ins></ins></ins></div><p>From a programming perspective, a JavaScript promise is an object which may produce a result or it may produce an error. To be more specific, the promise will either get resolved with a result or may get rejected with a reason. You can attach a callback to a promise if it has been resolved or if it has been rejected.</p>
+<p>Let’s see an example of how to write a JavaScript promise. Here is how the basic syntax for a JavaScript promise looks like:</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">var</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token comment" spellcheck="true">/* if everthing works as expected */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'all good !!'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'Something is not right !!'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>When you create a promise, it will either get resolved or it will get rejected. The JavaScript promise methods takes in a callback function with a resolve and reject parameter. If all goes good the promise will get resolved with a success message else it will get rejected with an appropriate error message.</p>
+<p>You can attach callbacks to the above created promise to execute certain code when the promise resolves or when the promise gets rejected. Here is how you do it:</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript">promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>handleSuccess<span class="token punctuation">,</span> handleError<span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">handleSuccess</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'success '</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">handleError</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error '</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>As seen in the above code, you can attach callback to a promise using the <em>.then()</em> method. You have added two callbacks to the above promise. One callback to handle the resolve state and other to handle the promise rejection.</p>
+<h2 id="why-use-javascript-promise">Why Use JavaScript Promise ?</h2>
+<p>JavaScript promise looks cool and all, but why do I need to use it ? Can’t I simply use our old JavaScript callbacks ? How are callbacks different from a JavaScript promise ?</p>
+<p>In order to understand the above question, you first need to understand what are callbacks in JavaScript. Callbacks in JavaScript means functions attached to certain events or occurrences which executes when the event occurs. A simple example of a JavaScript callback is a click event callback. Here is how it looks :</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"btn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// code to execute when the button btn is clicked</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Let’s write a small code to read a file in Node.js and log its content.</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript">fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>As seen in the above code, you have used the <em>fs</em> module to read the file content. When the content of the file <em>index.html</em> has been read the callback function will be executed and the data will be logged.</p>
+<p>Now once the index.html file has been read I want to read another file called <em>index1.html</em>. So, you need to modify the code as shown :</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript">fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index1.html'</span><span class="token punctuation">,</span><span class="token string">' utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Once <em>index1.html</em> file has been read I want to read another file called <em>index2.html</em> and similarly <em>index3.html</em>. Here is how the modified code will look :</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript">fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index1.html'</span><span class="token punctuation">,</span><span class="token string">' utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index2.html'</span><span class="token punctuation">,</span><span class="token string">' utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index3.html'</span><span class="token punctuation">,</span><span class="token string">' utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>The above code looks like a total mess and becomes hard to maintain when the chain continues to grow. The above code that you see with nested callbacks is what is popularly known as <em>callback hell</em>.</p>
+<h2 id="chaining-javascript-promise">Chaining JavaScript Promise</h2>
+<p>Let’s have a look at how you can write the same piece of code using JavaScript promise. For re writing the above code using promises, you first need to separate each of the file read operations into separate functions which will return a promise. Here is how the functions look :</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">readFile1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index1.html'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">readFile2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index2.html'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">readFile3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'index3.html'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">{</span>      
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Now you can make a call to the first function that you want to execute and chain the rest of the functions accordingly. Here is how it looks :</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token function">readFile1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">readFile2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">readFile3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>As seen in the above code, you first make a call to the <em>readFile1</em> function which returns a promise. When that promise gets resolved you make a call to the <em>readFile2</em> function. Similarly, <em>readFile2</em>&nbsp;returns a promise and <em>readFile3</em> is called when the promise returned by <em>readFile2</em> is resolved. This process of executing one JavaScript promise after the other is called JavaScript promise chaining.</p>
+<p>One key thing to note here is that every call to a then returns a promise object except the last one.</p>
+<h2 id="#error-handling-javascript-promise">Error Handling In JavaScript Promise</h2>
+<p>There are two ways to handle a promise rejection. Let’s have a look at how you typically reject a promise.</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">doPromiseStuff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'promise rejected'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">doPromiseStuff</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'response is '</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error is '</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>As seen in the above code, when the <em>doPromiseStuff</em> promise gets rejected you can handle the rejection using the second parameter of the <em>.then</em> callback.</p>
+<p>Now let’s say you have a couple of more promises chained along with the existing promise. To handle promise rejection you will have to write down the <em>.then</em> promise rejection second parameter for each promise. So, a better way to handle rejection when dealing with promise chaining is using the <em>.catch</em> method of JavaScript promise.</p><div class="google-auto-placed ap_container" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8100068945711948" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent;"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:135px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:135px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><iframe width="540" height="135" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0px;width:540px;height:135px;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(6).html"></iframe></ins></ins></ins></div>
+<p>Here is an example of promise chaining with <em>.catch</em> method.</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">getPromiseResolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'promise resolved'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">getPromiseRejected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'promise rejected'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">getPromiseResolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">getPromiseRejected</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'response is '</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error is '</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>You have attached a catch handler to the JavaScript promise chain to handle the promise rejection. When the first promise gets resolved, you called the second promise which returns a rejected promise which is handled in the catch block. Similarly, any promise rejection will be handled in the catch block.</p>
+<p>Let’s say you have a number of JavaScript promises chained. You get an error then how will you identify from line the error is throwing up ?</p><div class="google-auto-placed ap_container" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8100068945711948" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent;"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:135px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:135px;margin:0;padding:0;position:relative;visibility:visible;width:540px;background-color:transparent;"><iframe width="540" height="135" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0px;width:540px;height:135px;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(7).html"></iframe></ins></ins></ins></div>
+<p>One nice way to handle this is to reject with a new JavaScript error. Have a look a the modified code:</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">getPromiseRejected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'promise rejected'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>The code will log the error with a stack trace which will be helpful in debugging the code.</p>
+<pre class="line-numbers language-bash code-toolbar"><code class=" language-bash">error is  Error: promise rejected
+    at C:\Users\ajay\Desktop\index.js:57:10
+    at new Promise <span class="token punctuation">(</span><span class="token operator">&lt;</span>anonymous<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    at getPromiseRejected <span class="token punctuation">(</span>C:\Users\ajay\Desktop\index.js:56:9<span class="token punctuation">)</span>
+    at C:\Users\ajay\Desktop\index.js:63:9
+    at <span class="token operator">&lt;</span>anonymous<span class="token operator">&gt;</span>
+    at process._tickCallback <span class="token punctuation">(</span>internal/process/next_tick.js:188:7<span class="token punctuation">)</span>
+    at Function.Module.runMain <span class="token punctuation">(</span>module.js:695:11<span class="token punctuation">)</span>
+    at startup <span class="token punctuation">(</span>bootstrap_node.js:191:16<span class="token punctuation">)</span>
+    at bootstrap_node.js:612:3</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h2 id="javascript-promise-all">JavaScript Promise All</h2>
+<p>At times it’s required to execute a number of promises in parallel. When you are in a scenario when you need to be sure that a certain set of promises have been executed you can use JavaScript Promise.all. Assuming that you have a couple of promises defined as shown:</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">function</span> <span class="token function">doTask1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'task one resolved'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">doTask2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'task two resolved'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">doTask3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'task three resolved'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Let’s make use of <em>Promise.all</em> method to execute the promise <em>doTask1</em> and <em>doTask2</em>. Once doTask1 and doTask2 has been executed, let’s execute doTask3. Here is how you can use Promise.all() to accomplish the following task:</p>
+<pre class="line-numbers language-javascript code-toolbar"><code class=" language-javascript"><span class="token keyword">var</span> promises <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">doTask1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">doTask2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+promises<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+    <span class="token function">doTask3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<h2>Wrapping It Up</h2>
+<p>In this tutorial, you learnt what is a JavaScript promise, how to use Promise and why use a promise. You also learnt how to chain JavaScript promises, how to handle errors when writing promises and how to use Promise.all() to execute promises in parallel.</p>
+<p>How was your experience learning Promises ? Do let us know thoughts or suggestions in the comments below.</p>
+                <div class="wp-post-author-wrap wp-post-author-shortcode left">
+                    <h3 class="awpa-title"></h3>
+                                        
+        <div class="wp-post-author">
+
+                <div class="awpa-img awpa-author-block square">
+                    <a href="https://codehandbook.org/author/jay/"><img src="./Understanding JavaScript Promise - Code Handbook_files/wpua-150x150.png" width="150" height="150" alt="Avatar" class="avatar avatar-150 wp-user-avatar wp-user-avatar-150 photo avatar-default"></a>
+                </div>
+                <div class="wp-post-author-meta awpa-author-block">
+                    <h4 class="awpa-display-name">
+                        <a href="https://codehandbook.org/author/jay/">jay</a>
+                    </h4>
+
+                    
+                    
+                                        <div class="wp-post-author-meta-bio">
+                        <p>I’m a software developer. I blog about web development related tutorials and articles in my free time.</p>
+                    </div>
+                    <div class="wp-post-author-meta-more-posts">
+                        <p class="awpa-more-posts">                        
+                           <a href="https://codehandbook.org/author/jay/" class="awpa-more-posts">See author's posts</a>
+                        </p>
+                    </div>
+                                            <ul class="awpa-contact-info">
+                                                            <li class="awpa-twitter-li">
+                                    <a href="https://twitter.com/jay3dec" class="awpa-twitter awpa-icon-twitter"></a>
+                                </li>
+                                                            <li class="awpa-linkedin-li">
+                                    <a href="https://www.linkedin.com/in/jay-raj-45303b16" class="awpa-linkedin awpa-icon-linkedin"></a>
+                                </li>
+                                                    </ul>
+                                    </div>
+        </div>
+
+                                            </div>
+                
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="1758" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codehandbook.org/how-to-handle-error-in-javascript-promise-all/" title="How To Handle Error In JavaScript Promise All
+
+In this tutorial, you&#39;ll learn how to handle error in JavaScript Promise.all method. Promise.all method is used to make sure that all promises in an array of promises has resolved. If any of the promises gets rejected, the Promise.all execution stops. So, how to handle such scenarios and make sure…" rel="nofollow" data-origin="1150" data-position="0">How To Handle Error In JavaScript Promise All</a></span><span class="jp-relatedposts-post-date">August 1, 2019</span><span class="jp-relatedposts-post-context">In "JavaScript"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="1465" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codehandbook.org/execute-javascript-promises-sequence/" title="How To Execute JavaScript Promises In Sequence
+
+In this tutorial, you&#39;ll learn how to execute JavaScript promises in sequence. If you are unfamiliar with JavaScript promises, I would recommend getting a basic understanding of how JavaScript promises work. Creating a JavaScript Promise Let&#39;s start by creating a JavaScript promise. I&#39;ll define a function which will return a…" rel="nofollow" data-origin="1150" data-position="1">How To Execute JavaScript Promises In Sequence</a></span><span class="jp-relatedposts-post-date">November 1, 2018</span><span class="jp-relatedposts-post-context">In "JavaScript"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="1775" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://codehandbook.org/how-to-return-data-from-javascript-promise-es6/" title="How To Return Data From JavaScript Promise
+
+In this tutorial, you&#39;ll learn how to return data from JavaScript Promise. Assuming that you have a basic understanding about JavaScript Promises, I&#39;ll start by creating a method which returns a Promise, so that you can see how to return data from promise. function getPromise(){ return new Promise(function(resolve,reject){ setTimeout(function(){ resolve({&#39;country&#39;…" rel="nofollow" data-origin="1150" data-position="2">How To Return Data From JavaScript Promise</a></span><span class="jp-relatedposts-post-date">July 8, 2019</span><span class="jp-relatedposts-post-context">In "JavaScript"</span></p></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="https://codehandbook.org/understanding-javascript-promise/" rel="bookmark"><time class="entry-date published" datetime="2018-06-19T21:04:10+00:00">June 19, 2018</time><time class="updated" datetime="2018-10-21T12:07:48+00:00">October 21, 2018</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://codehandbook.org/author/jay/">jay</a></span></span><span class="tags-links"><a href="https://codehandbook.org/tag/javascript/" rel="tag">JavaScript</a>, <a href="https://codehandbook.org/tag/promise/" rel="tag">Promise</a></span>	<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="./Understanding JavaScript Promise - Code Handbook_files/tweet_button.e3a0e1b01ae601b6c9cf798a93ab7e69.en.html" data-url="https://codehandbook.org/understanding-javascript-promise/"></iframe></li><li class="share-google-plus-1"><div class="googleplus1_button"><div class="g-plus" data-action="share" data-annotation="bubble" data-href="https://codehandbook.org/understanding-javascript-promise/" id="___plusone_0"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1571690135273" name="I0_1571690135273" src="./Understanding JavaScript Promise - Code Handbook_files/fastbutton.html" data-gapiattached="true"></iframe></div></div></li><li class="share-facebook"><div class="fb-share-button fb_iframe_widget" data-href="https://codehandbook.org/understanding-javascript-promise/" data-layout="button_count" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=249643311490&amp;container_width=0&amp;href=https%3A%2F%2Fcodehandbook.org%2Funderstanding-javascript-promise%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f28fe0e7083ef2" width="1000px" height="1000px" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Understanding JavaScript Promise - Code Handbook_files/share_button.html" style="border: none; visibility: visible; width: 0px; height: 0px;" class=""></iframe></span></div></li><li class="share-end"></li></ul></div></div></div></footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+					<div id="disqus_thread">
+		</div>
+
+					
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://codehandbook.org/use-fragments-in-react-web-app/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">How To Use Fragments In React Web App</span></a></div><div class="nav-next"><a href="https://codehandbook.org/post-data-from-angular-to-node-rest-api/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">How To Post Data From Angular To Node REST API</span></a></div></div>
+	</nav>
+				
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		
+	<button class="sidebar-toggle" aria-controls="secondary" aria-expanded="false"><span class="screen-reader-text">Sidebar</span></button>
+
+<div id="secondary" class="widget-area" role="complementary" aria-expanded="false" style="height: auto !important;">
+	<aside id="blog_subscription-3" class="widget jetpack_subscription_widget">			<form action="https://codehandbook.org/understanding-javascript-promise/#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
+				<div id="subscribe-text"></div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-3" style="clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-3" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="https://codehandbook.org/understanding-javascript-promise/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3">
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-3]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-3'),
+					input = d.getElementById('subscribe-field-blog_subscription-3'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside><div class="googlepublisherpluginad" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-8100068945711948" data-ad-slot="2656195049" data-ad-channel="WordPressSinglePost+pso-lv-7" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 600px;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:270px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:270px;background-color:transparent;"><iframe width="270" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 270px; height: 600px; overflow: visible;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(8).html"></iframe></ins></ins></ins></div><aside id="synved_social_follow-3" class="widget widget_synved_social_follow"><h2 class="widget-title">Follow Us</h2><div><a class="synved-social-button synved-social-button-follow synved-social-size-48 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Follow us on Facebook" href="https://www.facebook.com/codehandbook" style="font-size: 0px; width:48px;height:48px;margin:0;margin-bottom:10px;margin-right:10px;"><img alt="Facebook" title="Follow us on Facebook" class="synved-share-image synved-social-image synved-social-image-follow" width="48" height="48" style="display: inline; width:48px;height:48px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Understanding JavaScript Promise - Code Handbook_files/facebook.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-48 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="http://www.twitter.com/codehandbook" style="font-size: 0px; width:48px;height:48px;margin:0;margin-bottom:10px;margin-right:10px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="48" height="48" style="display: inline; width:48px;height:48px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Understanding JavaScript Promise - Code Handbook_files/twitter.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-48 synved-social-resolution-single synved-social-provider-google_plus nolightbox" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="https://plus.google.com/+CodehandbookOrg007" style="font-size: 0px; width:48px;height:48px;margin:0;margin-bottom:10px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="48" height="48" style="display: inline; width:48px;height:48px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Understanding JavaScript Promise - Code Handbook_files/google_plus.png"></a></div></aside><aside id="listcategorypostswidget-2" class="widget widget_listcategorypostswidget"><h2 class="widget-title">Also read ….</h2><ul class="lcp_catlist" id="lcp_instance_listcategorypostswidget-2"><li><a href="https://codehandbook.org/implement-dark-background-mode-css/" title="How to Implement Dark Background Mode in CSS">How to Implement Dark Background Mode in CSS</a>  </li><li><a href="https://codehandbook.org/server-side-client-side-upload-best/" title="Server-Side or Client-Side Upload: Which Is Best?">Server-Side or Client-Side Upload: Which Is Best?</a>  </li><li><a href="https://codehandbook.org/development-python-aws/" title="Development With Python in AWS">Development With Python in AWS</a>  </li><li><a href="https://codehandbook.org/file-upload-security-best-practices/" title="File Upload Security Best Practices">File Upload Security Best Practices</a>  </li><li><a href="https://codehandbook.org/define-video-transcoding-html5-video/" title="How to Define Video Transcoding in an HTML5 Video">How to Define Video Transcoding in an HTML5 Video</a>  </li><li><a href="https://codehandbook.org/5-ways-save-time-deploying-kubernetes-cluster/" title="5 Ways to Save Time When Deploying a Kubernetes Cluster">5 Ways to Save Time When Deploying a Kubernetes Cluster</a>  </li><li><a href="https://codehandbook.org/javascript-es-6-pass-object-by-value/" title="JavaScript ES6 : Pass Object By Value">JavaScript ES6 : Pass Object By Value</a>  </li><li><a href="https://codehandbook.org/how-to-handle-error-in-javascript-promise-all/" title="How To Handle Error In JavaScript Promise All">How To Handle Error In JavaScript Promise All</a>  </li><li><a href="https://codehandbook.org/javascript-convert-string-number/" title="JavaScript : Convert String To Number">JavaScript : Convert String To Number</a>  </li><li><a href="https://codehandbook.org/unsure-type-hosting-need-perfect/" title="Unsure On What Type Of Hosting You Need? This Is Perfect For You!">Unsure On What Type Of Hosting You Need? This Is Perfect For You!</a>  </li><li><a href="https://codehandbook.org/javascript-remove-last-character-string/" title="JavaScript : Remove Last Character From String">JavaScript : Remove Last Character From String</a>  </li><li><a href="https://codehandbook.org/javascript-jquery-remove-first-character-string/" title="JavaScript jQuery : Remove First Character From String">JavaScript jQuery : Remove First Character From String</a>  </li><li><a href="https://codehandbook.org/sort-array-objects-javascript/" title="How To Sort Array Of Objects In JavaScript">How To Sort Array Of Objects In JavaScript</a>  </li><li><a href="https://codehandbook.org/check-object-array-javascript/" title="How To Check If Object Is Array In JavaScript">How To Check If Object Is Array In JavaScript</a>  </li><li><a href="https://codehandbook.org/check-object-key-javascript/" title="How To Check If Object Has Key In JavaScript">How To Check If Object Has Key In JavaScript</a>  </li><li><a href="https://codehandbook.org/remove-attribute-html-element/" title="How To Remove An Attribute From An HTML Element">How To Remove An Attribute From An HTML Element</a>  </li><li><a href="https://codehandbook.org/building-node-js-express-app-using-typescript/" title="Building Node.js Express App Using TypeScript">Building Node.js Express App Using TypeScript</a>  </li><li><a href="https://codehandbook.org/empty-array-javascript/" title="How To Empty An Array In JavaScript">How To Empty An Array In JavaScript</a>  </li><li><a href="https://codehandbook.org/split-number-individual-digits-using-javascript/" title="How To Split Number To Individual Digits Using JavaScript">How To Split Number To Individual Digits Using JavaScript</a>  </li><li><a href="https://codehandbook.org/handle-404-error-python-flask/" title="How To Handle 404 Error In Python Flask">How To Handle 404 Error In Python Flask</a>  </li><li><a href="https://codehandbook.org/javascript-get-last-character-string/" title="JavaScript : How To Get Last Character Of A String">JavaScript : How To Get Last Character Of A String</a>  </li><li><a href="https://codehandbook.org/javascript-find-duplicate-objects-array/" title="JavaScript : Find Duplicate Objects In An Array">JavaScript : Find Duplicate Objects In An Array</a>  </li><li><a href="https://codehandbook.org/javascript-find-duplicate-values-array/" title="JavaScript : Find Duplicate Values In An Array">JavaScript : Find Duplicate Values In An Array</a>  </li><li><a href="https://codehandbook.org/check-object-contains-key-javascript/" title="How To Check If An Object Contains A Key In JavaScript">How To Check If An Object Contains A Key In JavaScript</a>  </li><li><a href="https://codehandbook.org/access-previous-promise-result-chain/" title="How To Access Previous Promise Result In Then Chain">How To Access Previous Promise Result In Then Chain</a>  </li><li><a href="https://codehandbook.org/check-object-empty-javascript/" title="How To Check If An Object Is Empty In JavaScript">How To Check If An Object Is Empty In JavaScript</a>  </li><li><a href="https://codehandbook.org/understanding-object-keys-method-javascript/" title="Understanding Object.keys Method In JavaScript">Understanding Object.keys Method In JavaScript</a>  </li><li><a href="https://codehandbook.org/javascript-ternary-operator/" title="JavaScript Ternary Operator">JavaScript Ternary Operator</a>  </li><li><a href="https://codehandbook.org/reverse-string-javascript/" title="How To Reverse A String In JavaScript">How To Reverse A String In JavaScript</a>  </li><li><a href="https://codehandbook.org/check-array-contains-value-javascript/" title="How To Check If An Array Contains A Value JavaScript">How To Check If An Array Contains A Value JavaScript</a>  </li><li><a href="https://codehandbook.org/javascript-array-includes-method/" title="JavaScript Array Includes Method">JavaScript Array Includes Method</a>  </li><li><a href="https://codehandbook.org/how-to-return-data-from-javascript-promise-es6/" title="How To Return Data From JavaScript Promise">How To Return Data From JavaScript Promise</a>  </li><li><a href="https://codehandbook.org/push-json-object-array-using-javascript/" title="How To Push JSON Object Into An Array Using JavaScript">How To Push JSON Object Into An Array Using JavaScript</a>  </li><li><a href="https://codehandbook.org/create-json-array-dynamically-using-javascript/" title="How To Create JSON Array Dynamically Using JavaScript">How To Create JSON Array Dynamically Using JavaScript</a>  </li><li><a href="https://codehandbook.org/javascript-array-reduce-method/" title="JavaScript Array Reduce Method">JavaScript Array Reduce Method</a>  </li><li><a href="https://codehandbook.org/how-to-read-and-display-json-using-python/" title="How To Read And Display JSON using Python">How To Read And Display JSON using Python</a>  </li><li><a href="https://codehandbook.org/extract-data-from-javascript-object-using-es6/" title="How To Extract Data From JavaScript Object Using ES6">How To Extract Data From JavaScript Object Using ES6</a>  </li><li><a href="https://codehandbook.org/reverse-a-number-in-javascript/" title="How to Reverse a Number In JavaScript">How to Reverse a Number In JavaScript</a>  </li><li><a href="https://codehandbook.org/how-to-merge-two-objects-in-javascript/" title="How To Merge Two Objects In JavaScript">How To Merge Two Objects In JavaScript</a>  </li><li><a href="https://codehandbook.org/things-you-can-do-with-pytorch-python-deep-learning/" title="6 Cool Things You Can Do with PyTorch – the Python-Native  Deep Learning Framework">6 Cool Things You Can Do with PyTorch – the Python-Native  Deep Learning Framework</a>  </li><li><a href="https://codehandbook.org/handle-error-javascript-promise/" title="How To Handle Error In JavaScript Promise">How To Handle Error In JavaScript Promise</a>  </li><li><a href="https://codehandbook.org/how-to-connect-to-mysql-running-in-docker-container-from-localhost/" title="How To Connect To MySQL Running In Docker Container From Localhost">How To Connect To MySQL Running In Docker Container From Localhost</a>  </li><li><a href="https://codehandbook.org/how-to-add-bootstrap-to-angular-7/" title="How To Add Bootstrap To Angular 7">How To Add Bootstrap To Angular 7</a>  </li><li><a href="https://codehandbook.org/how-to-create-module-in-angular-7/" title="How To Create Module In Angular 7">How To Create Module In Angular 7</a>  </li><li><a href="https://codehandbook.org/how-to-make-api-calls-inside-for-loop-in-javascript/" title="How To Make API Calls Inside For Loop In JavaScript">How To Make API Calls Inside For Loop In JavaScript</a>  </li><li><a href="https://codehandbook.org/three-dots-in-javascript/" title="What Does … (Three Dots) Mean In JavaScript">What Does … (Three Dots) Mean In JavaScript</a>  </li><li><a href="https://codehandbook.org/insert-element-frontbeginning-array-javascript/" title="How To Insert Element To Front/Beginning Of An Array In JavaScript">How To Insert Element To Front/Beginning Of An Array In JavaScript</a>  </li><li><a href="https://codehandbook.org/how-to-run-javascript-promises-in-parallel/" title="How To Run JavaScript Promises In Parallel">How To Run JavaScript Promises In Parallel</a>  </li><li><a href="https://codehandbook.org/set-default-parameter-javascript-function/" title="How To Set Default Parameter In JavaScript Function">How To Set Default Parameter In JavaScript Function</a>  </li><li><a href="https://codehandbook.org/javascript-program-to-check-armstrong-number/" title="JavaScript Program To Check If Armstrong Number">JavaScript Program To Check If Armstrong Number</a>  </li></ul><a href="https://codehandbook.org/understanding-javascript-promise/"> </a></aside><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8100068945711948" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 600px;"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:270px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:270px;background-color:transparent;"><iframe width="270" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_6" name="aswift_6" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 270px; height: 600px; overflow: visible;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(9).html"></iframe></ins></ins></ins></div><aside id="top-posts-2" class="widget widget_top-posts"><h2 class="widget-title">Popular Posts</h2><ul>				<li>
+										<a href="https://codehandbook.org/javascript-date-format/" class="bump-view" data-bump-view="tp">
+						How To Format Date In JavaScript					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/remove-character-from-string/" class="bump-view" data-bump-view="tp">
+						How To Remove Character From String Using JavaScript					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/how-to-read-email-from-gmail-using-python/" class="bump-view" data-bump-view="tp">
+						How to Read Email From Gmail Using Python					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/es6-javascript-remove-duplicates-from-an-array/" class="bump-view" data-bump-view="tp">
+						ES6 JavaScript : Remove Duplicates from An Array					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/use-leaflet-in-angular/" class="bump-view" data-bump-view="tp">
+						How To Use Leaflet In Angular Web Apps					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/how-to-read-email-from-gmail-api-using-python/" class="bump-view" data-bump-view="tp">
+						How To Read Email From GMAIL API Using Python					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/python-flask-jquery-ajax-post/" class="bump-view" data-bump-view="tp">
+						Python Flask jQuery Ajax POST					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/looping-nested-object-keys-with-ngfor-in-angular/" class="bump-view" data-bump-view="tp">
+						Looping Nested Object Keys With ngFor In Angular					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/sorting-string-letters-in-alphabetical-order-using-javascript/" class="bump-view" data-bump-view="tp">
+						Sorting String Letters In Alphabetical Order Using JavaScript					</a>
+									</li>
+							<li>
+										<a href="https://codehandbook.org/generate-random-string-characters-in-javascript/" class="bump-view" data-bump-view="tp">
+						How To Generate Random String Characters In JavaScript					</a>
+									</li>
+			</ul></aside></div><!-- #secondary -->
+	</div><div class="google-auto-placed" style="text-align: center; width: 100%; height: auto; clear: both;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8100068945711948" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 280px;"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><iframe width="1200" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0px;width:1200px;height:280px;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(10).html"></iframe></ins></ins></ins></div><!-- .site-content-inner -->
+
+
+	</div><!-- #content -->
+
+	
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer-inner">
+			
+			
+			<div class="site-info">
+				<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="genericon genericon-wordpress sep"></span>
+				Theme: Gazette by <a href="https://wordpress.com/themes/" rel="designer">Automattic</a>.			</div><!-- .site-info -->
+		</div><!-- .site-footer-inner -->
+	</footer><!-- #colophon -->
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(11).html"></iframe></ins></ins></ins><!-- #page -->
+
+	<div style="display:none">
+	<div class="grofile-hash-map-a6a8ec1cf0cf3446929e09eb5afaf1f0">
+	</div>
+	</div>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<script>
+			function renderGooglePlus1() {
+				if ( 'undefined' === typeof gapi ) {
+					return;
+				}
+
+				jQuery( '.g-plus' ).each(function() {
+					var $button = jQuery( this );
+
+					if ( ! $button.data( 'gplus-rendered' ) ) {
+						gapi.plusone.render( this, {
+							href: $button.attr( 'data-href' ),
+							size: $button.attr( 'data-size' ),
+							annotation: $button.attr( 'data-annotation' )
+						});
+
+						$button.data( 'gplus-rendered', true );
+					}
+				});
+			}
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				po.innerHTML = '{"parsetags": "explicit"}';
+				po.onload = renderGooglePlus1;
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+			jQuery( document.body ).on( 'post-load', renderGooglePlus1 );
+			</script>
+			<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Understanding JavaScript Promise - Code Handbook_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+			<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"codehandbook"};
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.16"},"disqusIdentifier":"1150 https:\/\/codehandbook.org\/?p=1150","disqusShortname":"codehandbook","disqusTitle":"Understanding JavaScript Promise","disqusUrl":"https:\/\/codehandbook.org\/understanding-javascript-promise\/","postId":"1150"};
+var dclCustomVars = {"dcl_progress_text":"Loading..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/embed-scroll.min.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/wpgroho.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/navigation.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/featured-content.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/header.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/search.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/single-thumbnail.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/single.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/sidebar.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/prism-js.min.js"></script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/wp-embed.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/sharing.js"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type="text/javascript" src="./Understanding JavaScript Promise - Code Handbook_files/e-201943.js" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.4.1',blog:'94541410',post:'1150',tz:'5.5',srv:'codehandbook.org'} ]);
+	_stq.push([ 'clickTrackerInit', '94541410', '1150' ]);
+</script>
+
+
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+
+Served from: codehandbook.org @ 2019-10-22 02:05:32 by W3 Total Cache
+--><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Understanding JavaScript Promise - Code Handbook_files/widget_iframe.e3a0e1b01ae601b6c9cf798a93ab7e69.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="google_osd_static_frame_1322337273797" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Understanding JavaScript Promise - Code Handbook_files/saved_resource(12).html"></iframe><iframe name="oauth2relay291538732" id="oauth2relay291538732" src="./Understanding JavaScript Promise - Code Handbook_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><img src="./Understanding JavaScript Promise - Code Handbook_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body><iframe id="google_esf" name="google_esf" src="./Understanding JavaScript Promise - Code Handbook_files/zrt_lookup.html" data-ad-client="ca-pub-8100068945711948" style="display: none;"></iframe></html>
