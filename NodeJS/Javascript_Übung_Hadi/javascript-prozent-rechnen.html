@@ -1,0 +1,187 @@
+<html>
+<head>
+<script type="text/javascript">
+function prozent_rechnen(){
+    var a=document.getElementById('zahlenwert_a');
+    var b=document.getElementById('zahlenwert_b');
+    if (a.value==""){
+        alert("Bitte Zahlenwert 1 angeben!");
+        a.focus();
+        return false;
+        }
+    if (!numerisch(a.value)){
+        alert("Zahlenwert 1 ist nicht numerisch oder negativ!");
+        a.focus();
+        return false;
+        }
+    if (b.value==""){
+        alert("Bitte Zahlenwert 2 angeben!");
+        b.focus();
+        return false;
+        }
+    if (!numerisch(b.value)){
+        alert("Zahlenwert 2 ist nicht numerisch oder negativ!");
+        b.focus();
+        return false;
+        }
+    if (parseFloat(a.value)<parseFloat(b.value)){
+        var ausgabe=a.value + " ist " + prozent_runden(100*(b.value-a.value)/b.value) + " kleiner als " + b.value + "<br />" + b.value + " ist " + prozent_runden(100*(b.value-a.value)/a.value) + " gr&ouml;&szlig;er als " + a.value + "<br />";
+        }else{
+        var ausgabe=b.value + " ist " + prozent_runden(100*(a.value-b.value)/a.value) + " kleiner als " + a.value + "<br />" + a.value + " ist " + prozent_runden(100*(a.value-b.value)/b.value) + " gr&ouml;&szlig;er als " + b.value + "<br />";
+        }
+    document.getElementById('ausgabe').innerHTML=ausgabe;
+    return false;
+    }
+function numerisch(quelle){
+    var zahlen="0123456789.";
+    var quelle_laenge=quelle.length;
+    for (i=0;i<quelle_laenge;i++){
+        if (zahlen.indexOf(quelle[i]) == -1){
+           return false;
+           }
+        }
+    return true;
+    }
+function prozent_runden(quelle){
+    var wert=Math.round(quelle*10);
+    var wert2=wert/10;
+    var wert3=wert2-Math.round(wert2);
+    if (wert3==0){
+        return wert2 + "." + wert3 + "%";
+        }else{
+        return wert2 + "%";
+        }
+    }
+
+</script>
+</head>
+<body>
+Zahlenwert 1: <input type="text" id="zahlenwert_a" size="3" /><br />
+Zahlenwert 2: <input type="text" id="zahlenwert_b" size="3" />
+<input type="button" onclick="return prozent_rechnen();" value="Prozent rechnen" />
+<div id="ausgabe"></div>
+</body>
+</html>
+
+
+<!-- 
+
+    JavaScript zum Prozent rechnen:
+
+    Dieses einfache JavaScript vergleicht zwei angegebene Zahlenwerte. Mit ihm können Sie rechnen lassen, wieviel Prozent ein Wert größer ist als der andere und wieviel Prozent der andere Wert im Umkehrschluss kleiner ist. Damit das Script nicht zu kompliziert wird, können nur positive Werte miteinander verglichen werden. Brüche sind zugelassen, müssen aber mit Punkt . statt Komma , angegeben werden. Die berechneten Prozentzahlen werden auf eine Nachkommastelle gerundet.
+
+    Erläuterung des Codes
+
+
+<html>
+Beginn des HTML-Codes.
+
+<head>
+Beginn des HEAD-Bereichs.
+
+<script type="text/javascript">
+Beginn des JavaScript-Codes.
+
+function prozent_rechnen(){
+Die Funktion function prozent_rechnen() wird definiert. 
+Die benötigten Werte werden nicht als Parameter an die Funktion übergeben,
+sondern in den beiden nachfolgenden Code-Zeilen gelesen.
+
+var a=document.getElementById('zahlenwert_a');
+Der Variablen a wird das Input-Feld für den ersten Zahlenwert zugewiesen.
+
+var b=document.getElementById('zahlenwert_b');
+Das Eingabefeld für den Zahlenwert 2 wird der Variablen b zugewiesen.
+
+if (a.value==""){alert("Bitte Zahlenwert 1 angeben!");a.focus();return false;}
+Falls die JavaScript-Funktion durch Klick auf den Prozent rechnen-Button in Zeile 41 aufgerufen wird ohne dass im ersten Eingabe-Feld etwas eingetragen wurde, wird via alert eine Fehlermeldung angezeigt, das Eingabefeld für den ersten Zahlenwert fokussiert und das Ausführen der JavaScript-Funktion mit return false abgebrochen.
+
+if (!numerisch(a.value)){alert("Zahlenwert 1 ist nicht numerisch oder negativ!");
+a.focus();
+return false;
+}
+
+Mittels der in Zeile 18ff definierten numerisch()-Funktion wird geprüft, ob der im Eingabefeld für den ersten Zahlenwert eingegebene Text numerisch ist. Sollte das nicht der Fall sein, wird eine entsprechende Fehlermeldung ausgegeben, das Eingabefeld fokussiert und die Ausführung des JavaScripts abgebrochen.
+
+if (b.value==""){alert("Bitte Zahlenwert 2 angeben!");b.focus();return false;}
+Das Eingabefeld für den zweiten Zahlenwert wird auf die gleiche Art überprüft wie das Eingabefeld für den ersten Zahlenwert. Wird das JavaScript aufgerufen, ohne dass eine Text-Eingabe im zweiten Eingabefeld erfolgt ist, wird eine Fehlermeldung angezeigt.
+
+if (!numerisch(b.value)){alert("Zahlenwert 2 ist nicht numerisch oder negativ!");b.focus();return false;}
+Auch im zweiten Eingabefeld dürfen nur numerische Werte eingegeben werden.
+
+if (a.value*1<b.value*1){
+Indem die Werte der beiden Eingabefelder mit 1 mulipliziert werden kann sichergestellt werden, dass JavaScript die angegeben Werte als Zahlen und nicht als Strings behandelt. Andernfalls wären keine Vergleiche oder Rechenoperationen möglich. Wenn die Bedingung in der if-Anweisung zutrifft, nämlich dass der erste eingegebene Zahlenwert kleiner ist als der zweite, wird der JavaScript-Code in Zeile 12 ausgeführt.
+
+var ausgabe=a.value + " ist " + prozent_runden(100*(b.value-a.value)/b.value) + " kleiner als " + b.value + "<br />" + b.value + " ist " + prozent_runden(100*(b.value-a.value)/a.value) + " größer als " + a.value + "<br />";
+}else{
+In Zeile 12 wird der Variablen ausgabe der Wert zugewiesen, der das Ergebnis des Vergleichs inklusive prozentualem Unterschied beinhaltet; also der Text, der dem Anwender auf der Seite angezeigt wird. Der auszugebende Text beginnt zunächst mit dem bei Zahlenwert 1 angegebenen Wert, gefolgt vom String ist und dem Rückgabewert der in Zeile 26ff definierten Funktion prozent_runden(). Als Parameter an diese Funktion wird der zur Errechnung des Prozentsatzes benötigte Dreisatz aus der Differenz der beiden angegebenen Zahlenwerte dividiert durch den größeren Zahlenwert und multipliziert mit 100 übergeben. Es folgt die Zeichenkette kleiner als, der zweite und in diesem Fall größere Zahlenwert und ein Zeilenumbruch zwecks Übersichtlichkeit.
+
+Auf den mit <br /> bewirkten Zeilenumbruch folgt die Anzeige des im zweiten Eingabefeld eingetragenen Zahlenwertes. Anschließend wird die ausgabe-Variable erweitert um den String ist und den Rückgabewert der prozent_runden()-Funktion. Dabei wird an prozent_runden() als Parameter die positive Differenz der zu vergleichenden Zahlenwerte dividert durch den kleineren Zahlenwert im ersten Eingabefeld multipliziert mit 100 übergeben. Damit die ausgegebene Prozentzahl in den Kontext passt, wird die ausgabe-Variable mit größer als und dem kleineren der beiden angegebenen Zahlenwerte vervollständigt.
+
+Zu guter Letzte befindet sich am Ende von Zeile 12 eine else-Anweisung, mittels derer der JavaScript-Code in Zeile 13 nur ausgeführt wird, wenn der erste Zahlenwert größer oder gleich dem zweiten im Formular angegebenen Zahlenwert ist.
+var ausgabe=b.value + " ist " + prozent_runden(100*(a.value-b.value)/a.value) + " kleiner als " + a.value + "<br />" + a.value + " ist " + prozent_runden(100*(a.value-b.value)/b.value) + " größer als " + b.value + "<br />";
+Der Code entspricht weitestgehend dem in Zeile 12 verwendeten mit dem Unterschied, dass nun der erste Zahlenwert größer oder gleich dem Zahlenwert im zweiten Eingabefeld ist, die Rechenoperationen entsprechend angepasst sind und die Reihenfolge der in der ausgabe-Variablen angezeigten Zahlenwerte „vertauscht” ist.
+}
+Ende der in Zeile 12 eingeleiteten else-Anweisung.
+document.getElementById('ausgabe').innerHTML=ausgabe;
+Der in den Zeilen 12 bzw. 13 zugewiesene Wert der ausgabe-Variablen wird im div-Container in Zeile 42 angezeigt.
+return false;
+Die Funktion liefert false zurück, um ein in manchen Browsern auftretendes Phänomen zu unterdrücken, wonach ein Formular nicht nur durch Klick auf einen Submit-Button, sondern durch Klick auf einen beliebigen Button innerhalb des Formulars abgeschickt wird.
+}
+Die prozent_rechnen-Funktion ist fertig definiert, die in Zeile 4 geöffnete geschweifte Klammer wird geschlossen.
+function numerisch(quelle){
+Die in den Zeilen 8 und 10 benötgte numerisch()-Funktion wird definiert. Sie überprüft, dass in die beiden Eingabefelder nur positive, numerische Werte eingetragen wurden.
+var zahlen="0123456789.";
+Der Variablen zahlen wird ein String bestehend aus alle Zeichen zugeordnet, die das Prozent-rechnen-Script verabeiten kann.
+var quelle_laenge=quelle.length;
+quelle_laenge enthält die Anzahl der zu prüfenden Zeichen, also die Länge des jeweiligen angegebenen Wertes.
+for (i=0;i<quelle_laenge;i++){
+Beginn einer for()-Schleife, die so lange durchlaufen wird, wie die bei jedem Durchlauf inkrementierte i-Variable kleiner als der Wert von quelle_laenge ist. Oder anders ausgedrückt: Für jedes zu prüfende Zeichen wird die Schleife einmal durchlaufen.
+if (zahlen.indexOf(quelle[i]) == -1){return false;}
+Wenn das innerhalb der for()-Schleife geprüfte Zeichen des vom Anwender angegebenen Wertes nicht im in Zeile 19 angegebenen String enthalten ist, wird false zurückgegeben.
+}
+Ende der in Zeile 21 begonnenen for()-Schleife.
+return true;
+Der angegebene Wert wurde erfolgreich geprüft, enthält nur Zahlen oder Punkte. Die numerisch-Funktion liefert true zurück.
+}
+Ende der numerisch-Funktion.
+function prozent_runden(quelle){
+Die in den Zeilen 12 und 13 benötigte prozent_runden()-Funktion wird definiert. Mit dieser Funktion werden die auszugebenden Prozentzahlen auf eine Nachkomma-Stelle gerundet. An die Funktion wird als quelle-Parameter der zu rundende Prozentwert übergeben.
+var wert=Math.round(quelle*10);
+Der Quellwert wird mit 10 multipliziert und das Ergebnis anschließend mit Math.round zu einer Ganzzahl gerundet. Der gerundete Wert wird der Variablen wert zugewiesen.
+var wert2=wert/10;
+Der Variablen wert2 wird der Quotient aus dem gerundeten Zahlenwert und 10 zugeordnet.
+var wert3=wert2-Math.round(wert2);
+Indem wir wert3 die Differenz aus wert2 und dem auf eine Ganzzahl gerundeten Wert von wert2 zuordnen, können wir feststellen, ob wert2 eine Nachkommastelle besitzt oder es sich um eine Ganzzahl handelt. Alternativ könnte wert2 auch mit indexOf auf Vorkommnis eines Punkts geprüft werden.
+if (wert3==0){
+Wenn wert3 gleich 0 ist, hat wert2 keine Nachkommastelle.
+return wert2 + "." + wert3 + "%";
+Um ein einheitliches Erscheinungsbild zu bewirken, liefert die Funktion die Ganzzahl von wert2 gefolgt von .0% zurück.
+}else{
+Sofern wert2 bereits eine Nachkommastelle hat,…
+return wert2 + "%";
+…wird wert2 gefolgt von % zurückgegeben.
+}
+Ende der else-Anweisung.
+}
+Ende der prozent_runden()-Funktion.
+...
+Code für ältere Browser…
+</script>
+Ende des script-Containers.
+</head>
+Der HEAD-Bereich wird beendet.
+<body>
+Öffnen von BODY.
+Zahlenwert 1: <input type="text" id="zahlenwert_a" size="3" /><br />
+Auf der Seite wird der Text Zahlenwert 1 angezeigt. Rechts davon wird ein Eingabefeld dargestellt, in das der Anwender den ersten der beiden zu vergleichenden Zahlenwerte eintragen kann.
+Zahlenwert 2: <input type="text" id="zahlenwert_b" size="3" /> <input type="button" onclick="return prozent_rechnen();" value="Prozent rechnen" />
+Auf den Text Zahlenwert 2 folgt das Eingabefeld für den zweiten Zahlenwert und ein mit Prozent rechnen betitelter Button. Durch Klick auf den Button wird die JavaScript-Funktion prozent_rechnen() ausgeführt.
+<div id="ausgabe"></div>
+Im ausgabe-div wird der Rückgabewert der mit prozent_rechnen() durchgeführten Prozentrechnung angezeigt.
+</body>
+Endes des BODYs.
+</html>
+Der HTML-Container wird geschlossen.
+
+ -->

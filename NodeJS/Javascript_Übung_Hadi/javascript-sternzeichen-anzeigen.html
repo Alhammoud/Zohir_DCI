@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <!-- <script type="text/javascript">
+ 
+</script> -->
+
+</head>
+
+<body>
+    Geburtsdatum: <select name="geb_tag" id="geb_tag" onchange="sternzeichen_generieren();">
+        <option value="0">Tag</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>.
+    <select name="geb_mon" id="geb_mon" onchange="sternzeichen_generieren()">
+        <option value="0">Mon</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>.
+    <span id="sternzeichen_span"></span>
+    <script type="text/javascript" src="jscriptSternzeichen.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+
+
+    JavaScript Sternzeichen anzeigen
+
+    Nachfolgendes JavaScript zeigt das zugehörige Sternzeichen eines angegebenen Geburtsdatums an. Das Script ist nicht nur für Websites zum Thema Horoskope und Astrologie interessant. Auch zur Anzeige von Sternzeichen in Ihrer Community angemeldeter Mitglieder ist diese JavaScript-Funktion bestens geeignet.
+
+
+
+    Erläuterungen :
+
+    
+<html>
+Beginn des HTML-Containers.
+<head>
+Beginn des HEAD-Bereichs.
+<script type="text/javascript">
+Einleiten von JavaScript.
+function sternzeichen_generieren(){
+Die Funktion sternzeichen_generieren() wird eingeleitet. An sie werden keine Parameter übergeben. Stattdessen werden die beiden benötigten Werte in den nachfolgenden beiden Zeilen gelesen.
+var geb_tag=document.getElementById('geb_tag').value;
+Der Variablen geb_tag wird der im Auswahlfeld für den Geburtstag des anzuzeigenden Sternzeichens zugewiesen.
+var geb_mon=document.getElementById('geb_mon').value;
+Auf die gleiche Weise wird geb_mon die getroffene Auswahl des Geburtsmonats zugeordnet.
+if (geb_tag>0 && geb_mon>0){
+In der if-Anweisung wird geprüft, ob bei beiden Feldern eine Auswahl getroffen wurde.
+sternzeichen=new Array();
+sternzeichen wird als Array definiert.
+sternzeichen[1]="Widder";
+In den Zeilen 9 bis 20 wird das sternzeichen-Array mit Werten „gefüttert”. Es beginnt in Zeile 9 mit dem Array-Schlüssel 1 und dem Wert Widder.
+sternzeichen[2]="Stier";
+Dem sternzeichen-Array mit dem Schlüssel 2 wird der Wert Stier zugeordnet u.s.w.
+sternzeichen[3]="Zwillinge";
+sternzeichen[4]="Krebs";
+sternzeichen[5]="Löwe";
+sternzeichen[6]="Jungfrau";
+sternzeichen[7]="Waage";
+sternzeichen[8]="Skorpion";
+sternzeichen[9]="Schütze";
+sternzeichen[10]="Steinbock";
+sternzeichen[11]="Wassermann";
+sternzeichen[12]="Fische";
+Die Namen der Sternzeichen sind nun dem sternzeichen-Array zugeordnet.
+var sternz=0;
+Der Variablen sternz wird der Wert 0 zugeordnet. Mithilfe der sternz-Variablen wird in Zeile 35 auf den entsprechenden Wert des sternzeichen-Arrays zugegriffen.
+if ((geb_mon==3 && geb_tag>=21) || (geb_mon==4 && geb_tag<=20)){sternz=1;}
+Ist entweder der Wert von geb_mon 3 und der Wert von geb_tag mindestens 21 oder geb_mon gleich 4 und geb_tag höchstens 20, so wird der Variablen sternz der Wert 1 zugeordnet. Dem Array sternzeichen mit dem Schlüssel 1 wurde in Zeile 9 der Wert Widder zugewiesen. So kann mit dem Schlüssel sternz auf das Sternzeichen Wdder zugegriffen werden.
+else if ((geb_mon==4 && geb_tag>=21) || (geb_mon==5 && geb_tag<=20)){sternz=2;}
+Liegt das vom Besucher ausgewählte Geburtsdatum zwischen dem 21. April und dem 20. Mai, wobei beide Daten eingeschlossen sind, wird der sternz-Variable der Wert 2 zugewiesen. Das sternzeichen-Array mit dem Schlüssel 2 hat den Wert Stier.
+else if ((geb_mon==5 && geb_tag>=21) || (geb_mon==6 && geb_tag<=21)){sternz=3;}
+Bei Auswahl eines Geburtsdatums zwischen dem 21. Mai und dem 21. Juni wird in Zeile 35 sternzeichen[3], also Zwillinge zurückgeliefert.
+else if ((geb_mon==6 && geb_tag>=22) || (geb_mon==7 && geb_tag<=22)){sternz=4;}
+Mit dem Array-Schlüssel 4 wird das Sternzeichen Krebs zugegriffen, wenn das Geburtsdatum zwischen dem 22. Juni und dem 22. Juli liegt.
+else if ((geb_mon==7 && geb_tag>=23) || (geb_mon==8 && geb_tag<=23)){sternz=5;}
+Das gleiche gilt für den Array-Schlüssel 5 für das Sternzeichen Löwe bei einem Geburtsdatum zwischen dem 23. Juli und 23. August,…
+else if ((geb_mon==8 && geb_tag>=24) || (geb_mon==9 && geb_tag<=23)){sternz=6;}
+…den Array-Schlüssel 6 für das Sternzeichen Jungfrau bei einem Geburtsdatum zwischen dem 24. August und 23. September,…
+else if ((geb_mon==9 && geb_tag>=24) || (geb_mon==10 && geb_tag<=23)){sternz=7;}
+…den Array-Schlüssel 7 für das Sternzeichen Waage bei einem Geburtsdatum zwischen dem 24. September und 23. Oktober,…
+else if ((geb_mon==10 && geb_tag>=24) || (geb_mon==11 && geb_tag<=22)){sternz=8;}
+…den Array-Schlüssel 8 für das Sternzeichen Skorpion bei einem Geburtsdatum zwischen dem 24. Oktober und 22. November,…
+else if ((geb_mon==11 && geb_tag>=23) || (geb_mon==12 && geb_tag<=21)){sternz=9;}
+…den Array-Schlüssel 9 für das Sternzeichen Schütze bei einem Geburtsdatum zwischen dem 23. November und 21. Dezember,…
+else if ((geb_mon==12 && geb_tag>=22) || (geb_mon==1 && geb_tag<=21)){sternz=10;}
+…den Array-Schlüssel 10 für das Sternzeichen Steinbock bei einem Geburtsdatum zwischen dem 22. Dezember und 21. Januar,…
+else if ((geb_mon==1 && geb_tag>=21) || (geb_mon==2 && geb_tag<=19)){sternz=11;}
+…den Array-Schlüssel 11 für das Sternzeichen Wassermann bei einem Geburtsdatum zwischen dem 21. Januar und 19. Februar,…
+else if ((geb_mon==2 && geb_tag>=20) || (geb_mon==3 && geb_tag<=20)){sternz=12;}
+… und zu guter Letzt den Array-Schlüssel 12 für das Sternzeichen Fische bei einem Geburtsdatum zwischen dem 20. Februar und 20. März.
+if (sternz>0){
+Wenn eine der Bedingungen in den Zeilen 38 bis 40 zutrifft, wurde sternz ein Zahlenwert von 1 bis 12 zugewiesen und die Bedingung der if-Anweisung ist erfüllt.
+document.getElementById('sternzeichen_span').innerHTML=sternzeichen[sternz];
+Innerhalb des in Zeile 90 des Quellcodes befindlichen Span-Elements mit der ID sternzeichen_span wird der Wert des sternzeichen-Arrays mit dem Schlüssel sternz angezeigt.
+}}}
+Schließen der auf die if-Anweisungen in den Zeilen 7 und 34 folgenden geschweiften Klammern und Ende der sternzeichen_generieren()-Funktion.
+
+Ende des HTML-Kommentars für inkompatible Browser.
+</script>
+Ende des Script-Containers.
+</head>
+Ende des HEAD-Bereichs.
+<body>
+Beginn des BODY-Bereichs.
+Geburtsdatum: <select name="geb_tag" id="geb_tag" onchange="sternzeichen_generieren();">
+Durch Ausgabe des Wortes Geburtsdatum im HTML-Code soll dem Besucher suggeriert werden, in den beiden nachfolgenden Auswahlfeldern seinen Geburtstag und -monat auszuwählen. Das Select-Feld geb_tag zur Auswahl des Geburtstages wird geöffnet. Bei Änderung der Auswahl durch den Besucher wird die JavaScript-Funktion sternzeichen_generieren() ausgeführt.
+<option value="0">Tag</option>
+Die erste zur Auswahl stehende Option hat den Wert 0 und den Inhalt Tag. Dem Anwender soll dadurch vermittelt werden, dass an dieser Stelle der Tags des zu verarbeitenden Geburtsdatums auszuwählen ist.
+<option value="1">01</option>
+In Zeile 43ff werden die zur Auswahl stehenden Tage des Monats für das Geburtsdatum angegeben. Diese haben die Werte von 1 bis 31.
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+Der letzte zur Auswahl stehende Wert für die Angabe des Geburtstages ist 31.
+</select>.
+Das in Zeile 41 geöffnete Auswahlfeld wird geschlossen und ein Punkt als Trennzeichen zwischen Geburtstag und Geburtsmonat angezeigt.
+<select name="geb_mon" id="geb_mon" onchange="sternzeichen_generieren();">
+Das für die Auswahl des Geburtsmonats bereitgestellte Select-Feld mit dem Namen geb_mon und der gleichnamigen ID wird geöffnet. Bei Änderung der getroffenen Auswahl wird mittels des onchange-Attributs die JavaScript-Funktion sternzeichen_generieren() aufgerufen.
+<option value="0">Mon</option>
+Ähnlich der ersten Option bei der Auswahl des Geburtstages, enthält die erste Option für die Auswahl des Geburtsmonats den Wert 0 und den Inhalt Mon, um dem Besucher aufzuzeigen, dass in diesem Select-Feld der Geburtsmonat auszuwählen ist.
+<option value="1">01</option>
+Der erste beim Generieren des Sternzeichens verarbeitbare Wert des Geburtsmonats ist 1 und steht für den Monat Januar.
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+Die zur Auswahl stehenden Monate von 1 bis 12, also Januar bis Dezember sind auf der Seite ausgegeben.
+</select>.
+Das Select-Feld wird geschlossen.
+<span id="sternzeichen_span"></span>
+Im Span-Bereich mit der ID sternzeichen_span wird das mit der JavaScript-Funktion sternzeichen_generieren() generierte Sternzeichen angezeigt, wenn gültige Daten beim Geburtstag und Geburtsmonat ausgewählt wurden.
+</body>
+Ende des BODY-Bereichs.
+</html>
+Ende des HTML-Containers.
+ -->

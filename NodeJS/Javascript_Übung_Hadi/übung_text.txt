@@ -1,0 +1,39 @@
+## Anleitung für Studierende:
+
+
+
+### Argumente übergeben
+Dieses Programm sollte 2 Argumente akzeptieren. Das erste Argument sollte vor und nach dem Header gedruckt werden. Das zweite Argument sollte das Wort sein, das in der Kopfzeile gedruckt werden soll. 
+- erstell "Index.js" sollte die Argumente vom Terminal analysieren und eine Funktion aufrufen, die von der zweiten Datei ausgegeben wird: "stars.js".
+- `stars.js` sollte in die Anzahl der zu druckenden Sterne und den Kopfzeilentext exportieren. Wenn es keine Sterne gibt, um die Funktion zu bestehen, sollte die Funktion standardmäßig 10 Sterne und das Wort an die Konsole ausgeben. Siehe folgendes Beispiel
+`` `Bash
+$ node index.js
+**********
+hi
+**********
+`` `
+```bash
+$ node index.js 15 hola
+***************
+hola
+***************
+```
+
+ ## Aufgabe 2 :
+Sortieren von Buchstaben in alphabetischer Reihenfolge
+Siehe folgendes Beispiel
+```bash
+$ node index.js bdca
+abcd
+```
+```bash
+$ node index.js b21a
+12ab
+```
+
+## Aufgabe 3 :
+Der ungerade / gerade Reporter.
+ Schreib ein Programm, Dieses Programm sollte 2 Argumente akzeptieren( x und z).
+ und von x bis z iteriert.
+ Bei jeder Iteration prüft es, ob die aktuelle Zahl gerade oder ungerade ist,
+ und meldet dies dem Bildschirm (z. B. "2 ist gerade").
