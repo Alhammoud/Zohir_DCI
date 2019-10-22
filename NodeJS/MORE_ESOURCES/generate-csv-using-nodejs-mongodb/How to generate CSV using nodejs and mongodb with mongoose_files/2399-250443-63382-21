@@ -1,0 +1,96 @@
+
+(function (window, undefined) {
+	"use strict";
+	if (!mplx) {
+	  var mplx = {};
+	}
+	mplx.outVars = {
+		"mpcke": "<mpcke/>",
+		"mpi": "<mpi/>",
+		"mpcrgif": "<mpcrgif/>",
+		"mpcrw": "<mpcrw/>",
+		"mpcrh": "<mpcrh/>",
+		"mpadmarker": "<mpadmarker/>",
+		"mpadmarkerurl": "<mpadmarkerurl/>",
+		"mpcrflash": "<mpcrflash/>",
+		"mpcrid": "<mpcrid/>",
+		"geozip": "<geozip/>",
+		"geocity": "<geocity/>",
+		"geoareacode": "<geoareacode/>",
+		"geocountry": "<geocountry/>",
+		"geostate": "<geostate/>",
+		"geotz": "<geotz/>",
+		"geocontinent": "<geocontinent/>",
+		"geodma": "<geodma/>",
+		"ptoffsetyear": "<ptoffsetyear/>",
+		"ptoffsetmonth": "<ptoffsetmonth/>",
+		"ptoffsetday": "<ptoffsetday/>",
+		"ptoffsethour": "<ptoffsethour/>",
+		"ptoffsetmin": "<ptoffsetmin/>",
+		"refdomain": "<refdomain/>",
+		"placementid": "<placementid/>",
+		"mpaltexp": "<mpaltexp/>",
+		"mpaltflash": "<mpaltflash/>",
+		"mpanimate": "<mpanimate/>",
+		"mpauto": "<mpauto/>",
+		"mpcrflash2": "<mpcrflash2/>",
+		"mpcrflv": "<mpcrflv/>",
+		"mpcrgif2": "<mpcrgif2/>",
+		"mpcrn": "<mpcrn/>",
+		"mpcrn_aol": "<mpcrn_aol/>",
+		"mpcrpv": "<mpcrpv/>",
+		"mpcrwin": "<mpcrwin/>",
+		"mpcrwinex": "<mpcrwinex/>",
+		"mpcrx": "<mpcrx/>",
+		"mpcrxh": "<mpcrxh/>",
+		"mpcrxw": "<mpcrxw/>",
+		"mpcry": "<mpcry/>",
+		"mpcrz": "<mpcrz/>",
+		"mpexdelay": "<mpexdelay/>",
+		"mpexpandspeed": "<mpexpandspeed/>",
+		"mphd": "<mphd/>",
+		"mpmouseout": "<mpmouseout/>",
+		"mpocd": "<mpocd/>",
+		"mpoverflow": "<mpoverflow/>",
+		"mpovrly": "<mpovrly/>",
+		"mppshdwn": "<mppshdwn/>",
+		"mpretdelay": "<mpretdelay/>",
+		"mprmtype": "<mprmtype/>",
+		"mpretractspeed": "<mpretractspeed/>",
+		"mpsingle": "<mpsingle/>",
+		"mpsv": "<mpsv/>",
+		"mpswfoffset": "<mpswfoffset/>",
+		"mpvd": "<mpvd/>",
+		"mpssl": "1",
+		"mpck": "altfarm.mediaplex.com/ad/ck/2399-250443-63382-21?mpt=1571656214578521&mpcr=102574225&mpcrset=root",
+		"mpvc": "https://googleads.g.doubleclick.net/dbm/clk?sa=L&ai=C6B01FpKtXdmnI7qAjuwPncSEqAuWrp3VWc2G9pyYCuvigr7DCxABIKWmxnJglfrwgYwHoAGQ4fn7AsgBCakChSv9-5O-sj6oAwGqBNUBT9CqQGGhqWGyoXjbXfKdSU0F4xA8WVxSZ3Bh87S9Q6uGpUs9YsUmworp6WvbsZxShnLB70ncwywltf6GkqgKls-7_W4Z1MlUrWUxRyxyXPWn58RmPIf0Q4tdiWMtYUZJCDlkwRd4bmuKLkVGR39IJ-5-NQGa3i43bT5f313Ma29W0On9KTVbonV-a5cYMFLlC6ZiVjkkl5j7iMMPLipRWPqaAFSmhMfcdQ_9VFhuKHTcHsbp_sS6n5XgAOajvC--lUWKVtScnkytVmdtIevtjyi3XWrb4AQDkAYBoAZNgAfYnoaEAagHjs4bqAfVyRuoB8HTG6gHhdQbqAeB1BuoB4LUG6gHhtQbqAeE1BuoB5PYG6gH4NMbqAe6BqgH2csbqAfPzBuoB-zVG6gHpr4bqAfz0RvYBwDSCAkIgOGAEBABGB6ACgGwE8TpwAfQEwDYEwPYFAE&ae=1&num=1&cid=CAASEuRoGB2eiuOBrCoto-iYNeUqJA&sig=AOD64_1qRnQ3KLFiEyIzQ_j7h9QnesNdAw&client=ca-pub-4430217873946613&dbm_c=AKAmf-BbcTqO2bjWed2iF4UTG7M43qbmeRU_OgzuM7TZaFt7feDgRdbNX5-VC2IUTOvR9QbAFVMeTZnoOdDYNzI1AEgBGnLDKg&dbm_d=AKAmf-BW3lfv0eIFe9MQGhmTIKkEDNG8i3eYn8fjCbo25wftKwspileC3-ja_i0P37zqRFt2JnF17iodD4Ott7DVqlTfqEut3VfDUMS-sP4zC_6aVskRhfvOyQT9H5zb7dYV-_Wy4KzVbQ4iEnsvLNvZpc4A_DMPDtmX_eBLvULyAUAcuQSI9KaQD0AkDRoO_FsYZoASP-psMaXGE6ds3tOdadkcgDy9LbAzFR5d4-zIbS46HdNdM3vKKxNloY7kZtxPhXOcPJBe29iHjdxCrXLIZBYYJhVEG4v_mTw0XgPnA5qL3E_K9x2fdmN5P3xcGl_6c62HaOFHqPJbpjhrBGL7SrqdqCE13jNqhiTkV6Sg8nNBU49pOPIarhITijVat5lqP4Id5g5s5emBkWZh3NWCoAurVjLZPjaZHUPCa9XFRmS38xAEGbtfXYQwpnhpczLp1SWu2EIcvXGvC3D7C88sTYnpG2jA8Qf4vz3yPV7IPkl1WlkPKbA&adurl="
+	};
+
+	mplx.mpqs = "mpt=1571656214578521";
+	mplx.mpqs = (mplx.mpqs !== "") ? mplx.mpqs : "";
+	for (var props in mplx.outVars) {
+		if (mplx.outVars[props].indexOf("/>") < 0 ) {
+			mplx.mpqs += "&" + props + "=" + encodeURIComponent(mplx.outVars[props]);
+		}
+	}
+
+	mplx.iFrameSrc = (mplx.outVars.mpssl == 1 ? "https://img.mediaplex.com/content/0" : "http://img.mediaplex.com/content/0") + "/2399/250443/317607_de_cs_co_co_fy20q3_oa_omegaprime_300x250/index.html" + "?" + mplx.mpqs;
+	mplx.mojoframe = '<iframe border="0" src="' + mplx.iFrameSrc + '" width="300" height="250" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor="#000000"></iframe>';
+	document.write(mplx.mojoframe);
+
+	mplx.randJSI = Math.floor(Math.random()*100000+1);
+	document.write('<div id="mojoJSI_' + mplx.randJSI +'" style="height:0px; width:0px;"></div>');
+	mplx.mpjs = String("https://c.evidon.com/durly.js?;coid=6250;nid=142330;ad_w=300;ad_h=250;check_container=true; https://cdn.doubleverify.com/dvtp_src.js?ctx=3758893&cmp=250443&sid=63382&plc=23992504436338221&num=&adid=&advid=1498131&adsrv=8&region=40&btreg=23992504436338221&btadsrv=mediaplex&crt=102574225&dvp_plcd=2399-250443-63382-21&crtname=&chnl=&unit=&pid=&uid=&tagtype=&dvtagver=6.1.src");
+	if (mplx.mpjs && typeof mplx.mpjs === "string" && mplx.mpjs.length > 0 && mplx.mpjs!="<mp"+"jsp/>") {
+		mplx.mpscr = {};
+		mplx.mojoTiny = document.getElementById("mojoJSI_" + mplx.randJSI);
+		mplx.mpjs = mplx.mpjs.split( " " );
+		for( var i = 0; i < mplx.mpjs.length; i++ ) {
+			mplx.mpscr = document.createElement("script");
+			mplx.mpscr.type = "text/javascript";
+			mplx.mpscr.async = true;
+			mplx.mpscr.src = mplx.mpjs[i];
+			mplx.mojoTiny.appendChild(mplx.mpscr);
+		}
+	}
+})(window);
