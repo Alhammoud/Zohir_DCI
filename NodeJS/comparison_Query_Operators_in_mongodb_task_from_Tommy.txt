@@ -1,0 +1,777 @@
+Task:
+Find all Airquality points that are between a certain date-range 2018-03-06 14:26 - 2018-03-06 14:40
+
+
+Löusung  into the shell type: mongo :
+
+
+> db.aqmpoints.find({"gps.system_time":{$gte:"2018-03-06 14:26",$lte:"2018-03-06 14:40"}}).pretty()
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811d"),
+	"aqm" : {
+		"r3000" : 21,
+		"r5000" : 29,
+		"noxevent" : 111,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:28:40.581219",
+		"gps_time" : "14:28:40",
+		"latitude" : 52.56502966666667,
+		"longitude" : 13.409465666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811e"),
+	"aqm" : {
+		"r3000" : 12,
+		"r5000" : 23,
+		"noxevent" : 3,
+		"r2000" : 27,
+		"coevent" : 218
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:00.909184",
+		"gps_time" : "14:26:03.010000",
+		"latitude" : 52.56515266666667,
+		"longitude" : 13.409577833333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811f"),
+	"aqm" : {
+		"r3000" : 25,
+		"r5000" : 37,
+		"noxevent" : 99,
+		"r2000" : 35,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:29:44.191285",
+		"gps_time" : "14:29:44",
+		"latitude" : 52.56504616666667,
+		"longitude" : 13.409395833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28120"),
+	"aqm" : {
+		"r3000" : 31,
+		"r5000" : 42,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:31:50.326854",
+		"gps_time" : "14:31:50",
+		"latitude" : 52.5651325,
+		"longitude" : 13.409320666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28121"),
+	"aqm" : {
+		"r3000" : 34,
+		"r5000" : 45,
+		"noxevent" : 62,
+		"r2000" : 43,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:32:58.597262",
+		"gps_time" : "14:32:58",
+		"latitude" : 52.565209833333334,
+		"longitude" : 13.4094395
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28122"),
+	"aqm" : {
+		"r3000" : 38,
+		"r5000" : 47,
+		"noxevent" : 55,
+		"r2000" : 45,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:35:05.284544",
+		"gps_time" : "14:35:05",
+		"latitude" : 52.565099000000004,
+		"longitude" : 13.409380833333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28123"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 40,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:36:12.664534",
+		"gps_time" : "14:36:12",
+		"latitude" : 52.56515383333333,
+		"longitude" : 13.409426833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28124"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 33,
+		"noxevent" : 3,
+		"r2000" : 33,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:38:21.447283",
+		"gps_time" : "14:38:21",
+		"latitude" : 52.5651575,
+		"longitude" : 13.4094255
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28126"),
+	"aqm" : {
+		"r3000" : 15,
+		"r5000" : 27,
+		"noxevent" : 181,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:32.468370",
+		"gps_time" : "14:26:32",
+		"latitude" : 52.565067166666665,
+		"longitude" : 13.409508333333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812b"),
+	"aqm" : {
+		"r3000" : 18,
+		"r5000" : 28,
+		"noxevent" : 133,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:27:36.478383",
+		"gps_time" : "14:27:36",
+		"latitude" : 52.56503716666667,
+		"longitude" : 13.409478
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812c"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 37,
+		"noxevent" : 3,
+		"r2000" : 37,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:37:16.449108",
+		"gps_time" : "14:37:16",
+		"latitude" : 52.56511716666667,
+		"longitude" : 13.409449500000001
+	}
+}
+> 
+
+
+> db.aqmpoints.find({"gps.system_time":{$gte:"2018-03-06 14:26",$lte:"2018-03-06 14:40"}}).pretty().count()
+11
+> 
+
+
+
+
+Task:
+Sort them by system_time
+
+Löusung  into the shell type: mongo :
+
+
+db.aqmpoints.find({"gps.system_time":{$gte:"2018-03-06 14:26",$lte:"2018-03-06 14:40"}}).sort({"gps.system_time":-1}).pretty()
+
+
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28124"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 33,
+		"noxevent" : 3,
+		"r2000" : 33,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:38:21.447283",
+		"gps_time" : "14:38:21",
+		"latitude" : 52.5651575,
+		"longitude" : 13.4094255
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812c"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 37,
+		"noxevent" : 3,
+		"r2000" : 37,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:37:16.449108",
+		"gps_time" : "14:37:16",
+		"latitude" : 52.56511716666667,
+		"longitude" : 13.409449500000001
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28123"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 40,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:36:12.664534",
+		"gps_time" : "14:36:12",
+		"latitude" : 52.56515383333333,
+		"longitude" : 13.409426833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28122"),
+	"aqm" : {
+		"r3000" : 38,
+		"r5000" : 47,
+		"noxevent" : 55,
+		"r2000" : 45,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:35:05.284544",
+		"gps_time" : "14:35:05",
+		"latitude" : 52.565099000000004,
+		"longitude" : 13.409380833333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28121"),
+	"aqm" : {
+		"r3000" : 34,
+		"r5000" : 45,
+		"noxevent" : 62,
+		"r2000" : 43,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:32:58.597262",
+		"gps_time" : "14:32:58",
+		"latitude" : 52.565209833333334,
+		"longitude" : 13.4094395
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28120"),
+	"aqm" : {
+		"r3000" : 31,
+		"r5000" : 42,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:31:50.326854",
+		"gps_time" : "14:31:50",
+		"latitude" : 52.5651325,
+		"longitude" : 13.409320666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811f"),
+	"aqm" : {
+		"r3000" : 25,
+		"r5000" : 37,
+		"noxevent" : 99,
+		"r2000" : 35,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:29:44.191285",
+		"gps_time" : "14:29:44",
+		"latitude" : 52.56504616666667,
+		"longitude" : 13.409395833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811d"),
+	"aqm" : {
+		"r3000" : 21,
+		"r5000" : 29,
+		"noxevent" : 111,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:28:40.581219",
+		"gps_time" : "14:28:40",
+		"latitude" : 52.56502966666667,
+		"longitude" : 13.409465666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812b"),
+	"aqm" : {
+		"r3000" : 18,
+		"r5000" : 28,
+		"noxevent" : 133,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:27:36.478383",
+		"gps_time" : "14:27:36",
+		"latitude" : 52.56503716666667,
+		"longitude" : 13.409478
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28126"),
+	"aqm" : {
+		"r3000" : 15,
+		"r5000" : 27,
+		"noxevent" : 181,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:32.468370",
+		"gps_time" : "14:26:32",
+		"latitude" : 52.565067166666665,
+		"longitude" : 13.409508333333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811e"),
+	"aqm" : {
+		"r3000" : 12,
+		"r5000" : 23,
+		"noxevent" : 3,
+		"r2000" : 27,
+		"coevent" : 218
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:00.909184",
+		"gps_time" : "14:26:03.010000",
+		"latitude" : 52.56515266666667,
+		"longitude" : 13.409577833333334
+	}
+}
+> 
+
+
+
+TASK :
+Filter by where latitude < 52.56532 and longitude < 13.41126 
+
+
+Löusung  into the shell type: mongo :
+
+
+
+> db.aqmpoints.find({"gps.latitude":{$lte: 52.56532},"gps.longitude":{$lte:13.41126}}).count()
+8266
+> 
+
+
+> db.aqmpoints.find({"gps.latitude":{$lte: 52.56532},"gps.longitude":{$lte:13.41126}}).pretty()
+
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811d"),
+	"aqm" : {
+		"r3000" : 21,
+		"r5000" : 29,
+		"noxevent" : 111,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:28:40.581219",
+		"gps_time" : "14:28:40",
+		"latitude" : 52.56502966666667,
+		"longitude" : 13.409465666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811e"),
+	"aqm" : {
+		"r3000" : 12,
+		"r5000" : 23,
+		"noxevent" : 3,
+		"r2000" : 27,
+		"coevent" : 218
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:00.909184",
+		"gps_time" : "14:26:03.010000",
+		"latitude" : 52.56515266666667,
+		"longitude" : 13.409577833333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2811f"),
+	"aqm" : {
+		"r3000" : 25,
+		"r5000" : 37,
+		"noxevent" : 99,
+		"r2000" : 35,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:29:44.191285",
+		"gps_time" : "14:29:44",
+		"latitude" : 52.56504616666667,
+		"longitude" : 13.409395833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28120"),
+	"aqm" : {
+		"r3000" : 31,
+		"r5000" : 42,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:31:50.326854",
+		"gps_time" : "14:31:50",
+		"latitude" : 52.5651325,
+		"longitude" : 13.409320666666666
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28121"),
+	"aqm" : {
+		"r3000" : 34,
+		"r5000" : 45,
+		"noxevent" : 62,
+		"r2000" : 43,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:32:58.597262",
+		"gps_time" : "14:32:58",
+		"latitude" : 52.565209833333334,
+		"longitude" : 13.4094395
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28122"),
+	"aqm" : {
+		"r3000" : 38,
+		"r5000" : 47,
+		"noxevent" : 55,
+		"r2000" : 45,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:35:05.284544",
+		"gps_time" : "14:35:05",
+		"latitude" : 52.565099000000004,
+		"longitude" : 13.409380833333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28123"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 40,
+		"noxevent" : 3,
+		"r2000" : 40,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:36:12.664534",
+		"gps_time" : "14:36:12",
+		"latitude" : 52.56515383333333,
+		"longitude" : 13.409426833333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28124"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 33,
+		"noxevent" : 3,
+		"r2000" : 33,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:38:21.447283",
+		"gps_time" : "14:38:21",
+		"latitude" : 52.5651575,
+		"longitude" : 13.4094255
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28125"),
+	"aqm" : {
+		"r3000" : 39,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 31,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:40:31.376815",
+		"gps_time" : "14:40:31",
+		"latitude" : 52.565146166666665,
+		"longitude" : 13.4095275
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28126"),
+	"aqm" : {
+		"r3000" : 15,
+		"r5000" : 27,
+		"noxevent" : 181,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:26:32.468370",
+		"gps_time" : "14:26:32",
+		"latitude" : 52.565067166666665,
+		"longitude" : 13.409508333333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28127"),
+	"aqm" : {
+		"r3000" : 40,
+		"r5000" : 35,
+		"noxevent" : 52,
+		"r2000" : 34,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:41:31.498281",
+		"gps_time" : "14:41:31",
+		"latitude" : 52.565061166666666,
+		"longitude" : 13.409485666666667
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28128"),
+	"aqm" : {
+		"r3000" : 40,
+		"r5000" : 30,
+		"noxevent" : 3,
+		"r2000" : 30,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:43:45.052689",
+		"gps_time" : "14:43:45",
+		"latitude" : 52.565071,
+		"longitude" : 13.4095545
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28129"),
+	"aqm" : {
+		"r3000" : 41,
+		"r5000" : 30,
+		"noxevent" : 3,
+		"r2000" : 30,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:44:48.376410",
+		"gps_time" : "14:44:48",
+		"latitude" : 52.56502566666666,
+		"longitude" : 13.409597333333334
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812a"),
+	"aqm" : {
+		"r3000" : 41,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:45:53.150685",
+		"gps_time" : "14:45:53",
+		"latitude" : 52.56504866666667,
+		"longitude" : 13.4095765
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812b"),
+	"aqm" : {
+		"r3000" : 18,
+		"r5000" : 28,
+		"noxevent" : 133,
+		"r2000" : 28,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:27:36.478383",
+		"gps_time" : "14:27:36",
+		"latitude" : 52.56503716666667,
+		"longitude" : 13.409478
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812c"),
+	"aqm" : {
+		"r3000" : 37,
+		"r5000" : 37,
+		"noxevent" : 3,
+		"r2000" : 37,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:37:16.449108",
+		"gps_time" : "14:37:16",
+		"latitude" : 52.56511716666667,
+		"longitude" : 13.409449500000001
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812d"),
+	"aqm" : {
+		"r3000" : 43,
+		"r5000" : 34,
+		"noxevent" : 3,
+		"r2000" : 33,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:48:01.934655",
+		"gps_time" : "14:48:01",
+		"latitude" : 52.565076166666664,
+		"longitude" : 13.409416333333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812e"),
+	"aqm" : {
+		"r3000" : 45,
+		"r5000" : 31,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:51:13.387023",
+		"gps_time" : "14:51:13",
+		"latitude" : 52.5650605,
+		"longitude" : 13.409378333333333
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d2812f"),
+	"aqm" : {
+		"r3000" : 44,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:49:03.191890",
+		"gps_time" : "14:49:03",
+		"latitude" : 52.565142333333334,
+		"longitude" : 13.4093455
+	}
+}
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28130"),
+	"aqm" : {
+		"r3000" : 45,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:52:17.585144",
+		"gps_time" : "14:52:17",
+		"latitude" : 52.56518366666667,
+		"longitude" : 13.409408333333333
+	}
+}
+Type "it" for more
+> 
+
+
+TASK :
+Update a aqmpoint with the update method 
+
+e.x. : db.users.update({"_id": ObjectId("5cd136160a9dc4a1fd7085e2")}, {$set: {"isAdmin": true}})
+
+
+Löusung  into the shell type: mongo :
+
+Before upadte:
+
+> db.aqmpoints.find({"_id":ObjectId("5dad9bcb0010ca68f1d28130")}).pretty()
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28130"),
+	"aqm" : {
+		"r3000" : 45,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 3
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:52:17.585144",
+		"gps_time" : "14:52:17",
+		"latitude" : 52.56518366666667,
+		"longitude" : 13.409408333333333
+	}
+}
+> 
+
+After update:
+
+
+> db.aqmpoints.update({"_id":ObjectId("5dad9bcb0010ca68f1d28130")}, {$set:{"aqm.coevent":55555555555555555555555}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+> db.aqmpoints.find({"_id":ObjectId("5dad9bcb0010ca68f1d28130")}).pretty()
+{
+	"_id" : ObjectId("5dad9bcb0010ca68f1d28130"),
+	"aqm" : {
+		"r3000" : 45,
+		"r5000" : 32,
+		"noxevent" : 3,
+		"r2000" : 32,
+		"coevent" : 5.5555555555555555e+22
+	},
+	"gps" : {
+		"system_time" : "2018-03-06 14:52:17.585144",
+		"gps_time" : "14:52:17",
+		"latitude" : 52.56518366666667,
+		"longitude" : 13.409408333333333
+	}
+}
+> 
+

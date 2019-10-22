@@ -1,0 +1,24 @@
+10026  touch .gitignore
+10030  rm .gitignore
+10032  git status
+10033  echo "node_modules" >> .gitignore
+10034  ls -la
+10036  echo "node_moduldsfdsfsfdes" >> .gitignore
+10038  echo "node_moduldsfdsfsfdes\nkdslfjs" >> .gitignore
+10040  echo ".env\nnode_modules"
+10043  echo ".env\nnode_modules" > .gitignore
+10045  echo ".env" > .gitignore
+10046  cat .gitignore
+10047* vim
+10048  touch index.js
+10049* vim index.js
+10050  node index.js
+10052  ls
+10056  node index.js >> result.txt
+10057  cat result.txt
+10058  node index.js >> result.txt && cat result.txt
+
+
+
+Task: refactor your CSV script to not use fs.writeFile
+Then use CTRL+R to get familiar with your recent history commands!
