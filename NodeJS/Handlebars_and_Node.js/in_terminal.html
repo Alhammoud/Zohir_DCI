@@ -1,0 +1,486 @@
+<pre><font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ ll
+total 8
+drwxr-xr-x  2 temp temp 4096 Okt 23 09:46 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 35 temp temp 4096 Okt 23 09:49 <font color="#729FCF"><b>..</b></font>/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (handlebars_and_node) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/package.json:
+
+{
+  &quot;name&quot;: &quot;handlebars_and_node&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) 
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ ll
+total 12
+drwxr-xr-x  2 temp temp 4096 Okt 23 09:50 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 35 temp temp 4096 Okt 23 09:49 <font color="#729FCF"><b>..</b></font>/
+-rw-r--r--  1 temp temp  215 Okt 23 09:50 package.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ npm i --save
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No repository field.
+
+up to date in 5.599s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ npm i --save express
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 126 packages in 3.258s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ ll
+total 32
+drwxr-xr-x  3 temp temp  4096 Okt 23 09:51 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 35 temp temp  4096 Okt 23 09:49 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 52 temp temp  4096 Okt 23 09:51 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp   265 Okt 23 09:51 package.json
+-rw-r--r--  1 temp temp 14295 Okt 23 09:51 package-lock.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ npm i --save hbs
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> handlebars_and_node@1.0.0 No repository field.
+
++ hbs@4.0.6
+added 11 packages from 44 contributors and audited 138 packages in 4.26s
+found <font color="#8AE234">0</font> vulnerabilities
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ ll
+total 36
+drwxr-xr-x  3 temp temp  4096 Okt 23 09:52 <font color="#729FCF"><b>.</b></font>/
+drwxrwxr-x 35 temp temp  4096 Okt 23 09:49 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 63 temp temp  4096 Okt 23 09:52 <font color="#729FCF"><b>node_modules</b></font>/
+-rw-r--r--  1 temp temp   286 Okt 23 09:52 package.json
+-rw-r--r--  1 temp temp 17292 Okt 23 09:52 package-lock.json
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ code .
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ node index.js 
+Error: Cannot find module &apos;hbd&apos;
+Require stack:
+- /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/view.js
+- /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/application.js
+- /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/express.js
+- /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/index.js
+- /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at new View (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/view.js:81:14)
+    at Function.render (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/response.js:1012:7)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:16:9
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:137:13)
+^C
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js</b></font>$ nodemon index.js 
+<font color="#C4A000">[nodemon] 1.19.2</font>
+<font color="#C4A000">[nodemon] to restart at any time, enter `rs`</font>
+<font color="#C4A000">[nodemon] watching dir(s): *.*</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:60
+    res.render(template(data)):
+                              ^
+
+SyntaxError: Unexpected token :
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:60
+    res.render(template(data)):
+                              ^
+
+SyntaxError: Unexpected token :
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+ReferenceError: Handlebars is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:45:20
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/response.js:1007
+    if (err) return req.next(err);
+                        ^
+
+TypeError: req.next is not a function
+    at done (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/<u style="text-decoration-style:single">express</u>/lib/response.js:1007:25)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/<u style="text-decoration-style:single">hbs</u>/lib/hbs.js:85:9
+<font color="#555753">    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:61:3)</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+ReferenceError: Handlebars is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:45:20
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/response.js:1007
+    if (err) return req.next(err);
+                        ^
+
+TypeError: req.next is not a function
+    at done (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/<u style="text-decoration-style:single">express</u>/lib/response.js:1007:25)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/<u style="text-decoration-style:single">hbs</u>/lib/hbs.js:85:9
+<font color="#555753">    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:61:3)</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+ReferenceError: Handlebars is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:40:20
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: Handlebars is not defined
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:40:20
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+    at /home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/index.js:275:10)
+    at expressInit (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/middleware/init.js:40:5)
+    at Layer.handle [as handle_request] (/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/node_modules/express/lib/router/layer.js:95:5)
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:56
+        people2: &lt;ul&gt;
+                 ^
+
+SyntaxError: Unexpected token &lt;
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:38
+        &quot;name: &quot;Alan&quot;,
+                ^^^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:39
+        &quot;hometown: &quot;Somewhere, TX&quot;,
+                    ^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:41
+            &quot;name: &quot;Jimmy&quot;,
+                    ^^^^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:42
+            &quot;age: &quot;12&quot;
+                   ^^
+
+SyntaxError: Unexpected number
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:44
+            &quot;name: &quot;Sally&quot;,
+                    ^^^^^
+
+SyntaxError: Unexpected identifier
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:45
+            &quot;age: &quot;4&quot;
+                   ^
+
+SyntaxError: Unexpected number
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:39
+        hometown: &quot;Somewhere, TX&quot;,
+                ^
+
+SyntaxError: Unexpected token :
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:38
+        name: &quot;Alan&quot;,
+            ^
+
+SyntaxError: Unexpected token :
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js/index.js:38
+        name: &quot;Alan&quot;,
+            ^
+
+SyntaxError: Unexpected token :
+<font color="#555753">    at Module._compile (internal/modules/cjs/loader.js:872:18)</font>
+<font color="#555753">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)</font>
+<font color="#555753">    at Module.load (internal/modules/cjs/loader.js:790:32)</font>
+<font color="#555753">    at Function.Module._load (internal/modules/cjs/loader.js:703:12)</font>
+<font color="#555753">    at Function.Module.runMain (internal/modules/cjs/loader.js:999:10)</font>
+<font color="#555753">    at internal/main/run_main_module.js:17:11</font>
+<font color="#CC0000">[nodemon] app crashed - waiting for file changes before starting...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+__dirname
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+__dirname 
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+<font color="#4E9A06">[nodemon] restarting due to changes...</font>
+<font color="#4E9A06">[nodemon] starting `node index.js`</font>
+__dirname :
+/home/temp/Desktop/Zohir_DCI/NodeJS/Handlebars_and_Node.js
+
+</pre>
