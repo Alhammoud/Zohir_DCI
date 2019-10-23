@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aqmpoints</h1>
+        <table style="width:100%">
+            <tr>
+                <th>_id</th>
+                <th>aqm.noxevent</th>
+                <th>gps.system_time</th>
+            </tr>
+            {{#each people}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{aqm.noxevent}}</td>
+                <td>{{gps.system_time}}</td>
+            </tr>
+             {{/each}}
+            
+        </table>
+
+        <ul class="list-group">
+            {{#each people}}
+            <li class="list-group-item">
+                
+                {{!--  {{this}} for complete Array of objects--}}
+                {{!-- {{aqm.noxevent}} --}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+</html>
