@@ -7,6 +7,12 @@ const t_module = require('./t.js');
 const sternzeichenConsole = require('./sternzeichenConsole.js');
 const zahl_prüft = require('./ eine_dreistellige_zahl');
 const zahl_prüft_reg = require('./ eine_dreistellige_zahl_reg');
+const formatting = require('./formatting');
+const messaging = require('./messaging');
+
+const countLetters = require('./countLetters');
+const countLetters_hadi= require('./countLetters_hadi');
+
 
 const arr = process.argv.slice(2);
 
@@ -76,7 +82,22 @@ console.log(sortString(args)) */
 
 
 // sternzeichenConsole(arr[0],arr[1]);
-// console.log(arr);
 
-//zahl_prüft(arr);
-zahl_prüft_reg(arr);
+// zahl_prüft(arr);
+// zahl_prüft_reg(arr);
+
+// formatting(arr);
+
+console.log('arr von index.js',arr);
+/* 
+ if(arr[1]==="--help"){
+    messaging();
+    formatting(arr);
+
+ }else{
+    formatting(arr);
+ } */
+
+
+// countLetters(arr);
+ countLetters_hadi(arr);
