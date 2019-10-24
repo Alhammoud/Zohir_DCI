@@ -1,4 +1,3 @@
-
 const stars = require('./stars.js');
 const sort = require('./sort.js');
 
@@ -6,7 +5,8 @@ const un_gerade = require('./un-gerade.js');
 
 const t_module = require('./t.js');
 const sternzeichenConsole = require('./sternzeichenConsole.js');
-
+const zahl_prüft = require('./ eine_dreistellige_zahl');
+const zahl_prüft_reg = require('./ eine_dreistellige_zahl_reg');
 
 const arr = process.argv.slice(2);
 
@@ -53,7 +53,7 @@ function sortString(str) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
             /* if ASCII code greater then swap the elements position*/
-            /* if (arr[i] > arr[j]) {
+/* if (arr[i] > arr[j]) {
                 tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;
@@ -72,7 +72,11 @@ console.log(sortString(args)) */
 
 
 
- // t_module(arr[0]);
+// t_module(arr[0]);
 
 
- sternzeichenConsole(arr[0],arr[1]);
+// sternzeichenConsole(arr[0],arr[1]);
+// console.log(arr);
+
+//zahl_prüft(arr);
+zahl_prüft_reg(arr);
