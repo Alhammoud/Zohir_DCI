@@ -99,5 +99,5 @@ console.log('arr von index.js',arr);
  } */
 
 
-// countLetters(arr);
- countLetters_hadi(arr);
+ countLetters(arr);
+// countLetters_hadi(arr);
