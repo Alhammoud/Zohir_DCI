@@ -1,0 +1,17 @@
+Aufgabe :
+
+1. Erstelle eiene MySQL-Datenbank "authdb" .
+2. Erstelle auf "authdb" eine neue Tabelle "user" mit 3 spalten : "id"(integer, autoincrement),"email"           und "password".
+3. Erstellle 3 Nutzer :
+        "ralf@gmail.com" , "ralfpw"
+        "steffi@gmail.com , "steffipw"
+        "sandra@yahoo.com , "sandrapw"
+
+        insert into users (email,password)
+        values ('ralf@gmail.com','ralfpw'),
+            ('steffi@gmail.com','steffipw'),
+            ('sandra@yahoo.com','sandrapw');
+
+
+            
+4. Erweitere Dein Authentication-server so, dass sich alle Nutzer einloggen können und dass jeder Nutzer außer "ralf" auf "/content" zugreifen kann. Alle dürfen auf "/private" zugreifen.
