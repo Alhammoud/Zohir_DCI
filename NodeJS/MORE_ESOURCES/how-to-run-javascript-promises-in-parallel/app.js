@@ -21,7 +21,7 @@ helper.getPhotos()
 async function callAPI(){
     let photos = helper.getPhotos();
     let posts = helper.getPosts();
-    let [photosResponse, postsResponse] = [await photos, await posts];
+    let [photosResponse, postsResponse] = [photos, posts];
     console.log(photosResponse, postsResponse)
 }
 callAPI();

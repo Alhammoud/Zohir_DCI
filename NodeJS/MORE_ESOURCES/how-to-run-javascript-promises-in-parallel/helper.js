@@ -23,15 +23,15 @@ module.exports = {
             })
     } */
 
-    getPhotos: function () {
-        return fetch('https://jsonplaceholder.typicode.com/photos')
+    getPhotos: async () => {
+        return await fetch('https://jsonplaceholder.typicode.com/photos')
             .then((response) => {
                 return response.json()
             })
     },
 
-    getPosts: function () {
-        return fetch('https://jsonplaceholder.typicode.com/posts')
+    getPosts:  async () => {
+        return await fetch('https://jsonplaceholder.typicode.com/posts')
             .then((response) => {
                 return response.json()
             })
