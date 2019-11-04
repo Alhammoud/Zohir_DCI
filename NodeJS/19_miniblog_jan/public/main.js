@@ -1,5 +1,39 @@
 const mainObj = document.getElementById('main');
 
+
+
+const navlink2obj = document.getElementsByClassName('navlink2');
+
+const login = async () => {
+
+    const userobj = document.getElementById('user').value;
+    const passwordobj= document.getElementById('password').value;
+    navlink2obj.classList.toggle('none_display');
+
+    /* const result = await fetch(`http://localhost:3000/login?email=${userobj.value}&password=${passwordobj.value}`); */
+
+    const data = await result.text();
+
+    mainObj.innerHTML = data;
+}
+
+
+const logout = async () => {
+
+
+    const result = await fetch(`http://localhost:3000/logout`);
+
+    const data = await result.text();
+
+    mainObj.innerHTML = data;
+}
+
+
+
+
+
+
+
 const loadBlogPosts = async () => {
 
     const result = await fetch('http://localhost:3000/blogposts');

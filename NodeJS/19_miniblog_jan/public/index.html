@@ -11,8 +11,15 @@
 
 <body>
     <div class="header">
+        <div id="auth">
+                <input type="text" placeholder="type email here ..!"  id="user" />
+                <input type="text" placeholder="type password here ..!" id="password" />
+                <br />
+                <button onclick="login()">Login</button>
+                <button onclick="logout()">Logout</button>
+        </div>
         <h1>Miniblog</h1>
-        <div><span class="navlink" onclick="loadBlogPosts()">Artikel</span> | <span class="navlink" onclick="loadCreateBlogPost()"">Neuen Artikel verfassen</span></div>
+        <div><span class="navlink1" onclick="loadBlogPosts()">Artikel</span> | <span class="navlink2" onclick="loadCreateBlogPost()"">Neuen Artikel verfassen</span></div>
     </div>
     <div id="main">
     </div>

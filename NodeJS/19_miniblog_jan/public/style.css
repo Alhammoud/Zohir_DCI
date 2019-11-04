@@ -8,16 +8,28 @@ html, body {
 }
 
 .header {
-    height: 120px;
+    height: 130px;
     padding: 6px;
     background: url(stars.jpg);
 }
-
-.navlink {
+#auth{
+display: flex;
+}
+.navlink1 {
     cursor: pointer;
 }
+.navlink2 {
+    cursor: pointer;
+    display: none;
+}
+.none_display{
+    display: block;
+}
 
-.navlink:hover {
+.navlink1:hover {
+    text-decoration: underline;;
+}
+.navlink2:hover {
     text-decoration: underline;;
 }
 
