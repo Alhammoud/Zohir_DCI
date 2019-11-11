@@ -1,0 +1,128 @@
+<pre><font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ mkdir src sict config
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ ll
+total 20
+drwxr-xr-x 5 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 4 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>config</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>sict</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>src</b></font>/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ code .
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo npm install -g webpack-cli
+[sudo] password for temp: 
+/usr/local/bin/webpack-cli -&gt; /usr/local/lib/node_modules/webpack-cli/bin/cli.js
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> webpack-cli@3.3.10 requires a peer of webpack@4.x.x but none is installed. You must install peer dependencies yourself.
+
++ webpack-cli@3.3.10
+added 204 packages from 129 contributors in 17.159s
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ ll
+total 20
+drwxr-xr-x 5 temp temp 4096 Nov 11 13:48 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 4 temp temp 4096 Nov 11 13:45 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:47 <font color="#729FCF"><b>config</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:47 <font color="#729FCF"><b>dist</b></font>/
+drwxr-xr-x 2 temp temp 4096 Nov 11 13:48 <font color="#729FCF"><b>src</b></font>/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo npm -v
+6.11.3
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ webpack --mode=development
+
+Command &apos;webpack&apos; not found, but can be installed with:
+
+sudo apt install webpack
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo apt-get install npm
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ npm : Depends: nodejs but it is not going to be installed
+       Depends: node-abbrev (&gt;= 1.0.4) but it is not going to be installed
+       Depends: node-ansi (&gt;= 0.3.0-2) but it is not going to be installed
+       Depends: node-ansi-color-table but it is not going to be installed
+       Depends: node-archy but it is not going to be installed
+       Depends: node-block-stream but it is not going to be installed
+       Depends: node-fstream (&gt;= 0.1.22) but it is not going to be installed
+       Depends: node-fstream-ignore but it is not going to be installed
+       Depends: node-github-url-from-git but it is not going to be installed
+       Depends: node-glob (&gt;= 3.1.21) but it is not going to be installed
+       Depends: node-graceful-fs (&gt;= 2.0.0) but it is not going to be installed
+       Depends: node-inherits but it is not going to be installed
+       Depends: node-ini (&gt;= 1.1.0) but it is not going to be installed
+       Depends: node-lockfile but it is not going to be installed
+       Depends: node-lru-cache (&gt;= 2.3.0) but it is not going to be installed
+       Depends: node-minimatch (&gt;= 0.2.11) but it is not going to be installed
+       Depends: node-mkdirp (&gt;= 0.3.3) but it is not going to be installed
+       Depends: node-gyp (&gt;= 0.10.9) but it is not going to be installed
+       Depends: node-nopt (&gt;= 3.0.1) but it is not going to be installed
+       Depends: node-npmlog but it is not going to be installed
+       Depends: node-once but it is not going to be installed
+       Depends: node-osenv but it is not going to be installed
+       Depends: node-read but it is not going to be installed
+       Depends: node-read-package-json (&gt;= 1.1.0) but it is not going to be installed
+       Depends: node-request (&gt;= 2.25.0) but it is not going to be installed
+       Depends: node-retry but it is not going to be installed
+       Depends: node-rimraf (&gt;= 2.2.2) but it is not going to be installed
+       Depends: node-semver (&gt;= 2.1.0) but it is not going to be installed
+       Depends: node-sha but it is not going to be installed
+       Depends: node-slide but it is not going to be installed
+       Depends: node-tar (&gt;= 0.1.18) but it is not going to be installed
+       Depends: node-underscore but it is not going to be installed
+       Depends: node-which but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo npm install -g webpack-cli
+/usr/local/bin/webpack-cli -&gt; /usr/local/lib/node_modules/webpack-cli/bin/cli.js
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> webpack-cli@3.3.10 requires a peer of webpack@4.x.x but none is installed. You must install peer dependencies yourself.
+
++ webpack-cli@3.3.10
+updated 1 package in 7.287s
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ webpack --mode=development
+
+Command &apos;webpack&apos; not found, but can be installed with:
+
+sudo apt install webpack
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ webpack --mode=development
+
+Command &apos;webpack&apos; not found, but can be installed with:
+
+sudo apt install webpack
+
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo apt install -g webpack-cli
+E: Command line option &apos;g&apos; [from -g] is not understood in combination with the other options.
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo apt install -g webpack-cli webpack
+E: Command line option &apos;g&apos; [from -g] is not understood in combination with the other options.
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ sudo npm install -g webpack-cli webpack
+/usr/local/bin/webpack-cli -&gt; /usr/local/lib/node_modules/webpack-cli/bin/cli.js
+/usr/local/bin/webpack -&gt; /usr/local/lib/node_modules/webpack/bin/webpack.js
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> <font color="#75507B">optional</font> SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/webpack/node_modules/fsevents):
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> <font color="#75507B">notsup</font> SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;linux&quot;,&quot;arch&quot;:&quot;x64&quot;})
+
++ webpack-cli@3.3.10
++ webpack@4.41.2
+added 322 packages from 197 contributors and updated 1 package in 22.526s
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ webpack --mode=development
+Hash: <b>5b90c629ada6fed12c59</b>
+Version: webpack <b>4.41.2</b>
+Time: <b>55</b>ms
+Built at: 11/11/2019 <b>1:59:44 PM</b>
+  <b>Asset</b>      <b>Size</b>  <b>Chunks</b>             <b>Chunk Names</b>
+<font color="#8AE234"><b>main.js</b></font>  3.77 KiB    <b>main</b>  <font color="#8AE234"><b>[emitted]</b></font>  main
+Entrypoint <b>main</b> = <font color="#8AE234"><b>main.js</b></font>
+[<b>./src/index.js</b>] 0 bytes {<font color="#FCE94F"><b>main</b></font>}<font color="#8AE234"><b> [built]</b></font>
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ cd ..
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack</b></font>$ cp -r 02_initialbundle/ 03_halloworld
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack</b></font>$ ll
+total 20
+drwxr-xr-x  5 temp temp 4096 Nov 11 14:01 <font color="#729FCF"><b>.</b></font>/
+drwxr-xr-x 28 temp temp 4096 Nov 11 13:41 <font color="#729FCF"><b>..</b></font>/
+drwxr-xr-x  2 temp temp 4096 Nov 11 13:41 <font color="#729FCF"><b>01_minify</b></font>/
+drwxr-xr-x  5 temp temp 4096 Nov 11 13:48 <font color="#729FCF"><b>02_initialbundle</b></font>/
+drwxr-xr-x  5 temp temp 4096 Nov 11 14:01 <font color="#729FCF"><b>03_halloworld</b></font>/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack</b></font>$ cd 02_initialbundle/
+<font color="#8AE234"><b>temp@temp-Latitude-E5440</b></font>:<font color="#729FCF"><b>~/Desktop/Zohir_DCI/webpack/02_initialbundle</b></font>$ 
+</pre>
