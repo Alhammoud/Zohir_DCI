@@ -1,0 +1,8 @@
+Anfrage (request): 
+die Frage nach einer Information ohne zu wissen, ob es diese überhaupt gibt
+
+Abfrage (query):
+ wenn man weiß, dass es eine bestimmte Information gibt, diese aber nachfragt.
+
+Anfrage (request): : if you ask for an information but you don't know if there is an information
+Abfrage: if you know there is an information and you ask for it again
