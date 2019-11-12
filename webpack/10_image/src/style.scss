@@ -1,0 +1,44 @@
+html, body{
+    padding: 0;
+    margin: 0 15px;
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h2{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkkhaki;
+    color:  greenyellow;
+    
+}
+
+.climateBtn{
+    display: block;
+    margin: 0 auto;
+}
+/* sass style */
+.nav{
+
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    background-color:paleturquoise;
+    
+
+    .nav-start{
+        color: white;
+    }
+
+    .nav-profile{
+        color: blue;
+    }
+
+    .nav-logout{
+        color: red;
+    }
+}
