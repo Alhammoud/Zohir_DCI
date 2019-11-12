@@ -1,0 +1,17 @@
+Webpack is a module bundler,
+ but you can also use it running tasks as well. 
+Webpack relies on a dependency graph underneath. 
+Webpack traverses through the source to construct the graph, and it uses this information and configuration to generate bundles. Webpack relies on loaders and plugins.
+
+webpack. webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+
+
+Webpack is a command line tool to create bundles of assets (code and files). Webpack doesn't run on the server or the browser. Webpack takes all your javascript files and any other assets and transforms then into one huge file. This big file can then be sent by the server to a client's browser.
+
+
+Initially, Webpack is a module bundler, though it is quite often used instead of Gulp or Grunt task runners. 
+This advanced tool provides developers with control over how it splits the modules, allowing them to adjust builds to particular situations and workaround solutions that don't function properly out of the box.
+
+Does react require Webpack?
+No, Babel and Webpack is not necessary for React stack. ... However, if you want to make things easier, I do recommend you learn and use Babel and Webpack together with React because: You can use modules. You can use JSX with ES6
+
