@@ -26,10 +26,10 @@ const loadBlogPosts = async () => {
     let blogposts = `<div class="blogposts">`;
     
     for(let i=0; i<blogpostsArray.length; i++) {
-        blogposts += `<div class="blogpost">
-        <h2 class="blog-header">${blogpostsArray[i].title}</h2>
-        <div class="blog-body">${blogpostsArray[i].content}
-        </div>
+        blogposts += `
+        <div class="blogpost">
+            <h2 class="blog-header">${blogpostsArray[i].title}</h2>
+            <div class="blog-body">${blogpostsArray[i].content}</div>
         </div>`;
     }
     blogposts += `</div>`;
@@ -37,10 +37,11 @@ const loadBlogPosts = async () => {
 }
 
 const loadCreateBlogPost = () => {
-    const createblogpost = `<div class="new-blogpost">
-    <input type="text" placeholder="Blog-Titel eingeben" id="title" />
-    <textarea rows="10" id="content"></textarea>
-    <button id="btnCreateArticle">Artikel erstellen</button>
+    const createblogpost = `
+    <div class="new-blogpost">
+        <input type="text" placeholder="Blog-Titel eingeben" id="title" />
+        <textarea rows="10" id="content"></textarea>
+        <button id="btnCreateArticle">Artikel erstellen</button>
     </div>`;
     
     mainObj.innerHTML = createblogpost;
@@ -85,9 +86,9 @@ const createPost = async () => {
 const loadLogin = () => {
     const loginHtml = `
     <div class="blogposts login">
-    <input type="text" placeholder="email" id="email" />
-    <input type="password" placeholder="password" id="password" />
-    <button id="btnLogin">Login</button>
+        <input type="text" placeholder="email" id="email" />
+        <input type="password" placeholder="password" id="password" />
+        <button id="btnLogin">Login</button>
     </div>`;
     
     mainObj.innerHTML = loginHtml;
@@ -98,15 +99,15 @@ const loadLogin = () => {
 const loadSignup = () => {
     const signupHtml = `
     <div class="blogposts signup">
-    <input type="text" placeholder="email" id="emailSignup" />
-    <input type="password" placeholder="password" id="passwordSignup" />
-    <input type="password" placeholder="password repeat" id="passwordRepeat" />
-    <button id="btnSignup">Jetzt registrieren</button>
+        <input type="text" placeholder="email" id="emailSignup" />
+        <input type="password" placeholder="password" id="passwordSignup" />
+        <input type="password" placeholder="password repeat" id="passwordRepeat" />
+        <button id="btnSignup">Jetzt registrieren</button>
     </div>`;
     
     mainObj.innerHTML = signupHtml;
     const btnSignupObj = document.getElementById('btnSignup');
-    btnSignupObj.onclick = signup;
+    btnSignupObj.onclick = signup.bind(this, mainObj);
 }
 
 const showLoggedIn = () => {
