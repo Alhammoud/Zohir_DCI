@@ -1,0 +1,18 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+.imageDiv{
+  text-align: center;
+ 
+
+}
+.image{
+  float: center;
+ 
+}
+
+.textArea{
+  width: max-content;
+}
