@@ -22,7 +22,9 @@ class App extends Component {
 
     for(let i = 0; i < morseArray.length; i++){
 
-      if(morseArray[i] === " "){
+
+      output += morseCodes[morseArray[i].toUpperCase()];
+      /* if(morseArray[i] === " "){
   
          output += "\xa0\xa0";
         //output += "&nbsp";
@@ -35,7 +37,7 @@ class App extends Component {
         output += morseCodes[morseArray[i].toUpperCase()];
         console.log('output');
         console.log(output);
-      }
+      } */
     }
     this.setState({output, input});
 
@@ -48,15 +50,18 @@ class App extends Component {
       <div className="container">
       
           <h1>Morse Code Translator</h1>
-          {/* <div className='imageDiv'> <img className='image' alt='Morse Code' src='./mose_code.jpg' /></div> */}
-           <textarea className="textArea" rows="10"
+           {/* <div className='imageDiv'> </div>  */}
+           <img className='image' alt='Morse Code' src='./mose_code.jpg' />
+           <textarea className="textArea" rows="10" cols="70"
                  onChange={(e)=>this.convertToMorse(e.target.value)}>
 
            </textarea>
           {/* <input className="form-control"
                  onChange={(e)=>this.convertToMorse(e.target.value)}/> */}
-          <h3>original: {this.state.input}</h3>
-          <h3>morse: {this.state.output}</h3>
+          <h3 className="pre-line">original:<br/>
+           {this.state.input}</h3>
+          <h3 className="pre-line">morse: <br/>
+          {this.state.output}</h3>
         
     </div>
 

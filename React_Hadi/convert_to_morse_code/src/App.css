@@ -2,17 +2,25 @@ html,body{
   margin: 0;
   padding: 0;
 }
-
+.container{
+ margin: 10px;
+}
 .imageDiv{
   text-align: center;
- 
-
 }
 .image{
-  float: center;
+  width: 800px;
+  height: 600px;
+  position: fixed;
+  right: 500px;
+  top: 10px;
  
 }
 
 .textArea{
   width: max-content;
+}
+
+.pre-line{
+  white-space: pre-line;
 }
