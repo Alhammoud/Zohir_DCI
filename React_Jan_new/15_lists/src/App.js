@@ -85,9 +85,9 @@ class App extends Component {
               <td>{fruit.color}</td>
                <td><button onClick={this.showId.bind(this,fruit.id) }>{
                  /* 
-
+                 
+                 
                  <td><button onClick={() => this.showId(fruit.id)}>Show Id </button></td>
-
 
                (method) Function.bind(this: Function, thisArg: any, ...argArray: any[]): any
 
