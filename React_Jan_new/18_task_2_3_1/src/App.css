@@ -1,0 +1,53 @@
+html ,body{
+  padding: 0;
+  margin:5px;
+  height: 100%; /* unbedingt */
+  box-sizing: border-box;
+
+}
+#root{
+  height: 100%;  /* unbedingt */
+}
+.app{
+  height: 100%;   /* unbedingt */
+  /* margin: 5px auto; */
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.header{
+  height: 80px;
+  border: 1px solid black;
+  margin: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 80px;
+}
+
+.container{
+ /*  width: calc(100% - 120px); */
+  /* height: 100%; */
+  display: flex;
+  height: calc(100% - 105px);
+  box-sizing: border-box;
+
+}
+
+.mainCom{
+  flex-grow: 1; 
+  height: 100%;  /* unbedingt */
+  border: 1px solid black;
+  margin: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100%;
+}
+
+.rightSidebar{
+  height: 100%; /* unbedingt */
+  width: 120px;
+  border: 1px solid black;
+  margin: 5px;
+  box-sizing: border-box;
+
+
+}
