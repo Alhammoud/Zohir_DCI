@@ -27,7 +27,7 @@ class App extends Component {
 
     /* Add an interval that adds a new randomstring to
     randomstrings array every second. */
-    let counter = 0;
+   /*  let counter = 0; */
     /* setTimeout( */
      setInterval( 
 

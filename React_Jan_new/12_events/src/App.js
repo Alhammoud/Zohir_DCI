@@ -9,6 +9,18 @@ class App extends Component {
     text: ''
   }
 
+
+  
+/*   constructor(){
+    super();
+    this.state.clickCounter= 0,
+    this.state.mouseEnterCounter= 0,
+    this.state.text= ''
+  }
+ */
+
+
+
   clickHandler = () => {  
     this.setState({
       clickCounter: this.state.clickCounter + 1 
