@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ body{
+    background: black;
+    background-image: url(Background.jpg);
+    padding: 50px;
+ }
+ .tag{
+    font-size: 0.7rem;
+    color: White;
+ }
+ #responseCity{
+    display: flex;
+    flex-wrap: wrap;
+    color: White;
+ }
+ .cityCard{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+ }
+ td{
+    padding:5px;
+ }
+ .icon{
+    position:relative;
+    top: -35px;
+    left: -25px;
+    /* background: rgba(255, 255, 255, 0.787); */
+    width: 20px;
+    height:20px;
+ }
