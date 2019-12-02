@@ -1,17 +1,27 @@
 import React from 'react'
 
 export default function User(props) {
-    
-    
     return (
-        <div>
-            <input  
-              name="radioButtons" 
-              type="radio" 
-             
-              value={props.id}/>
-              {/* <span>user name: {props.username } {'  -  '}user id: {props.id}</span> */}
-              <span>{props.username } </span>
-        </div>
+       
+            <div 
+                className="user" 
+                key={props.id}>
+
+                <label htmlFor={props.id} >
+                    <input 
+                    id={props.id} 
+                    name="radioButtons" 
+                    type="radio" 
+                    value={props.id} 
+                    onChange={()=> 
+                        props.selectUserHandler(props.id)} 
+                        checked={props.checked}/>
+
+                    <span>{props.name}</span>
+                    
+                </label>
+            </div>
+
+       
     )
 }
