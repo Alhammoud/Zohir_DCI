@@ -1,0 +1,11 @@
+html, body {
+  margin: 10;
+  padding: 10;
+}
+.test {
+  background: rgb(219, 202, 202);
+  width: 40vH;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 5px;
+}

@@ -1,0 +1,434 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(187, 187, 187, 0.034);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.headerheader{
+  position: fixed;
+  width: 100%;
+  
+  background-color: white;
+  z-index: 2;
+}
+.header{
+  
+  border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  transition: all 0.5s ease-out;
+}
+.picContainer{
+  
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  width: 30%;
+  min-width: 200px;
+}
+
+.headerflex{
+  
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  width: 70%;
+}
+
+.leftheaderFlex,
+.middleheaderFlex,
+.rightheaderFlex
+{
+  /* border: 1px dotted red; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  width: 30%;
+}
+.leftheaderFlex{
+  justify-content: flex-start;
+}
+.rightheaderFlex{
+  justify-content: flex-end;
+}
+
+.content{
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accountflex{
+  /* border: 1px solid orange; */
+  margin-top: 120px;
+  
+  width: 70%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: stretch;
+}
+.accountData{
+  /* border: 1px solid red; */
+}
+
+.postsflex{
+  /* border: 1px solid rgb(247, 0, 255); */
+  width: 70%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.postsCard{
+  width:100%;
+}
+.postCardlinks{
+  border-top: 1px solid rgba(184, 184, 184, 0.308);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+.postCardMenuLink{
+  width: 100px;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+
+
+}
+.postCardMenuLink:hover{
+  width: 100px;
+  border-top: 2px solid black;
+  color: black;
+}
+.postsCardCards{
+ display:flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+
+.svgProfile{
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  
+}
+.menuLink{
+  width: 80px;
+  text-align: right;
+}
+.instagram{
+
+}
+
+.stripe{
+  margin: 0 16px 0 0;
+  border-right: 1px solid black;
+  height: 28px;
+  min-width:16px;
+}
+
+.storyImageImg{
+  width:77px;
+  height: 77px;
+  border-radius: 100%;
+}
+.storyImageCircle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:85px;
+  height: 85px;
+  border-radius: 100%;
+  margin: 10px;
+  overflow:hidden;
+  border: 1px solid rgba(128, 128, 128, 0.466);
+}
+.storyImageCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  overflow: hidden;
+  margin: 10px;
+  cursor: pointer;
+  min-width: 100px;
+
+}
+.storyImageHeaderLink{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.storyImageHeaderLinkLeft{
+
+  width: 50%;
+  text-align: left;
+
+  padding: 0 0 10px 10px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  height: 1em;
+  font-size: 1em;
+  
+  white-space: nowrap;
+  overflow: hidden;
+}
+.storyImageHeaderLinkRight{
+  position: relative;
+  top:0;
+  right: 0px;
+  width: 40%;
+  text-align: left;
+  position: relative;
+  padding: 0 10px 10px 0;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  height: 1em;
+  font-size: 1em;
+  
+  white-space: nowrap;
+}
+
+.leftaccountFlex{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.rightaccountFlex{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.imagecard{
+
+  padding:40px;
+
+
+  /* border: 1px solid green; */
+}
+.imageBackground{
+  background-image: linear-gradient(45deg, rgb(255, 251, 0) 0%, rgb(255, 0, 0) 50%, purple 80%);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageBackgroundinner{
+  background-color: white;
+  border-radius: 100%;
+  width: 192px;
+  height: 192px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accountImage{
+  border-radius: 100%;
+  width: 186px;
+  height: 186px;
+}
+.accountData{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  
+  align-content: stretch;
+  align-items: stretch;
+  /* border: 1px dashed green; */
+
+}
+.accountDataHeader{
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+.accountDataHeaderName{
+  font-size: 2.5em;
+}
+.icon{
+  width: 1em;
+  height: 1em;
+  margin: 0.5em;
+}
+.follow{
+  margin: 0 10px;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em 1.2em;
+  cursor: pointer;
+  height: 2em;
+}
+.dropdown, .menu{
+  margin: 0 10px;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0em 0.5em;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+
+}
+.dropdownImg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  background-color:rgba(255, 255, 255, 0);
+}
+.menuImg{
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.icon2{
+  width: 0.7em;
+  height: 0.7em;
+  margin: 0.5em;
+}
+.accountDataCounter{
+  display: flex;
+  justify-content: left;
+}
+.counter{
+  box-sizing: border-box;
+  /* flex-grow: 1; */
+  width: 12em;
+  margin: 20px 0;
+  font-size: 1.2em;
+
+}
+.count{
+  font-weight: bold;
+  margin: 0 10px 0 0;
+}
+.accountDataName, .accountDataLink{
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+.accountDataMessage{
+  font-size: 1.3em;
+  margin: 10px 0 0;
+}
+.cardcard{
+  width: calc(70vw / 3 - 3em);
+  height:  calc(70vw / 3 - 3em);
+  margin-bottom: 3em;
+  /* border: 1px solid cornflowerblue; */
+  overflow: hidden;
+}
+.storyImg{
+  object-fit: cover;
+  width: calc(70vw / 3 - 3em);
+  height:  calc(70vw / 3 - 3em);
+}
+
+.searchIcon{
+  
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.searchField{
+  display: flex;
+  border: 1px solid rgba(177, 175, 175, 0.513);
+  border-radius: 3px;
+}
+.searchIconSvg{
+  width: 15px;
+  height: 15px;
+  
+}
+.searchIconPath{
+fill: rgba(177, 175, 175, 0.513);
+}
+.searchIconPath:hover{
+  fill: rgb(0, 0, 0);
+  }
+
+.searchBox{
+  height:28px;
+  text-align: center;
+  border: none;
+  
+  outline: none;
+}
+.searchBox::placeholder{
+  color: rgba(177, 175, 175, 0.513);
+  font-weight: bold;
+
+}
+.searchBox:focus::placeholder{
+  color: white;
+}
+.storyarrow{
+  
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.storybarContainer{
+  width:70%;
+  display: flex;
+  overflow: hidden;
+  margin: 60px 0;
+}
+.storySlider{
+ overflow: hidden;
+}
+.storybar{
+  position: relative;
+ 
+  left: 0;
+  transition: all 2s ease-in-out;
+ width: 100%;
+ display:flex;
+ justify-content: flex-start;
+}
